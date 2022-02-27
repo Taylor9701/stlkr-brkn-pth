@@ -207,7 +207,7 @@ anomalies["models/nasca/etherealsrp_artifacts/urchin.mdl"] = true
 anomalies["models/artefacts/dragon_eye.mdl"] = true
 anomalies["models/artefacts/blackspray.mdl"] = true
 anomalies["models/artefacts/lighthouse.mdl"] = true
-anomalies["models/artefacts/ameba.mdl"] = true -- Focus
+
 
 
 --Exclusive Artifacts--
@@ -224,7 +224,7 @@ anomalies["models/gibs/hgibs_rib.mdl"] = true
 anomalies["models/nasca/etherealsrp_artifacts/firefly.mdl"] = true
 anomalies["models/nasca/etherealsrp_artifacts/compass.mdl"] = true
 anomalies["models/srp/items/art_spring.mdl"] = true
-anomalies["models/artefacts/setka.mdl"] = true --This model is used for both Blue Ring and Haze, but it shouldn't matter too much since both are veles only
+anomalies["models/artefacts/setka.mdl"] = true 
 anomalies["models/predatorcz/stalker/artifacts/dummy_dummy.mdl"] = true
 
 if CLIENT then
