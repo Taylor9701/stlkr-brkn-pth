@@ -1,0 +1,14 @@
+ITEM.name = "C4"
+ITEM.model = ("models/weapons/w_c4.mdl")
+ITEM.description = "A military explosive device."
+ITEM.class = "cw_kk_ins2_nade_c4"
+ITEM.weaponCategory = "secondary"
+ITEM.isWeapon = true
+ITEM.noAmmo = true
+ITEM.width = 2
+ITEM.height = 1
+ITEM.price = 36000
+ITEM.flag = "4"
+ITEM.category = "Weapons"
+ITEM.isGrenade = true
+ITEM.weight = 2.0

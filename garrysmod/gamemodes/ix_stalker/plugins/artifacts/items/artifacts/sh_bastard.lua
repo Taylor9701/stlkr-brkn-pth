@@ -1,0 +1,20 @@
+ITEM.name = "Bastard"
+ITEM.model = "models/artefacts/plenka.mdl"
+ITEM.description = "A green ball of energy"
+ITEM.longdesc = "Perhaps the only artifact credited to the Bandit faction for being discovered, catalogued, and then sold off-handedly to an Eco-Stalker after said individual stumbled upon their camp for the price of six anti-radiation packs and four liters of vodka.\n\nThe Bastard (name pending) is visually similar to a Jellyfish in shape, but differentiates itself in the neon-green color of it's apparatus. This green color is actually as a result of radioactive absorption, but not to the point of diffusing, rather the radiation is just simply held there, before so much radiation is held that some of it simply is let go, irradiating all that it touches. Initially mistaken for a Jellyfish by the bandits, who had found it in a small gravitational field atop a massive radioactive dump. This mistake resulted in three cases of acute radiation sickness among the bandits who'd found it, having hoped to use it to navigate some lesser anomalies in search of more artifacts. Upon further examination, it seems the Bastard itself is in fact a faulty or mutated Jellyfish, having lost it's radiation-removing abilities.\nIn exchange however, it gained the interesting dual abilities to diffuse electric shocks from the sheer radioactive build-up, and absorb lesser amounts of heat, which is then transferred into the artifact container's lining itself, to no harm.\nElectrical +3\nThermal+1\nRads+3"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.price = 4500
+ITEM.flag = "A"
+ITEM.isArtefact = true
+ITEM.weight = 1.1
+ITEM.res = {
+	["Fall"] = 0.00,
+	["Blast"] = 0.00,
+	["Bullet"] = 0.00,
+	["Shock"] = 0.30,
+	["Burn"] = 0.10,
+	["Radiation"] = 0.00,
+	["Chemical"] = 0.00,
+	["Psi"] = 0.00,
+}

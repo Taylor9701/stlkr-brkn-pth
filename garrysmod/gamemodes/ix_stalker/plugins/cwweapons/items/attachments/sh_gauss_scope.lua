@@ -1,0 +1,15 @@
+ITEM.name = "Gauss Rifle Optic"
+ITEM.description = "Russian optic sight."
+ITEM.category = "Attachments"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.model = "models/cw2/attachments/pso.mdl"
+ITEM.upgradeIcon = Material("materials/vgui/ui/stalker/weaponupgrades/4xmag.png")
+ITEM.slot = 1
+--ITEM.busflag = "SPECIAL3_1"
+ITEM.price = 30000 
+ITEM.Range = 10
+ITEM.isAttachment = true
+ITEM.weight = 0.65
+ITEM.attSearch = { "cw_sil_gauss_scope"}
+ITEM.flag = "A"

@@ -1,0 +1,9 @@
+ITEM.name = "Bandit HVT Patch"
+ITEM.model = "models/kek1ch/tfw_badge_bandit.mdl"
+ITEM.description = "A patch that once belonged to a prominent member of the Bandits faction, recovered by their killer. (Awarded from corpses of defeated player characters)"
+ITEM.category = "junk"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.price = "3500"
+ITEM.flag = "1"
+ITEM.weight = 3
