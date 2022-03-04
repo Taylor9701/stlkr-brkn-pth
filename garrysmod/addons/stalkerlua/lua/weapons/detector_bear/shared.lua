@@ -177,6 +177,7 @@ anomalies["models/nasca/etherealsrp_artifacts/nightstar.mdl"] = true
 anomalies["models/nasca/etherealsrp_artifacts/slug.mdl"] = true
 anomalies["models/nasca/etherealsrp_artifacts/stoneblood.mdl"] = true
 anomalies["models/nasca/etherealsrp_artifacts/stoneflower.mdl"] = true
+anomalies["models/nasca/etherealsrp_artifacts/meatchunk.mdl"] = true
 anomalies["models/artefacts/ice.mdl"] = true
 anomalies["models/tnb/stalker/artifacts/sponge.mdl"] = true
 anomalies["models/ethprops/consumable/flask_water.mdl"] = true

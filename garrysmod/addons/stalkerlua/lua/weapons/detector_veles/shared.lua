@@ -183,9 +183,11 @@ anomalies["models/nasca/etherealsrp_artifacts/nightstar.mdl"] = true
 anomalies["models/nasca/etherealsrp_artifacts/slug.mdl"] = true
 anomalies["models/nasca/etherealsrp_artifacts/stoneblood.mdl"] = true
 anomalies["models/nasca/etherealsrp_artifacts/stoneflower.mdl"] = true
+anomalies["models/nasca/etherealsrp_artifacts/meatchunk.mdl"] = true
 anomalies["models/artefacts/ice.mdl"] = true
 anomalies["models/tnb/stalker/artifacts/sponge.mdl"] = true
 anomalies["models/ethprops/consumable/flask_water.mdl"] = true
+
 
 
 
@@ -196,7 +198,6 @@ anomalies["models/tnb/stalker/artifacts/gravi.mdl"] = true
 anomalies["models/artefacts/phantom_star.mdl"] = true
 anomalies["models/artefacts/claw.mdl"] = true
 anomalies["models/nasca/etherealsrp_artifacts/wrenched.mdl"] = true
-anomalies["models/nasca/etherealsrp_artifacts/meatchunk.mdl"] = true
 anomalies["models/nasca/etherealsrp_artifacts/shell.mdl"] = true
 anomalies["models/nasca/etherealsrp_artifacts/soul.mdl"] = true
 anomalies["models/nasca/etherealsrp_artifacts/mamas_beads.mdl"] = true
