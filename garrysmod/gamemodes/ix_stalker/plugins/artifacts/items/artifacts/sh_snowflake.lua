@@ -1,7 +1,7 @@
 ITEM.name = "Snowflake"
 ITEM.model ="models/nasca/etherealsrp_artifacts/snowflake.mdl"
 ITEM.description = "This artifact features blue spikes."
-ITEM.longdesc = "Bearing a similar structure to the Kolobok, this artifact forms in electrical anomalies. It is known to have an electrostimulative effect which significantly improves the user's vitality and muscle tone.\n\nRads +1\nElectrical -2\nMovement +4s"
+ITEM.longdesc = "Bearing a similar structure to the Kolobok, this artifact forms in electrical anomalies. It is known to have an electrostimulative effect which significantly improves the user's vitality and muscle tone.\n\nRads +1\nElectrical -1\nMovement +3s"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 24000
