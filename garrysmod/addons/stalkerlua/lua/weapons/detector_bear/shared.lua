@@ -181,6 +181,8 @@ anomalies["models/nasca/etherealsrp_artifacts/meatchunk.mdl"] = true
 anomalies["models/artefacts/ice.mdl"] = true
 anomalies["models/tnb/stalker/artifacts/sponge.mdl"] = true
 anomalies["models/ethprops/consumable/flask_water.mdl"] = true
+anomalies["models/artefacts/plenka.mdl"] = true
+anomalies["models/artefacts/moss.mdl"] = true
 
 
 
