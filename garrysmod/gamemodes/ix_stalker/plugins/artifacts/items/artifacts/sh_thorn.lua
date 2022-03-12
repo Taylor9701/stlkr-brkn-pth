@@ -1,7 +1,7 @@
 ITEM.name = "Thorn"
 ITEM.model ="models/nasca/etherealsrp_artifacts/crystal_thorn.mdl"
 ITEM.description = "Spikey artifact, but quite small."
-ITEM.longdesc = "Draws out radiation through the use of pricking the user’s skin, no matter if armor is worn or not. When worn will cause bleeding.\n\nRads -2\nImpact -2"
+ITEM.longdesc = "Draws out radiation through the use of pricking the user’s skin, no matter if armor is worn or not. When worn will cause bleeding.\n\nRads -2\nBleeding +1"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 1000

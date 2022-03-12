@@ -1,7 +1,7 @@
 ITEM.name = "Crystal Thorn"
 ITEM.model = "models/nasca/etherealsrp_artifacts/crystal_thorn.mdl"
 ITEM.description = "Pointy artifact."
-ITEM.longdesc = "This artifact forms in Burnt Fuzz anomalies. Like its non-crystalline cousin, it draws radiation from its user through blood. It is known to have a relatively stable price on the artifact black market.\n\nRads -3\nImpact -2"
+ITEM.longdesc = "This artifact forms in Burnt Fuzz anomalies. Like its non-crystalline cousin, it draws radiation from its user through blood. It is known to have a relatively stable price on the artifact black market.\n\nRads -3\nBleeding +2"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 4000
