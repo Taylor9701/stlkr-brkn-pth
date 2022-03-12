@@ -1,5 +1,5 @@
 ITEM.name = "Large Jar of Swamper's Delight"
-ITEM.model = "models/props_lab/jar01b.mdl"
+ITEM.model = "models/props_lab/jar01a.mdl"
 ITEM.thirst = 60
 ITEM.description = "A mason jar of deep-blue liquid."
 ITEM.longdesc = "A large mason jar of sweet Bilberry juice infused with a light taste of Vodka. A soothing and refreshing cocktail made of Vodka mixed with Bog-Grown Bilberries found all across Eastern Europe. A common favorite among Swamp-Trekking stalkers, often said to help relieve the uncomfortable feeling of the warm, humid climate found in the Great Swamps and Northern Marshes. \n\n Thermal +1 for 30 mins"
