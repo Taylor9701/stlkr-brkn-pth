@@ -230,6 +230,7 @@ anomalies["models/nasca/etherealsrp_artifacts/compass.mdl"] = true
 anomalies["models/srp/items/art_spring.mdl"] = true
 anomalies["models/artefacts/setka.mdl"] = true 
 anomalies["models/predatorcz/stalker/artifacts/dummy_dummy.mdl"] = true
+anomalies["models/artefacts/pin.mdl"] = true
 
 if CLIENT then
 
