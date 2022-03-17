@@ -14,7 +14,7 @@ ITEM.isCW = true
 ITEM.isPLWeapon = true
 ITEM.modifier = 4
 ITEM.weight = 3.0
-ITEM.flag = "3"
+ITEM.flag = "A"
 ITEM.barrel = "medium"
 
 ITEM.iconCam = {
