@@ -211,6 +211,7 @@ anomalies["models/artefacts/dragon_eye.mdl"] = true
 anomalies["models/artefacts/blackspray.mdl"] = true
 anomalies["models/artefacts/lighthouse.mdl"] = true
 anomalies["models/props_debris/concrete_spawnchunk001d.mdl"] = true --Black Ice
+anomalies["models/artefacts/ear.mdl"] = true --Growth
 
 
 
