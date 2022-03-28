@@ -9,8 +9,9 @@ ITEM.price = 6000
 ITEM.model = "models/stalker/outfit/bandit2.mdl"
 ITEM.weaponCategory = "front"
 ITEM.exRender = true
-ITEM.iconCam = {
+--[[  {
 	pos = Vector(0, 0, 200),
 	ang = Angle(90, 0, -90),
 	fov = 4.9
 }
+ ]]

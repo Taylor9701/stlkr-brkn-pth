@@ -9,8 +9,8 @@ ITEM.price = 6000
 ITEM.model = "models/weapons/accessories/a_sling_bren_reparented.mdl"
 ITEM.weaponCategory = "belt"
 ITEM.exRender = true
-ITEM.iconCam = {
+--[[ ITEM.iconCam = {
 	pos = Vector(0, 0, 200),
 	ang = Angle(90, 0, -90),
 	fov = 4.9
-}
+} ]]

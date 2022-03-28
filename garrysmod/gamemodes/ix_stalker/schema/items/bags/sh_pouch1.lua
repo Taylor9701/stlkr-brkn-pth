@@ -8,8 +8,9 @@ ITEM.flag = "1"
 ITEM.price = 1250
 ITEM.model = "models/items/jewels/purses/big_purse.mdl"
 ITEM.exRender = true
-ITEM.iconCam = {
+--[[ ITEM.iconCam = {
 	pos = Vector(0, 0, 200),
 	ang = Angle(90, 0, -90),
 	fov = 4.9
 }
+ ]]
