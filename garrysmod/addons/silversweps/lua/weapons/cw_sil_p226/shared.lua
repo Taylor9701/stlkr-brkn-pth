@@ -98,7 +98,7 @@ SWEP.Instructions	= ""
 SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/silver/stalker/weapons/v_p226.mdl"
-SWEP.WorldModel		= "models/stalker/stalker/weapons/w_p226.mdl"
+SWEP.WorldModel		= "models/silver/stalker/weapons/w_p226.mdl"
 
 SWEP.WMPos = Vector(4.309, 1.623, -1.821)
 SWEP.WMAng = Vector(-3, -5, 180)
