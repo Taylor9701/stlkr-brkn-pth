@@ -183,8 +183,10 @@ anomalies["models/tnb/stalker/artifacts/sponge.mdl"] = true
 anomalies["models/ethprops/consumable/flask_water.mdl"] = true
 anomalies["models/artefacts/plenka.mdl"] = true
 anomalies["models/artefacts/moss.mdl"] = true
-
-
+anomalies["models/artefacts/spike.mdl"] = true -- Nugget
+anomalies["models/artefacts/chelust.mdl"] = true -- Pearls
+anomalies["models/artefacts/emerald.mdl"] = true -- Kryptonite
+anomalies["models/hunter/plates/plate.mdl"] = true -- Pacifier
 
 if CLIENT then
 	local matScreen = Material("models/kali/miscstuff/stalker/detectors/detector_bear_c"); // ��������, ������� ����

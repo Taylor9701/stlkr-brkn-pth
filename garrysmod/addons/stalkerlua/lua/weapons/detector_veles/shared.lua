@@ -189,6 +189,13 @@ anomalies["models/tnb/stalker/artifacts/sponge.mdl"] = true
 anomalies["models/ethprops/consumable/flask_water.mdl"] = true
 anomalies["models/artefacts/plenka.mdl"] = true  -- Bastard
 anomalies["models/artefacts/moss.mdl"] = true -- Beard
+anomalies["models/artefacts/spike.mdl"] = true -- Nugget
+anomalies["models/artefacts/chelust.mdl"] = true -- Pearls
+anomalies["models/artefacts/emerald.mdl"] = true -- Kryptonite
+anomalies["models/hunter/plates/plate.mdl"] = true -- Pacifier
+
+
+
 
 
 
@@ -212,7 +219,8 @@ anomalies["models/artefacts/blackspray.mdl"] = true
 anomalies["models/artefacts/lighthouse.mdl"] = true
 anomalies["models/props_debris/concrete_spawnchunk001d.mdl"] = true --Black Ice
 anomalies["models/artefacts/ear.mdl"] = true --Growth
-
+anomalies["models/artefacts/dragon_eye.mdl"] = true --Sharpeye
+ -- anomalies["models/tnb/stalker/artifacts/stoneflower.mdl"] = true --Baptism
 
 
 --Exclusive Artifacts--
@@ -232,6 +240,8 @@ anomalies["models/srp/items/art_spring.mdl"] = true
 anomalies["models/artefacts/setka.mdl"] = true 
 anomalies["models/predatorcz/stalker/artifacts/dummy_dummy.mdl"] = true
 anomalies["models/artefacts/pin.mdl"] = true
+-- anomalies["models/artefacts/peas.mdl"] = true -- Dreamcatcher
+-- anomalies["models/artefacts/ameba.mdl"] = true -- Mind
 
 if CLIENT then
 
