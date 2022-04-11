@@ -22,9 +22,9 @@ ITEM.res = {
 	["Bullet"] = 0.1,
 	["Blast"] = 0.1,
 	["Fall"] = 0.1,
-	["Burn"] = 0.1,
+	["Burn"] = 0.2,
 	["Radiation"] = 0.2,
-	["Chemical"] = 0.1,
+	["Chemical"] = 0.2,
 	["Shock"] = 0.1,
 	["Psi"] = 0,
 }
