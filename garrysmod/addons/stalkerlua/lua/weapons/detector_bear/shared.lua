@@ -187,6 +187,8 @@ anomalies["models/artefacts/spike.mdl"] = true -- Nugget
 anomalies["models/artefacts/chelust.mdl"] = true -- Pearls
 anomalies["models/artefacts/emerald.mdl"] = true -- Kryptonite
 anomalies["models/hunter/plates/plate.mdl"] = true -- Pacifier
+anomalies["models/props/de_inferno/wall_lamp_ring.mdl"] = true -- Wheel
+
 
 if CLIENT then
 	local matScreen = Material("models/kali/miscstuff/stalker/detectors/detector_bear_c"); // ��������, ������� ����

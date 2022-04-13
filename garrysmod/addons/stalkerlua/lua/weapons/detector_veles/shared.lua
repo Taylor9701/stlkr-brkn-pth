@@ -193,7 +193,7 @@ anomalies["models/artefacts/spike.mdl"] = true -- Nugget
 anomalies["models/artefacts/chelust.mdl"] = true -- Pearls
 anomalies["models/artefacts/emerald.mdl"] = true -- Kryptonite
 anomalies["models/hunter/plates/plate.mdl"] = true -- Pacifier
-
+anomalies["models/props/de_inferno/wall_lamp_ring.mdl"] = true -- Wheel
 
 
 
@@ -220,7 +220,8 @@ anomalies["models/artefacts/lighthouse.mdl"] = true
 anomalies["models/props_debris/concrete_spawnchunk001d.mdl"] = true --Black Ice
 anomalies["models/artefacts/ear.mdl"] = true --Growth
 anomalies["models/artefacts/dragon_eye.mdl"] = true --Sharpeye
- -- anomalies["models/tnb/stalker/artifacts/stoneflower.mdl"] = true --Baptism
+anomalies["models/predatorcz/stalker/artifacts/psi_field.mdl"] = true --Backbone
+
 
 
 --Exclusive Artifacts--
