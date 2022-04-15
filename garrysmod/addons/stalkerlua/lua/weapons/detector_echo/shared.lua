@@ -167,7 +167,9 @@ anomalies["models/nasca/etherealsrp_artifacts/sparkler.mdl"] = true
 anomalies["models/nasca/etherealsrp_artifacts/thorn.mdl"] = true
 anomalies["models/nasca/etherealsrp_artifacts/crystal.mdl"] = true
 anomalies["models/artefacts/grib.mdl"] = true
-
+anomalies["models/artefacts/sun.mdl"] = true -- Core
+anomalies["models/artefacts/yoyo.mdl"] = true -- Colony
+anomalies["models/srp/items/art_stoneflower.mdl"] = true -- Scorched
 
 SWEP.LastBeep = 0
 function SWEP:Think()

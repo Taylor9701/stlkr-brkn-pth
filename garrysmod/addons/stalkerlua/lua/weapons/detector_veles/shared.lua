@@ -173,6 +173,9 @@ anomalies["models/nasca/etherealsrp_artifacts/sparkler.mdl"] = true
 anomalies["models/nasca/etherealsrp_artifacts/thorn.mdl"] = true
 anomalies["models/nasca/etherealsrp_artifacts/crystal.mdl"] = true
 anomalies["models/artefacts/grib.mdl"] = true
+anomalies["models/artefacts/sun.mdl"] = true -- Core
+anomalies["models/artefacts/yoyo.mdl"] = true -- Colony
+anomalies["models/srp/items/art_stoneflower.mdl"] = true -- Scorched
 
 --Uncommon Artifacts--
 anomalies["models/nasca/etherealsrp_artifacts/battery.mdl"] = true
@@ -194,7 +197,7 @@ anomalies["models/artefacts/chelust.mdl"] = true -- Pearls
 anomalies["models/artefacts/emerald.mdl"] = true -- Kryptonite
 anomalies["models/hunter/plates/plate.mdl"] = true -- Pacifier
 anomalies["models/props/de_inferno/wall_lamp_ring.mdl"] = true -- Wheel
-
+anomalies["models/artefacts/mica.mdl"] = true -- Crater
 
 
 
