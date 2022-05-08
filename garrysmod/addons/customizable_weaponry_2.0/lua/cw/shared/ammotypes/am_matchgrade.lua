@@ -1,7 +1,7 @@
 local att = {}
 att.name = "am_matchgrade"
 att.displayName = "Match grade rounds"
-att.displayNameShort = "Armor Piercing"
+att.displayNameShort = "Match"
 
 att.statModifiers = {AimSpreadMult = -0.3}
 
