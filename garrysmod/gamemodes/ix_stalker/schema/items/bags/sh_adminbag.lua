@@ -5,6 +5,7 @@ ITEM.height = 2
 ITEM.invWidth = 15
 ITEM.invHeight = 15
 ITEM.price = 0
+ITEM.flag = "A"
 ITEM.model = "models/kek1ch/sumka5.mdl"
 ITEM.weaponCategory = "back"
 ITEM.exRender = true
