@@ -88,7 +88,7 @@ function PLUGIN:WeaponFired(entity)
     end
 end
 
-hook.Add("WeaponFired", "Weapon_Fired", PLUGIN.WeaponFired)
+hook.Add("WeaponFired", "Weapon_Fired", WeaponFired)
 
 function PLUGIN:AmmoCheck(client, weapon)
 	local ammoCount = 0
@@ -132,7 +132,7 @@ function PLUGIN:AmmoCheck(client, weapon)
 	end
 end
 
-hook.Add("AmmoCheck", "Ammo_Check", PLUGIN.AmmoCheck)
+hook.Add("AmmoCheck", "Ammo_Check", AmmoCheck)
 
 function PLUGIN:M203Fired(client)
 	for k,v in pairs(client:GetChar():GetInv():GetItems()) do
@@ -149,7 +149,7 @@ function PLUGIN:M203Fired(client)
 	end
 end
 
-hook.Add("M203Fired", "M203_Fired", PLUGIN.M203Fired)
+hook.Add("M203Fired", "M203_Fired", M203Fired)
 
 function PLUGIN:InitializedPlugins()
 		-- There is no Customization Keys.
