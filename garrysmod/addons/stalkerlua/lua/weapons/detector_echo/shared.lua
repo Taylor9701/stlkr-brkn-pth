@@ -97,7 +97,7 @@ SWEP.WElements = {
 }
 
 function SWEP:PrimaryAttack()
-	if (self.UseDel < CurTime() and self:Ammo1() > 0) then
+	if (self.UseDel < CurTime()) then
 		self.UseDel = CurTime() + 3
 		self.Owner:DoAttackEvent( )	
 		self.Weapon:SendWeaponAnim(ACT_VM_PULLPIN)
@@ -126,7 +126,7 @@ function SWEP:PrimaryAttack()
 end
 
 function SWEP:SecondaryAttack()
-	if (self.UseDel < CurTime() and self:Ammo1() > 0) then
+	if (self.UseDel < CurTime()) then
 		self.UseDel = CurTime() + 3
 		self.Owner:DoAttackEvent( )	
 		self.Weapon:SendWeaponAnim(ACT_VM_PULLPIN)
