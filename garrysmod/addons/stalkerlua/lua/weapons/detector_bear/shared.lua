@@ -115,8 +115,10 @@ function SWEP:PrimaryAttack()
 				bolt:GetPhysicsObject():AddAngleVelocity(Vector(math.random(-500,500),math.random(-500,500),math.random(-500,500)))		
 				bolt:GetPhysicsObject():SetMass(1)
 			end)
-			--if GetConVarNumber("vnt_stalker_bolt_ammo") != 0 then	self:TakePrimaryAmmo(1)	end
-		--end
+			--if GetConVarNumber("vnt_stalker_bolt_ammo") != 0 then
+			--	self:TakePrimaryAmmo(1)	
+			--end
+		end
 		timer.Simple( 0.75, function()
 		self.Weapon:SendWeaponAnim(ACT_VM_DRAW)	
 		end)
