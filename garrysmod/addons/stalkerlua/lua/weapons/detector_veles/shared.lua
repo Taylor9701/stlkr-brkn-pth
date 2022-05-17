@@ -226,7 +226,9 @@ anomalies["models/props_debris/concrete_spawnchunk001d.mdl"] = true --Black Ice
 anomalies["models/artefacts/ear.mdl"] = true --Growth
 anomalies["models/artefacts/dragon_eye.mdl"] = true --Sharpeye
 anomalies["models/predatorcz/stalker/artifacts/psi_field.mdl"] = true --Backbone
-
+anomalies["models/tnb/stalker/artifacts/witchesjelly.mdl"] = true -- Pellicle
+anomalies["models/tnb/stalker/artifacts/stoneflower.mdl"] = true -- Baptism
+anomalies["models/artefacts/sponge.mdl"] = true -- Coral
 
 
 --Exclusive Artifacts--
@@ -238,6 +240,7 @@ anomalies["models/nasca/etherealsrp_artifacts/kolobok.mdl"] = true
 anomalies["models/nasca/etherealsrp_artifacts/mica.mdl"] = true
 anomalies["models/artefacts/cell.mdl"] = true
 anomalies["models/gibs/hgibs_rib.mdl"] = true
+
 
 --Special Artifacts--
 anomalies["models/nasca/etherealsrp_artifacts/firefly.mdl"] = true
