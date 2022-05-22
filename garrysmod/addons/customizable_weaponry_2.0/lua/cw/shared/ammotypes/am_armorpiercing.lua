@@ -1,7 +1,7 @@
 local att = {}
-att.name = "am_matchgrade"
-att.displayName = "Match grade rounds"
-att.displayNameShort = "Match"
+att.name = "am_armorpiercing"
+att.displayName = "Armor piercing rounds"
+att.displayNameShort = "AP"
 
 att.statModifiers = {AimSpreadMult = -0.3}
 
@@ -12,7 +12,7 @@ end
 
 function att:attachFunc()
 	self:unloadWeapon()
-	local str = self.Primary.Ammo.." -MG-"
+	local str = self.Primary.Ammo.." -AP-"
 	self.Primary.Ammo = str
 end
 

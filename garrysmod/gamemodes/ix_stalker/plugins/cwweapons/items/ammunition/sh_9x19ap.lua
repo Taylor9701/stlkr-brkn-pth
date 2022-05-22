@@ -1,6 +1,6 @@
-ITEM.name = "9x19mm Match Grade"
+ITEM.name = "9x19mm Armor Piercing"
 ITEM.model = "models/kek1ch/ammo_9x19_fmj.mdl"
-ITEM.ammo = "9x19MM -MG-" // type of the ammo
+ITEM.ammo = "9x19MM -AP-" // type of the ammo
 ITEM.ammoAmount = 30 // amount of the ammo
 ITEM.description= "A box that contains %s rounds of 9x19mm ammo. "
 ITEM.longdesc = "This basic 9x19 caliber round with a jacketed bullet has good characteristics while being simple to produce. The round is popular due to the fact that international conventions prohibit the use of expanding ammunition in combat. "
