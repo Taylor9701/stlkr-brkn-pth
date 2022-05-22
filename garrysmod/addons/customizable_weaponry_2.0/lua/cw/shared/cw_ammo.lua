@@ -83,6 +83,10 @@ CustomizableWeaponry:registerAmmo("9x18MM -MG-", "9x18MM Rounds -MG-", 9, 18)
 CustomizableWeaponry:registerAmmo("9x19MM -MG-", "9x19MM Rounds -MG-", 9, 19)
 CustomizableWeaponry:registerAmmo("9x39MM -MG-", "9x39MM Rounds -MG-", 9, 39)
 
+--Armor Piercing Ammo
+CustomizableWeaponry:registerAmmo("9x19MM -AP-", "9x19MM Rounds -AP-", 9, 19)
+
+
 --Shotgun Ammo Variants
 CustomizableWeaponry:registerAmmo("12 Gauge -SG-", "12 Gauge Slug Shells", 5, 10)
 CustomizableWeaponry:registerAmmo("12 Gauge -BD-", "12 Gauge Bird Shells", 5, 10)
