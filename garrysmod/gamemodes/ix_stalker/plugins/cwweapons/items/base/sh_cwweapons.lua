@@ -899,7 +899,7 @@ local function ammoswap(item, data)
                         end
 					elseif ammotype == "Normal" then
 						if (wepon) then
-							if name == "am_magnum" or name == "am_matchgrade" or name == "am_slugrounds" or name == "am_flechetterounds" or name == "am_birdshot" or name == "am_zoneloaded" then
+							if name == "am_magnum" or name == "am_matchgrade" or name == "am_slugrounds" or name == "am_flechetterounds" or name == "am_birdshot" or name == "am_zoneloaded" or name == "am_armorpiercing" then
 								client:GiveAmmo(wepon:Clip1(), wepon:GetPrimaryAmmoType(), true)
 								wepon:SetClip1(0)
 								wepon:detach(atcat, k, false)
@@ -980,6 +980,13 @@ ITEM.functions.SwapAmmo = {
 					})
 				elseif name == "am_zoneloaded" then
 					ammoname = "Zone Loaded"
+					table.insert(targets,{
+						name = ammoname,
+						data = {name},
+					})
+
+				elseif name == "am_armorpiercing" then
+					ammoname = "Armor Piercing"
 					table.insert(targets,{
 						name = ammoname,
 						data = {name},
