@@ -117,7 +117,7 @@ SWEP.Attachments = {[1] = {header = "Sight", offset = {800, -500}, atts = {"bg_f
 	[5] = {header = "Magazine", offset = {-400, 400}, atts = {"bg_ar1560rndmag"}},
 	[6] = {header = "Stock", offset = {1000, 400}, atts = {"bg_ar15sturdystock", "bg_ar15heavystock"}},
 	[7] = {header = "Rail", offset = {250, 400}, atts = {"md_anpeq15"}, dependencies = {bg_ris = true, bg_longris = true}},
-	["+reload"] = {header = "Ammo", offset = {800, 0}, atts = {"am_magnum", "am_matchgrade"}}}
+	["+reload"] = {header = "Ammo", offset = {800, 0}, atts = {"am_magnum", "am_matchgrade", "am_armorpiercing"}}}
 	
 SWEP.AttachmentDependencies = {["md_m203"] = {"bg_longris"}} -- this is on a PER ATTACHMENT basis, NOTE: the exclusions and dependencies in the Attachments table is PER CATEGORY
 
