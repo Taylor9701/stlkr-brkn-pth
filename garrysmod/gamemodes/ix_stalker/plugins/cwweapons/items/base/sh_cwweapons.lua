@@ -948,8 +948,8 @@ ITEM.functions.SwapAmmo = {
     if (atts) then
         for atcat, data in pairs(atts) do
             for k, name in pairs(data.atts) do
-                if name == "am_zoneloaded" then
-                    ammoname = "Zone Loaded"
+                if name == "am_matchgrade" then
+                    ammoname = "Match Grade"
                     table.insert(targets, {
                         name = ammoname,
                         data = {name},
