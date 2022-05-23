@@ -1,4 +1,4 @@
-ITEM.name = "9x39mm"
+ITEM.name = "9x39mm Match Grade"
 ITEM.model = "models/kek1ch/ammo_9x39_pab9.mdl"
 ITEM.width = 1
 ITEM.height = 1
