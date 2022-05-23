@@ -954,14 +954,6 @@ ITEM.functions.SwapAmmo = {
                         name = ammoname,
                         data = {name},
                     })
-
-				if name == "am_zoneloaded" then
-					ammoname = "Zone Loaded"
-					table.insert(targets,{
-						name = ammoname,
-						data = {name},
-					})
-				
                 elseif name == "am_slugrounds" then
                     ammoname = "Slug"
                     table.insert(targets,{
