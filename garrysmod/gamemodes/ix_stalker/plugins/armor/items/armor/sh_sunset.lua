@@ -21,13 +21,13 @@ ITEM.noBusiness = true
 ITEM.weight = 10
 ITEM.maxArmor = 30
 ITEM.res = {
-	["Bullet"] = 0.2,
-	["Blast"] = 0.2,
-	["Fall"] = 0.2,
+	["Bullet"] = 0.3,
+	["Blast"] = 0.3,
+	["Fall"] = 0.3,
 	["Burn"] = 0.1,
-	["Radiation"] = 0.1,
+	["Radiation"] = 0.2,
 	["Chemical"] = 0.1,
-	["Shock"] = 0.1,
+	["Shock"] = 0.0,
 	["Psi"] = 0.2,
 }
 

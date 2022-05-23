@@ -1,6 +1,6 @@
 ITEM.name = "7.62x51mm"
 ITEM.model = "models/kek1ch/ammo_762x54_7h1.mdl"
-ITEM.width = 1
+ITEM.width = 2
 ITEM.height = 1
 ITEM.ammo = "7.62x51MM" // type of the ammo
 ITEM.ammoAmount = 20 // amount of the ammo
