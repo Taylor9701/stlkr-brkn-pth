@@ -954,38 +954,38 @@ ITEM.functions.SwapAmmo = {
                         name = ammoname,
                         data = {name},
                     })
-            	if name == "am_slugrounds" then
+                elseif name == "am_slugrounds" then
                     ammoname = "Slug"
                     table.insert(targets,{
                         name = ammoname,
                         data = {name},
                     })
-                if name == "am_flechetterounds" then
+                elseif name == "am_flechetterounds" then
                     ammoname = "Flechette"
                     table.insert(targets,{
                         name = ammoname,
                         data = {name},
                     })
-				if name == "am_birdshot" then
+				elseif name == "am_birdshot" then
 					ammoname = "Birdshot"
 					table.insert(targets,{
 						name = ammoname,
 						data = {name},
 					})
-				if name == "am_trishot" then
+				elseif name == "am_trishot" then
 					ammoname = "Trishot"
 					table.insert(targets,{
 						name = ammoname,
 						data = {name},
 					})
-				if name == "am_zoneloaded" then
+				elseif name == "am_zoneloaded" then
 					ammoname = "Zone Loaded"
 					table.insert(targets,{
 						name = ammoname,
 						data = {name},
 					})
 
-				if name == "am_armorpiercing" then
+				elseif name == "am_armorpiercing" then
 					ammoname = "Armor Piercing"
 					table.insert(targets,{
 						name = ammoname,
