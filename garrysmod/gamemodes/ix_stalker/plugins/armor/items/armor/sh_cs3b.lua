@@ -2,7 +2,7 @@ ITEM.name = "CS-3b Heavy Assault Armor"
 ITEM.model = "models/kek1ch/cs_heavy_outfit.mdl"
 ITEM.replacements = "models/nasca/stalker/male_cs3b.mdl"
 ITEM.description = "A Clear Sky assault suit."
-ITEM.longdesc = "Featuring a thick combat vest layered over a baggy canvas bodysuit infused with the experimental AIR-2 solution, this suit was the final proprietary design ever created by Clear Sky. Invented in preparation for the battle in Limansk, after Clear Sky's destruction this suit serves only as a reminder that even excellent protective armor cannot guarantee safety on the wrong side of the perimeter.\n\nBallistic Protection:\nSkull: III\nNeck & Face: II\nTorso: III+\nLimbs: IIIA\nWeight: 3"
+ITEM.longdesc = "Featuring a thick combat vest layered over a baggy canvas bodysuit infused with the experimental AIR-2 solution, this suit was the final proprietary design ever created by Clear Sky. Invented in preparation for the battle in Limansk, after Clear Sky's destruction this suit serves only as a reminder that even excellent protective armor cannot guarantee safety on the wrong side of the perimeter.\n\nBallistic Protection:\nSkull: III+\nNeck & Face: II\nTorso: IV\nLimbs: IIIA\nWeight: 3"
 ITEM.width = 2
 ITEM.height = 3
 ITEM.price = 230000
@@ -26,7 +26,7 @@ ITEM.res = {
 	["Fall"] = 0.3,
 	["Burn"] = 0.2,
 	["Radiation"] = 0.3,
-	["Chemical"] = 0.2,
+	["Chemical"] = 0.1,
 	["Shock"] = 0.2,
 	["Psi"] = 0.2,
 }

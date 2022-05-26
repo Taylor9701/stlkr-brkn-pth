@@ -2,7 +2,7 @@ ITEM.name = "SRS-S \"SEVA\" (Female) "
 ITEM.model = "models/kek1ch/scientific_outfit.mdl"
 ITEM.replacements = "models/silver/stalker/female_seva_merc.mdl"
 ITEM.description= "A closed cycle suit."
-ITEM.longdesc = "A variant of the SEVA bodysuit that was commissioned by Mercenaries, its design features greater combat protection using designs stolen from the Monolith. It is most often used by foreign scientists who operate in the Zone under protection of mercenaries, though some of its soldiers more inclined to investigate anomalous areas also make use of this suit.\n\nBallistic Protection:\nSkull: II\nNeck & Face: II\nTorso: III+\nLimbs: II\nWeight: 2"
+ITEM.longdesc = "A variant of the SEVA bodysuit that was commissioned by Mercenaries, its design features greater combat protection using designs stolen from the Monolith. It is most often used by foreign scientists who operate in the Zone under protection of mercenaries, though some of its soldiers more inclined to investigate anomalous areas also make use of this suit.\n\nBallistic Protection:\nSkull: IIIA\nNeck & Face: IIIA\nTorso: III+\nLimbs: II\nWeight: 2"
 ITEM.width = 2
 ITEM.height = 2
 ITEM.price = 150000
@@ -26,9 +26,9 @@ ITEM.res = {
 	["Blast"] = 0.2,
 	["Fall"] = 0.2,
 	["Burn"] = 0.3,
-	["Radiation"] = 0.3,
+	["Radiation"] = 0.4,
 	["Chemical"] = 0.3,
-	["Shock"] = 0.3,
+	["Shock"] = 0.2,
 	["Psi"] = 0.3,
 }
 
