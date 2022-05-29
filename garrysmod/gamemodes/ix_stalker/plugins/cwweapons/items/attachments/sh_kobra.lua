@@ -1,7 +1,7 @@
 ITEM.name = "Kobra Red Dot Sight"
 ITEM.description = "The Kobra Sight is a Russian reflex sight developed for the AK series of assault rifles."
 ITEM.category = "Attachments"
-ITEM.model = "models/cw2/attachments/microt1.mdl"
+ITEM.model = "models/silver/stalker/items/a_kobra.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 5000
