@@ -1,7 +1,7 @@
 ITEM.name = "Aimpoint Red Dot Sight"
 ITEM.description = "Produced by Aimpoint AB, the Aimpoint series are known for their reliability and are used around the world by professional militaries."
 ITEM.category = "Attachments"
-ITEM.model = "models/cw2/attachments/microt1.mdl"
+ITEM.model = "models/silver/stalker/items/a_aimpoint.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 5250
