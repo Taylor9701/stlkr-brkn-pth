@@ -1,7 +1,7 @@
 ITEM.name = "Leupold x24 Scope"
 ITEM.description = "A x24 Optic supported by certain bolt action rifles such as the SV-98 and M40A1."
 ITEM.category = "Attachments"
-ITEM.model = "models/cw2/attachments/pso.mdl"
+ITEM.model = "models/silver/stalker/items/a_leupold.mdl"
 ITEM.width = 2
 ITEM.height = 1
 ITEM.price = 22000
