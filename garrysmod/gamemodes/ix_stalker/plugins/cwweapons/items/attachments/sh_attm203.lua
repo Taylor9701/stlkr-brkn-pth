@@ -1,7 +1,7 @@
 ITEM.name = "M203 Grenade Launcher"
 ITEM.description = "It's a grenade launcher, you know what it does. Only accepts the M203 Grenade."
 ITEM.category = "Attachments"
-ITEM.model = "models/Items/BoxSRounds.mdl"
+ITEM.model = "models/silver/stalker/items/a_m203.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 100000
