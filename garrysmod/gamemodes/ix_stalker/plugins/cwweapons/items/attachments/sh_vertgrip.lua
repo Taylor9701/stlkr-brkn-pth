@@ -1,7 +1,7 @@
 ITEM.name = "Vertical Foregrip"
 ITEM.description = "A vertical foregrip, which allows for more ready handling of the firearm it is attached to, and can double as a poor man's bipod under the right circumstances."
 ITEM.category = "Attachments"
-ITEM.model = "models/Items/BoxSRounds.mdl"
+ITEM.model = "models/silver/stalker/items/a_foregrip_sec.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 1000
