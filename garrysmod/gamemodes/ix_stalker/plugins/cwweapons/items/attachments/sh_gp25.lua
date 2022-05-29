@@ -1,8 +1,8 @@
 ITEM.name = "GP-25 Grenade Launcher"
 ITEM.description = "It's a grenade launcher, you know what it does. Only accepts the VOG-25 Grenade."
 ITEM.category = "Attachments"
-ITEM.model = "models/Items/BoxSRounds.mdl"
-ITEM.width = 1
+ITEM.model = "models/silver/stalker/items/a_gp25.mdl"
+ITEM.width = 2
 ITEM.height = 1
 ITEM.price = 80000
 ITEM.slot = 5
