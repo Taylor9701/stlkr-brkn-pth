@@ -1,7 +1,7 @@
 ITEM.name = "Saiga-12 Drum Magazine"
 ITEM.description = "A drum magazine explicitly made for Saiga-12."
 ITEM.category = "Attachments"
-ITEM.model = "models/silver/stalker/items/a_saiga_20.mdl"
+ITEM.model = "models/silver/stalker/items/a_saiga12_20.mdl"
 ITEM.width = 2
 ITEM.height = 2
 ITEM.price = 30000
