@@ -1,8 +1,8 @@
 ITEM.name = "PBS-1 Suppressor"
 ITEM.description = "The earliest model of the PBS Suppressor, it is a standard suppressor for particular Warsaw Pact weaponry."
 ITEM.category = "Attachments"
-ITEM.model = "models/cw2/attachments/cobra_m2.mdl"
-ITEM.width = 1
+ITEM.model = "models/silver/stalker/items/a_suppressor_ak.mdl"
+ITEM.width = 2
 ITEM.height = 1
 ITEM.price = 10000
 ITEM.slot = 2
