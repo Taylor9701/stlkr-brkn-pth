@@ -41,8 +41,11 @@ if CLIENT then
 		["kk_ins2_anpeq15"] = {model = "models/weapons/attachments/v_cw_kk_ins2_cstm_anpeq_band.mdl", pos = Vector(), angle = Angle(), size = Vector(1, 1, 1), merge = true},
 
 		["cw_sil_okp7_optic"] = {model = "models/silver/stalker/weapons/attachments/a_okp7_optic.mdl", bone = "A_Optic", pos = Vector(0, -0.4, 0), angle = Angle(90, 90, 0), size = Vector(1.3, 1.3, 1.3), merge = false},
-		["cw_sil_ekp_optic"] = {model = "models/silver/stalker/weapons/attachments/a_ekp_optic.mdl", bone = "A_Optic", rLight = true, pos = Vector(0, 0.5, 0), angle = Angle(90, 90, 0), size = Vector(1.3, 1.3, 1.3), merge = false},
+		["cw_sil_ekp_optic"] = {model = "models/silver/stalker/weapons/attachments/a_ekp_new_optic.mdl", bone = "A_Optic", rLight = true, pos = Vector(0, 0.5, 0), angle = Angle(90, 90, 0), size = Vector(1.1, 1.1, 1.1), merge = false},
+		["cw_sil_pk1_optic"] = {model = "models/silver/stalker/weapons/attachments/a_pk1_optic.mdl", bone = "A_Optic", rLight = true, pos = Vector(0, 0.5, -0.25), angle = Angle(90, 90, 0), size = Vector(1.1, 1.1, 1.1), merge = false},
+		["cw_sil_pka_optic"] = {model = "models/silver/stalker/weapons/attachments/a_pka_optic.mdl", bone = "A_Optic", rLight = true, pos = Vector(0, 0.5, -0.5), angle = Angle(90, 90, 0), size = Vector(1.1, 1.1, 1.1), merge = false},
 		["cw_sil_pso1_scope"] = {model = "models/silver/stalker/weapons/attachments/a_pso2_scope.mdl", bone = "A_Optic", pos = Vector(0, 0.25, -2.25), angle = Angle(90, 90, 0 ), size = Vector(1, 1, 1), merge = false},
+		["cw_sil_ip78_scope"] = {model = "models/silver/stalker/weapons/attachments/a_scope_ip78.mdl", bone = "A_Optic", pos = Vector(0.15, -0.25, -1.25), angle = Angle(90, 90, 0 ), size = Vector(1, 1, 1), merge = false},
 		["cw_sil_ip29_scope"] = {model = "models/silver/stalker/weapons/attachments/a_ip29_scope.mdl", bone = "A_Optic", pos = Vector(0, -0.25, -2.25), angle = Angle(90, 90, 0 ), size = Vector(1, 1, 1), merge = false},
 	}
 
@@ -59,8 +62,11 @@ if CLIENT then
 		["kk_ins2_flashlight"] = {model = "models/weapons/upgrades/w_laser_ins.mdl", pos = Vector(0,0,8.25), angle = Angle(0,180,180), size = Vector(1, 1, 1), merge = true},
 		
 		["cw_sil_okp7_optic"] = {model = "models/silver/stalker/weapons/attachments/w_okp7_optic.mdl", bone = "R Hand", pos = Vector(-36.5, -3.5, -23), angle = Angle(4, -4, 0), size = Vector(1.3, 1.3, 1.3), merge = false},
-		["cw_sil_ekp_optic"] = {model = "models/silver/stalker/weapons/attachments/w_ekp_optic.mdl", bone = "R Hand", pos = Vector(-36.5, -3.5, -22), angle = Angle(4, -4, 0), size = Vector(1.3, 1.3, 1.3), merge = false},
+		["cw_sil_ekp_optic"] = {model = "models/silver/stalker/weapons/attachments/w_ekp_new_optic.mdl", bone = "R Hand", pos = Vector(-36.5, -3.5, -22), angle = Angle(4, -4, 0), size = Vector(1.3, 1.3, 1.3), merge = false},
+		["cw_sil_pka_optic"] = {model = "models/silver/stalker/weapons/attachments/w_pka_optic.mdl", bone = "R Hand", pos = Vector(-36.5, -3.5, -22), angle = Angle(4, -4, 0), size = Vector(1.3, 1.3, 1.3), merge = false},
+		["cw_sil_pk1_optic"] = {model = "models/silver/stalker/weapons/attachments/w_pk1_optic.mdl", bone = "R Hand", pos = Vector(-36.5, -3.5, -22), angle = Angle(4, -4, 0), size = Vector(1.3, 1.3, 1.3), merge = false},
 		["cw_sil_pso1_scope"] = {model = "models/silver/stalker/weapons/attachments/w_pso2_scope.mdl", bone = "R Hand", pos = Vector(-56.5, -17.5, 5), angle = Angle(4, -4, 100), size = Vector(1, 1, 1), merge = false},
+		["cw_sil_ip78_scope"] = {model = "models/silver/stalker/weapons/attachments/w_scope_ip78.mdl", bone = "R Hand", pos = Vector(-56.5, -4.5, -9.5), angle = Angle(4, -4, 0), size = Vector(1, 1, 1), merge = false},
 		["cw_sil_ip29_scope"] = {model = "models/silver/stalker/weapons/attachments/w_ip29_scope.mdl", bone = "R Hand", pos = Vector(-56.5, -5, -9.75), angle = Angle(4, -4, 0), size = Vector(1, 1, 1), merge = false},
 	}
 
@@ -79,8 +85,17 @@ if CLIENT then
 	SWEP.CWSILOKP7Pos = Vector(-2.8011, 3, -0.4139)
 	SWEP.CWSILOKP7Ang = Vector()
 
-	SWEP.CWSILEKPPos = Vector(-2.8114, 3, -1.1725)
+	SWEP.CWSILEKPPos = Vector(-2.8114, 3, -0.9725)
 	SWEP.CWSILEKPAng = Vector()
+	
+	SWEP.CWSILPK1Pos = Vector(-2.8114, 3, -0.9725)
+	SWEP.CWSILPK1Ang = Vector()
+	
+	SWEP.CWSILPKAPos = Vector(-2.8114, 3, -0.3725)
+	SWEP.CWSILPKAAng = Vector()
+	
+	SWEP.CWSILIP78Pos = Vector(-2.8976, 1, -0.8398)
+	SWEP.CWSILIP78Ang = Vector()
 
 	SWEP.CustomizationMenuScale = 0.016
 end
@@ -89,7 +104,7 @@ SWEP.MuzzleEffect = "muzzleflash_ak74_1p_core"
 SWEP.MuzzleEffectWorld = "muzzleflash_ak74_3rd"
 
 SWEP.Attachments = {
-	{header = "Sight", offset = {400, -450}, atts = {"cw_sil_okp7_optic", "cw_sil_ekp_optic", "cw_sil_ip29_scope", "cw_sil_pso1_scope"}},
+	{header = "Sight", offset = {400, -450}, atts = {"cw_sil_okp7_optic", "cw_sil_ekp_optic", "cw_sil_pk1_optic", "cw_sil_pka_optic", "cw_sil_ip78_scope", "cw_sil_ip29_scope", "cw_sil_pso1_scope"}},
 	{header = "Barrel", offset = {-100, -450}, atts = {"kk_ins2_pbs5"}},
 	{header = "Under", offset = {-400, 0}, atts = {"kk_ins2_vertgrip", "kk_ins2_gl_gp25"}},
 	{header = "Lasers", offset = {200, 400}, atts = {"kk_ins2_lam", "kk_ins2_flashlight", "kk_ins2_anpeq15"}},

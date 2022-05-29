@@ -28,7 +28,7 @@ if CLIENT then
 	SWEP.AttachmentModelsWM = {
 		["kk_ins2_vertgrip"] = {model = "models/weapons/upgrades/w_ins_foregrip.mdl", pos = Vector(), angle = Angle(0, 90, 0), size = Vector(0.5, 0.5, 0.5), merge = true},
 
-		["cw_sil_gauss_scope"] = {model = "models/silver/stalker/weapons/attachments/w_gauss_scope.mdl", bone = "ATTACH_ModKit", pos = Vector(-59, 11.1, 0), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), merge = false},
+		["cw_sil_gauss_scope"] = {model = "models/silver/stalker/weapons/attachments/w_gauss_scope.mdl", bone = "R_Hand", pos = Vector(-56, 0, -6.25), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), merge = false},
 	}
 
 	SWEP.IronsightPos = Vector(-2.485, -2, 0.47)

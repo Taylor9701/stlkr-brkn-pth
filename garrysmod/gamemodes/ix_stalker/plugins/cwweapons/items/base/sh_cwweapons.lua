@@ -91,10 +91,13 @@ attachments["md_tundra9mm"] = {name = "Tundra Supressor", slot = 2, uID = "tundr
 attachments["md_saker"] = {name = "SAKER Supressor", slot = 2, uID = "sakersuppressor"}
 attachments["md_foregrip"] = {name = "Foregrip", slot = 3, uID = "foregrip"}
 attachments["cw_sil_ekp_optic"] = {name = "EKP-08", slot = 1, uID = "ekp8"}
+attachments["cw_sil_pk1_optic"] = {name = "PK-1", slot = 1, uID = "pk1"}
+attachments["cw_sil_pka_optic"] = {name = "PK-A", slot = 1, uID = "pka"}
 attachments["cw_sil_gauss_scope"] = {name = "Item 62 Optic", slot = 1, uID = "gaussscope"}
 attachments["cw_sil_okp7_optic"] = {name = "OKP-07", slot = 1, uID = "okp7"}
 attachments["cw_sil_pso1_scope"] = {name = "PSO-01", slot = 1, uID = "pso1optic"}
-attachments["cw_sil_ip29_scope"] = {name = "IP-29 Tulip", slot = 1, uID = "ip29optic"}
+attachments["cw_sil_ip29_scope"] = {name = "1P-29 Tulip", slot = 1, uID = "ip29optic"}
+attachments["cw_sil_ip78_scope"] = {name = "1P-78 Kashtan", slot = 1, uID = "ip78optic"}
 attachments["cw_sil_pu_scope"] = {name = "PU Optic", slot = 1, uID = "puoptic"}
 attachments["cw_sil_zf4"] = {name = "ZF4 Optic", slot = 1, uID = "zf4optic"}
 attachments["cw_sil_leupold_scope"] = {name = "Leupold x24", slot = 1, uID = "leupoldscope"}

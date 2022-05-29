@@ -47,7 +47,9 @@ if CLIENT then
 		["cw_sil_pso1_scope"] = {model = "models/silver/stalker/weapons/attachments/a_pso2_scope.mdl", bone = "Weapon", rLight = true, pos = Vector(0, -7, 1.75), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), merge = false},
 		["cw_sil_ip29_scope"] = {model = "models/silver/stalker/weapons/attachments/a_ip29_scope.mdl", bone = "Weapon", rLight = true, pos = Vector(0, -7, 1.75), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), merge = false},
 		["cw_sil_okp7_optic"] = {model = "models/silver/stalker/weapons/attachments/a_okp7_optic.mdl", bone = "Weapon", pos = Vector(0, -4.5, 1.5), angle = Angle(0, -90, 0), size = Vector(1.3, 1.3, 1.3), merge = false},
-		["cw_sil_ekp_optic"] = {model = "models/silver/stalker/weapons/attachments/a_ekp_optic.mdl", bone = "Weapon", pos = Vector(0, -4.5, 2.5), angle = Angle(0, -90, 0), size = Vector(1.1, 1.1, 1.1), merge = false},
+		["cw_sil_ekp_optic"] = {model = "models/silver/stalker/weapons/attachments/a_ekp_new_optic.mdl", bone = "Weapon", pos = Vector(0, -4.5, 2.5), angle = Angle(0, -90, 0), size = Vector(1.1, 1.1, 1.1), merge = false},
+		["cw_sil_pk1_optic"] = {model = "models/silver/stalker/weapons/attachments/a_pk1_optic.mdl", bone = "Weapon", pos = Vector(0, -4.5, 2.25), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), merge = false},
+		["cw_sil_pka_optic"] = {model = "models/silver/stalker/weapons/attachments/a_pka_optic.mdl", bone = "Weapon", pos = Vector(0, -4.5, 2.25), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), merge = false},
 		
 	}
 	
@@ -65,7 +67,9 @@ if CLIENT then
 		["cw_sil_pso1_scope"] = {model = "models/silver/stalker/weapons/attachments/w_pso2_scope.mdl", bone = "R Hand", pos = Vector(-56, -12, 10), angle = Angle(0, 0, 110), size = Vector(1, 1, 1), merge = false},
 		["cw_sil_ip29_scope"] = {model = "models/silver/stalker/weapons/attachments/w_ip29_scope.mdl", bone = "R Hand", pos = Vector(-56, -1, -7), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), merge = false},
 		["cw_sil_okp7_optic"] = {model = "models/silver/stalker/weapons/attachments/w_okp7_optic.mdl", bone = "R Hand", pos = Vector(-35.5, -1, -21.25), angle = Angle(0, 0, 0), size = Vector(1.3, 1.3, 1.3), merge = false},
-		["cw_sil_ekp_optic"] = {model = "models/silver/stalker/weapons/attachments/w_ekp_optic.mdl", bone = "R Hand", pos = Vector(-35.5, -1, -20.25), angle = Angle(0, 0, 0), size = Vector(1.3, 1.3, 1.3), merge = false},
+		["cw_sil_ekp_optic"] = {model = "models/silver/stalker/weapons/attachments/w_ekp_new_optic.mdl", bone = "R Hand", pos = Vector(-35.5, -1, -20.25), angle = Angle(0, 0, 0), size = Vector(1.3, 1.3, 1.3), merge = false},
+		["cw_sil_pk1_optic"] = {model = "models/silver/stalker/weapons/attachments/w_pk1_optic.mdl", bone = "R Hand", pos = Vector(-35.5, -1, -20.25), angle = Angle(0, 0, 0), size = Vector(1.3, 1.3, 1.3), merge = false},
+		["cw_sil_pka_optic"] = {model = "models/silver/stalker/weapons/attachments/w_pka_optic.mdl", bone = "R Hand", pos = Vector(-35.5, -1, -20.25), angle = Angle(0, 0, 0), size = Vector(1.3, 1.3, 1.3), merge = false},
 		
 	}
 	
@@ -84,12 +88,18 @@ if CLIENT then
 	SWEP.CWSILEKPPos = Vector(-2.6282, 1, -0.756)
 	SWEP.CWSILEKPAng = Vector(0, 0, 0)
 	
+	SWEP.CWSILPK1Pos = Vector(-2.6682, 1, -0.356)
+	SWEP.CWSILPK1Ang = Vector(0, 0, 0)
+	
+	SWEP.CWSILPKAPos = Vector(-2.6682, 1, 0.256)
+	SWEP.CWSILPKAAng = Vector(0, 0, 0)
+	
 	SWEP.CustomizationMenuScale = 0.019
 end
 
 SWEP.Attachments = {
 	{header = "Magazine", offset = {-300, -200}, atts = {"cw_sil_vss_20"}},
-	{header = "Sight", offset = {400, -450}, atts = {"cw_sil_ip29_scope", "cw_sil_pso1_scope", "cw_sil_okp7_optic", "cw_sil_ekp_optic"}},
+	{header = "Sight", offset = {400, -450}, atts = {"cw_sil_ip29_scope", "cw_sil_pso1_scope", "cw_sil_okp7_optic", "cw_sil_ekp_optic", "cw_sil_pk1_optic", "cw_sil_pka_optic"}},
 	{header = "Barrel", offset = {-100, -450}, atts = {"kk_ins2_hoovy"}},
 	{header = "Lasers", offset = {100, 350}, atts = {"kk_ins2_lam", "kk_ins2_flashlight", "kk_ins2_anpeq15"}},
 	{header = "Under", offset = {-400, 0}, atts = {"kk_ins2_vertgrip"}},

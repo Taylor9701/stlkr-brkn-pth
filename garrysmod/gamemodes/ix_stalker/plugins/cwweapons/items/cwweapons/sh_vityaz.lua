@@ -1,6 +1,6 @@
 ITEM.name = "Vityaz SN"
 ITEM.description = "The Vityaz-SN is a 9×19mm Parabellum submachine gun developed in 2004 by Izhmash. It is based on the AK-74 rifle and offers a high degree of parts commonality with the AK-74. It is the standard submachine gun for all branches of the Russian military and police forces."
-ITEM.model = "models/silver/stalker/weapons/w_vityaz.mdl"
+ITEM.model = "models/silver/outbreak/weapons/w_vityaz.mdl"
 ITEM.class = "cw_sil_vityaz"
 ITEM.weaponCategory = "secondary"
 ITEM.width = 2

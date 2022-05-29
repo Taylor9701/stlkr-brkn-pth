@@ -62,7 +62,7 @@ if CLIENT then
 	SWEP.CWSILPK1Ang = Vector()
 	
 	SWEP.CWSILPKAPos = Vector(3.43, -2, 0.7)
-	SWEP.CWSILPKAAng = Vector()
+	SWEP.CWSILPKAAng = Vector()	
 	
 	SWEP.SightWithRail = true
 	SWEP.LuaVMRecoilAxisMod = {vert = 1.5, hor = 3, roll = 1, forward = 1, pitch = 1}
@@ -70,9 +70,9 @@ if CLIENT then
 
 	SWEP.AttachmentModelsVM = {
 		["cw_sil_okp7_optic"] = {model = "models/silver/stalker/weapons/attachments/a_okp7_optic.mdl", bone = "a_bizon", pos = Vector(-0.05, -1.8, 1.6), angle = Angle(-90, 0, -90), size = Vector(1.1, 1.1, 1.1)},
-		["cw_sil_ekp_optic"] = {model = "models/silver/outbreak/weapons/attachments/a_optic_ekp_new.mdl", bone = "a_bizon", pos = Vector(0, -2.6, 1.6), angle = Angle(-90, 0, -90), size = Vector(1, 1, 1)},
-		["cw_sil_pk1_optic"] = {model = "models/silver/outbreak/weapons/attachments/a_optic_pk1.mdl", bone = "a_bizon", pos = Vector(0, -2.6, 1.6), angle = Angle(-90, 0, -90), size = Vector(1, 1, 1)},
-		["cw_sil_pka_optic"] = {model = "models/silver/outbreak/weapons/attachments/a_optic_pka.mdl", bone = "a_bizon", pos = Vector(0, -2.6, 1.6), angle = Angle(-90, 0, -90), size = Vector(1, 1, 1)},
+		["cw_sil_ekp_optic"] = {model = "models/silver/stalker/weapons/attachments/a_ekp_new_optic.mdl", bone = "a_bizon", pos = Vector(0, -2.6, 1.6), angle = Angle(-90, 0, -90), size = Vector(1, 1, 1)},
+		["cw_sil_pk1_optic"] = {model = "models/silver/stalker/weapons/attachments/a_pk1_optic.mdl", bone = "a_bizon", pos = Vector(0, -2.6, 1.6), angle = Angle(-90, 0, -90), size = Vector(1, 1, 1)},
+		["cw_sil_pka_optic"] = {model = "models/silver/stalker/weapons/attachments/a_pka_optic.mdl", bone = "a_bizon", pos = Vector(0, -2.6, 1.6), angle = Angle(-90, 0, -90), size = Vector(1, 1, 1)},
 		["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "a_bizon", pos = Vector(0.03, -3.4, 1), angle = Angle(180, 180, 90), adjustment = {min = -1.3, max = 0.5, inverseOffsetCalc = true, axis = "y"}, size = Vector(0.4, 0.4, 0.4)},
 		["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", bone = "a_bizon", pos = Vector(-0.2, 7.5, 11), angle = Angle(-90, 90, 0), size = Vector(1, 1, 1)},
 		["md_kobra"] = {model = "models/cw2/attachments/kobra.mdl", bone = "a_bizon", pos = Vector(-0.45, 0.7, 1.5), angle = Angle(180, 180, 90), size = Vector(0.5, 0.5, 0.5)},
