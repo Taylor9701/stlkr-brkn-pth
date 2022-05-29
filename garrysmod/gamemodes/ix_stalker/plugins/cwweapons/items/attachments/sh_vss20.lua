@@ -1,7 +1,7 @@
 ITEM.name = "Vintorez Extended Magazine"
 ITEM.description = "A extended magazine explicitly made for the VSS Vintorez."
 ITEM.category = "Attachments"
-ITEM.model = "models/Items/BoxSRounds.mdl"
+ITEM.model = "models/silver/stalker/items/a_vss_20.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 20000
