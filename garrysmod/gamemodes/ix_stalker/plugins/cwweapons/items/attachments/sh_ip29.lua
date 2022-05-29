@@ -1,9 +1,9 @@
-ITEM.name = "IP29 Tulip"
+ITEM.name = "1P29 Tulip"
 ITEM.description = "Russian optic sight. 4.0x magnification."
 ITEM.category = "Attachments"
-ITEM.width = 2
+ITEM.width = 1
 ITEM.height = 1
-ITEM.model = "models/cw2/attachments/pso.mdl"
+ITEM.model = "models/silver/stalker/items/a_ip29.mdl"
 ITEM.upgradeIcon = Material("materials/vgui/ui/stalker/weaponupgrades/4xmag.png")
 ITEM.slot = 1
 --ITEM.busflag = "SPECIAL3_1"
