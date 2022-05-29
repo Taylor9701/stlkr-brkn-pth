@@ -1,7 +1,7 @@
 ITEM.name = "M1911 Extended Magazine"
 ITEM.description = "A extended magazine explicitly made for the M1911."
 ITEM.category = "Attachments"
-ITEM.model = "models/Items/BoxSRounds.mdl"
+ITEM.model = "models/silver/stalker/items/a_m1911.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 2000
