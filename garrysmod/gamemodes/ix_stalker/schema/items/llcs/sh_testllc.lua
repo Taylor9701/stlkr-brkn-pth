@@ -8,4 +8,4 @@ ITEM.width = 1
 ITEM.height = 1
 ITEM.invWidth = 1
 ITEM.invHeight = 1
-ITEM.isBag = false;
+ITEM.isLLC = true;
