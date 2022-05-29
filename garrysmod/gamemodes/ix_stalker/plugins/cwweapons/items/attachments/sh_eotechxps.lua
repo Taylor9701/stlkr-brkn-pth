@@ -1,7 +1,7 @@
-ITEM.name = "Eotech XPS"
-ITEM.description = "Practically identical to the Eotech Holographic Sight in every way, this version is simply more compact and easier to attach/remove. XPS meaning Express, this comes as no surpise."
+ITEM.name = "EOTech XPS"
+ITEM.description = "Practically identical to the EOTech Holographic Sight in every way, this version is simply more compact and easier to attach/remove. XPS meaning Express, this comes as no surpise."
 ITEM.category = "Attachments"
-ITEM.model = "models/cw2/attachments/microt1.mdl"
+ITEM.model = "models/silver/stalker/items/a_xps.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 6250

@@ -1,7 +1,7 @@
 ITEM.name = "Aimpoint CompM4S"
 ITEM.description = "An improvement over the original Aimpoint Red Dot Sight, the CompM4S provides longer battery life, accepts any AA battery, and is more durable in harsh conditions."
 ITEM.category = "Attachments"
-ITEM.model = "models/cw2/attachments/microt1.mdl"
+ITEM.model = "models/silver/stalker/items/a_compm4.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 5850

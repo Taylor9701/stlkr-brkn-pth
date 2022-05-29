@@ -1,7 +1,7 @@
 ITEM.name = "Saiga-12 Flash Hider"
 ITEM.description = "A Flash Hider explicitly made for the Saiga-12 Shotgun"
 ITEM.category = "Attachments"
-ITEM.model = "models/Items/BoxSRounds.mdl"
+ITEM.model = "models/silver/stalker/items/a_saiga_flash.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 15000

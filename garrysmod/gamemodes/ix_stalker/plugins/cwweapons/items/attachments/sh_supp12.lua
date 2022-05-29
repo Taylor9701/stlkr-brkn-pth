@@ -1,8 +1,8 @@
 ITEM.name = "12 Gauge Suppressor"
 ITEM.description = "A suppressor made for 12 Gauge Shotguns."
 ITEM.category = "Attachments"
-ITEM.model = "models/cw2/attachments/cobra_m2.mdl"
-ITEM.width = 1
+ITEM.model = "models/silver/stalker/items/a_suppressor_12g.mdl"
+ITEM.width = 2
 ITEM.height = 1
 ITEM.price = 10000
 ITEM.slot = 2

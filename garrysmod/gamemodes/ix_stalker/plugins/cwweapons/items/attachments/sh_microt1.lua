@@ -1,7 +1,7 @@
 ITEM.name = "Micro T-1 Red Dot Sight"
 ITEM.description = "Low profile, simple to use, and surrounded by a high strength aluminum housing, the Micro T-1 Red Dot Sight is popular for precisely those reasons."
 ITEM.category = "Attachments"
-ITEM.model = "models/cw2/attachments/microt1.mdl"
+ITEM.model = "models/silver/stalker/items/a_microt1.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 5250

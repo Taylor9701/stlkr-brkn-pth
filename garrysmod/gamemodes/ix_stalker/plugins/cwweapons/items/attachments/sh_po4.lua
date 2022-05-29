@@ -1,7 +1,7 @@
 ITEM.name = "PO 4x24 Scope"
 ITEM.description = "Produced for the Russian Military and foreign markets, the PO 4x24 is a standard mid to long range optic in Eastern Europe."
 ITEM.category = "Attachments"
-ITEM.model = "models/cw2/attachments/pso.mdl"
+ITEM.model = "models/silver/stalker/items/a_po4.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 10000

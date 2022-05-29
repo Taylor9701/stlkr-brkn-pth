@@ -1,7 +1,7 @@
 ITEM.name = "Flashlight"
 ITEM.description = "A flashlight which can be attached to any rail or weapon barrel depending on the weapon in question's construction."
 ITEM.category = "Attachments"
-ITEM.model = "models/Items/BoxSRounds.mdl"
+ITEM.model = "models/silver/stalker/items/a_flashlight_rail.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 2000

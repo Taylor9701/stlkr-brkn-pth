@@ -1,7 +1,7 @@
 ITEM.name = "AS VAL Extended Magazine"
 ITEM.description = "A extended magazine explicitly made for the AS VAL."
 ITEM.category = "Attachments"
-ITEM.model = "models/Items/BoxSRounds.mdl"
+ITEM.model = "models/silver/stalker/items/a_val_30.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 30000

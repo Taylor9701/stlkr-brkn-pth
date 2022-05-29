@@ -1,7 +1,7 @@
 ITEM.name = "C-More Red Dot Sight"
 ITEM.description = "The C-More Red Dot Sight is built explicitly to allow the user to have as much vision as possible, and to acquire targets as quickly as possible."
 ITEM.category = "Attachments"
-ITEM.model = "models/cw2/attachments/microt1.mdl"
+ITEM.model = "models/silver/stalker/items/a_cmore.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 7000

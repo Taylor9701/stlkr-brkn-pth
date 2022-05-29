@@ -1,8 +1,8 @@
 ITEM.name = "Bipod"
 ITEM.description = "A stabilization device, a Bipod is extraordinarily useful when fighting at a distance, as it helps to stabilize the weapon and make shooting easier and more accurate."
 ITEM.category = "Attachments"
-ITEM.model = "models/Items/BoxSRounds.mdl"
-ITEM.width = 1
+ITEM.model = "models/silver/stalker/items/a_bipod.mdl"
+ITEM.width = 2
 ITEM.height = 1
 ITEM.price = 2000
 ITEM.slot = 5

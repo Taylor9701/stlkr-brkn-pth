@@ -1,9 +1,9 @@
 ITEM.name = "PPSh-41 Drum Magazine"
 ITEM.description = "A drum magazine explicitly made for the PPSh-41."
 ITEM.category = "Attachments"
-ITEM.model = "models/Items/BoxSRounds.mdl"
-ITEM.width = 1
-ITEM.height = 1
+ITEM.model = "models/silver/stalker/items/a_ppsh41_drum.mdl"
+ITEM.width = 2
+ITEM.height = 2
 ITEM.price = 8000
 ITEM.slot = 4
 ITEM.isAttachment = true

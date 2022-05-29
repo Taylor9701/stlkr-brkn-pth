@@ -1,9 +1,9 @@
 ITEM.name = "IWI Galil ACE Drum Magazine"
 ITEM.description = "A drum magazine explicitly made for IWI Galil ACE."
 ITEM.category = "Attachments"
-ITEM.model = "models/Items/BoxSRounds.mdl"
-ITEM.width = 1
-ITEM.height = 1
+ITEM.model = "models/silver/stalker/items/a_galil_drum.mdl"
+ITEM.width = 2
+ITEM.height = 2
 ITEM.price = 30000
 ITEM.slot = 4
 ITEM.isAttachment = true

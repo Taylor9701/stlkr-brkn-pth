@@ -1,7 +1,7 @@
 ITEM.name = "x8 Scope"
 ITEM.description = "A x8 Optic supported by certain bolt action rifles such as the SV-98 and M40A1."
 ITEM.category = "Attachments"
-ITEM.model = "models/cw2/attachments/pso.mdl"
+ITEM.model = "models/silver/stalker/items/a_m40.mdl"
 ITEM.width = 2
 ITEM.height = 1
 ITEM.price = 17000

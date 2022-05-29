@@ -1,8 +1,8 @@
 ITEM.name = "Trijicon ACOG 4x32 Scope"
 ITEM.description = "Featuring day and night illumination with no batteries needed, the ACOG scope is reliable under even the harshest conditions."
 ITEM.category = "Attachments"
-ITEM.model = "models/cw2/attachments/pso.mdl"
-ITEM.width = 1
+ITEM.model = "models/silver/stalker/items/a_acog.mdl"
+ITEM.width = 2
 ITEM.height = 1
 ITEM.price = 11500
 ITEM.flag = "3"
