@@ -1,7 +1,7 @@
 ITEM.name = "M6X"
 ITEM.description = "A laser sight & flashlight module which allows the user to use either depending on their needs in the moment. This one is sized for pistols."
 ITEM.category = "Attachments"
-ITEM.model = "models/Items/BoxSRounds.mdl"
+ITEM.model = "models/silver/stalker/items/a_m6x_pistol.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 8000
