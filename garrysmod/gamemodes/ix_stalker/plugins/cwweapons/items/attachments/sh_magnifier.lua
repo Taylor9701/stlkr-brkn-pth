@@ -1,7 +1,7 @@
 ITEM.name = "Aimpoint/XPS x2 Magnifier"
 ITEM.description = "Low profile, simple to use, rail mounted optic intended to be fitted in conjunction with an Aimpoint or XPS optic to provide magnification."
 ITEM.category = "Attachments"
-ITEM.model = "models/Items/BoxSRounds.mdl"
+ITEM.model = "models/silver/stalker/items/a_magnifier.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 6000
