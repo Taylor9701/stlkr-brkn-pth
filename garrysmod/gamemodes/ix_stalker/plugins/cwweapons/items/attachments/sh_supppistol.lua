@@ -1,8 +1,8 @@
 ITEM.name = "Pistol Suppressor"
 ITEM.description = "A pistol-sized suppressor boxed with all the caliber conversion kits that the owner could possibly need."
 ITEM.category = "Attachments"
-ITEM.model = "models/cw2/attachments/cobra_m2.mdl"
-ITEM.width = 1
+ITEM.model = "models/silver/stalker/items/a_suppressor_pistol.mdl"
+ITEM.width = 2
 ITEM.height = 1
 ITEM.price = 10000
 ITEM.slot = 2
