@@ -1,7 +1,7 @@
 ITEM.name = "Speed Loader"
 ITEM.description = "A set of speed loaders for various common revolver calibers."
 ITEM.category = "Attachments"
-ITEM.model = "models/Items/BoxSRounds.mdl"
+ITEM.model = "models/silver/stalker/items/a_revolver_speedloader.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 2000
