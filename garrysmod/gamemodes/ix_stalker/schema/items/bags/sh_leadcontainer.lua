@@ -1,6 +1,6 @@
-ITEM.name = "(DEPRECIATED) Lead Container"
+ITEM.name = "(DEPRECATED) Lead Container"
 ITEM.model = "models/kek1ch/lead_box_closed.mdl"
-ITEM.description = "(DEPRECIATED) A portable lead container with a sealed lid, could be used to store Artifacts or other Anomalous materials to restrict raditation."
+ITEM.description = "(DEPRECATED) A portable lead container with a sealed lid, could be used to store Artifacts or other Anomalous materials to restrict raditation."
 ITEM.category = "Storage"
 ITEM.flag = "Z"
 ITEM.price = 600
