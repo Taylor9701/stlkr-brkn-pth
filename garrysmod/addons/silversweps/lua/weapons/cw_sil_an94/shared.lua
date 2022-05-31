@@ -218,7 +218,7 @@ SWEP.Slot = 3
 SWEP.SlotPos = 0
 SWEP.NormalHoldType = "ar2"
 SWEP.RunHoldType = "passive"
-SWEP.FireModes = {"auto", "semi"}
+SWEP.FireModes = {"auto", "2burst", "semi"}
 SWEP.Base = "cw_kk_ins2_base"
 SWEP.Category = "Silver's SWEPs - Assault Rifles"
 
