@@ -1,5 +1,5 @@
 ITEM.name = "Plate Carrier [SEVA]"
-ITEM.description = "A steel plate carrier. Only usable in a SEVA suit. Upgrades torso protection to III+. "
+ITEM.description = "A steel plate carrier. Only usable in a SEVA suit. \n\nUpgrades torso protection to III+\n-1 Electric "
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
@@ -9,6 +9,9 @@ ITEM.slot = 2
 ITEM.flag = "A"
 ITEM.isUpgrade = true
 ITEM.weight = 4.5
+ITEM.res = {
+    ["Shock"] = -0.10,
+}
 ITEM.isArmorUpg = true
 ITEM.ap = 24
 
