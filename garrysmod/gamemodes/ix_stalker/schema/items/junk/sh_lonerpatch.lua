@@ -1,6 +1,6 @@
-ITEM.name = "Loner HVT Patch"
+ITEM.name = "Loner Patch"
 ITEM.model = "models/kek1ch/tfw_badge_defiance.mdl"
-ITEM.description = "A patch that once belonged to a prominent stalker, recovered by their killer.(Awarded from corpses of defeated player characters)"
+ITEM.description = "A patch that once belonged to a free Stalker."
 ITEM.category = "junk"
 ITEM.flag = "1"
 ITEM.price = 2000
