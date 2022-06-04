@@ -1,7 +1,7 @@
 ITEM.name = "Puddle"
 ITEM.model = "models/ethprops/consumable/flask_water.mdl"
 ITEM.description = "A puddle."
-ITEM.longdesc = "A shapeless, liquified artifact that oddly enough cannot be divided or separated, will always remain as one cohesive puddle regardless of the conditions it’s put through. Must be contained in a flask or other container. \n\nChemical +3\nElectrical -2\nSingle use"
+ITEM.longdesc = "A shapeless, liquified artifact that oddly enough cannot be divided or separated, will always remain as one cohesive puddle regardless of the conditions it’s put through. Must be contained in a flask or other container. \n\nChemical Hotspot +3 Rounds\n\nThermal Hotspot +3 RoundsElectrical Hotspot -2\nSingle use"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 8800

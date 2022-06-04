@@ -1,6 +1,6 @@
-ITEM.name = "Ecologist HVT Patch"
+ITEM.name = "Ecologist Patch"
 ITEM.model = "models/silver/stalker/items/tfw_scientist.mdl"
-ITEM.description = "A patch that once belonged to a prominent member of the Ecologists faction, recovered by their killer. (Awarded from corpses of defeated player characters)"
+ITEM.description = "A patch that once belonged to a member of the Ecologists faction."
 ITEM.category = "junk"
 ITEM.flag = "1"
 ITEM.price = 2000
