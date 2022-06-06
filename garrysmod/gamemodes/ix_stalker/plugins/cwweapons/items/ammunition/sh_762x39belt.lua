@@ -7,6 +7,6 @@ ITEM.description = "A belt and drum that contains %s rounds of 7.62x39mm."
 ITEM.category = "Ammunition"
 ITEM.price = 4800
 ITEM.flag = "4"
-ITEM.ammoAmount = 1000
+ITEM.ammoAmount = 100
 ITEM.weight = 0.025
 ITEM.isAmmo = true
