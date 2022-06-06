@@ -2,7 +2,7 @@ ITEM.name = "Sunset Lightweight Assault Suit (Female)"
 ITEM.model = "models/kek1ch/exolight_outfit.mdl"
 ITEM.replacements = "models/silver/stalker/female_sunset_lone.mdl"
 ITEM.description = "A set of Sunset Assault Armour."
-ITEM.longdesc = "A traditional 'Sunrise' stalker suit that has been heavily modified with non-traditional components, this suit consists of a base suit that has been supplemented and armoured with various pieces of body armour. It's not seen often in the hands of Stalkers in the zone due to the rare components needed to manufacture it, but it is used by Veteran stalkers as an efficient combat suit that can prove versatile in countless situations.\n\nBallistic Protection:\nSkull: III\nNeck & Face: IIIA\nTorso: III+\nLimbs: II\nWeight: 2"
+ITEM.longdesc = "A traditional 'Sunrise' stalker suit that has been heavily modified with non-traditional components, this suit consists of a base suit that has been supplemented and armoured with various pieces of body armour. It's not seen often in the hands of Stalkers in the zone due to the rare components needed to manufacture it, but it is used by Veteran stalkers as an efficient combat suit that can prove versatile in countless situations.\n\nBallistic Protection:\nSkull: III\nNeck & Face: 0\nTorso: III+\nLimbs: II\nWeight: 2"
 ITEM.width = 2
 ITEM.height = 2
 ITEM.price = 175000
@@ -21,13 +21,13 @@ ITEM.noBusiness = true
 ITEM.weight = 10
 ITEM.maxArmor = 30
 ITEM.res = {
-	["Bullet"] = 0.2,
-	["Blast"] = 0.2,
-	["Fall"] = 0.2,
+	["Bullet"] = 0.3,
+	["Blast"] = 0.3,
+	["Fall"] = 0.3,
 	["Burn"] = 0.1,
-	["Radiation"] = 0.1,
+	["Radiation"] = 0.2,
 	["Chemical"] = 0.1,
-	["Shock"] = 0.1,
+	["Shock"] = 0.0,
 	["Psi"] = 0.2,
 }
 
