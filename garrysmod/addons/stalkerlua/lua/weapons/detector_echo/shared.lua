@@ -184,7 +184,7 @@ function SWEP:Think()
 				end
 			end
 		end
-		local dist = 201
+		local dist = 301
 		local ent = nil
 		for k,v in pairs(anoms) do
 			local pos = v:GetPos()
@@ -198,8 +198,8 @@ function SWEP:Think()
 				ent = v
 			end
 		end
-		if dist < 200 then
-			if self.LastBeep + dist/200 - CurTime() <= 0 then
+		if dist < 300 then
+			if self.LastBeep + dist/300 - CurTime() <= 0 then
 				self.LastBeep = CurTime()
 				self.VElements["echo"].skin = 2
 				timer.Simple(0.1, function()
