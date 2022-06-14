@@ -160,7 +160,6 @@ function SWEP:Deploy()
 	return true
 end
 
-local anomalies = {}
 --Common Artifacts--
 anomalies["models/nasca/etherealsrp_artifacts/droplet.mdl"] = true
 anomalies["models/nasca/etherealsrp_artifacts/jellyfish.mdl"] = true
@@ -172,6 +171,29 @@ anomalies["models/artefacts/grib.mdl"] = true
 anomalies["models/artefacts/sun.mdl"] = true -- Core
 anomalies["models/artefacts/yoyo.mdl"] = true -- Colony
 anomalies["models/srp/items/art_stoneflower.mdl"] = true -- Scorched
+
+
+--Uncommon Artifacts--
+anomalies["models/nasca/etherealsrp_artifacts/battery.mdl"] = true
+anomalies["models/nasca/etherealsrp_artifacts/crystal_thorn.mdl"] = true
+anomalies["models/nasca/etherealsrp_artifacts/fireball.mdl"] = true
+anomalies["models/nasca/etherealsrp_artifacts/flash.mdl"] = true
+anomalies["models/nasca/etherealsrp_artifacts/nightstar.mdl"] = true
+anomalies["models/nasca/etherealsrp_artifacts/slug.mdl"] = true
+anomalies["models/nasca/etherealsrp_artifacts/stoneblood.mdl"] = true
+anomalies["models/nasca/etherealsrp_artifacts/stoneflower.mdl"] = true
+anomalies["models/nasca/etherealsrp_artifacts/meatchunk.mdl"] = true
+anomalies["models/artefacts/ice.mdl"] = true
+anomalies["models/tnb/stalker/artifacts/sponge.mdl"] = true
+anomalies["models/ethprops/consumable/flask_water.mdl"] = true
+anomalies["models/artefacts/plenka.mdl"] = true
+anomalies["models/artefacts/moss.mdl"] = true
+anomalies["models/artefacts/spike.mdl"] = true -- Nugget
+anomalies["models/artefacts/chelust.mdl"] = true -- Pearls
+anomalies["models/artefacts/emerald.mdl"] = true -- Kryptonite
+anomalies["models/hunter/plates/plate.mdl"] = true -- Pacifier
+anomalies["models/props/de_inferno/wall_lamp_ring.mdl"] = true -- Wheel
+anomalies["models/artefacts/mica.mdl"] = true -- Crater
 
 SWEP.LastBeep = 0
 function SWEP:Think()
