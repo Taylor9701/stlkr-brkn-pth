@@ -196,6 +196,31 @@ anomalies["models/hunter/plates/plate.mdl"] = true -- Pacifier
 anomalies["models/props/de_inferno/wall_lamp_ring.mdl"] = true -- Wheel
 anomalies["models/artefacts/mica.mdl"] = true -- Crater
 
+--Rare Artifacts--
+anomalies["models/artefacts/itcher.mdl"] = true
+anomalies["models/artefacts/spaika.mdl"] = true
+anomalies["models/tnb/stalker/artifacts/gravi.mdl"] = true
+anomalies["models/artefacts/phantom_star.mdl"] = true
+anomalies["models/artefacts/claw.mdl"] = true
+anomalies["models/nasca/etherealsrp_artifacts/wrenched.mdl"] = true
+anomalies["models/nasca/etherealsrp_artifacts/shell.mdl"] = true
+anomalies["models/nasca/etherealsrp_artifacts/soul.mdl"] = true
+anomalies["models/nasca/etherealsrp_artifacts/mamas_beads.mdl"] = true
+anomalies["models/nasca/etherealsrp_artifacts/eye.mdl"] = true
+anomalies["models/nasca/etherealsrp_artifacts/gravi.mdl"] = true
+anomalies["models/nasca/etherealsrp_artifacts/snowflake.mdl"] = true
+anomalies["models/nasca/etherealsrp_artifacts/urchin.mdl"] = true
+anomalies["models/artefacts/dragon_eye.mdl"] = true
+anomalies["models/artefacts/blackspray.mdl"] = true
+anomalies["models/artefacts/lighthouse.mdl"] = true
+anomalies["models/props_debris/concrete_spawnchunk001d.mdl"] = true --Black Ice
+anomalies["models/artefacts/ear.mdl"] = true --Growth
+anomalies["models/artefacts/dragon_eye.mdl"] = true --Sharpeye
+anomalies["models/predatorcz/stalker/artifacts/psi_field.mdl"] = true --Backbone
+anomalies["models/tnb/stalker/artifacts/witchesjelly.mdl"] = true -- Pellicle
+anomalies["models/tnb/stalker/artifacts/stoneflower.mdl"] = true -- Baptism
+anomalies["models/artefacts/sponge.mdl"] = true -- Coral
+
 if CLIENT then
 	local matScreen = Material("models/kali/miscstuff/stalker/detectors/detector_bear_c"); // ��������, ������� ����
 	local RTTexture = GetRenderTarget("DTC_BEAR", 512, 512); // ����� ��������
