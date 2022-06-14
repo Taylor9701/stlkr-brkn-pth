@@ -10,7 +10,7 @@ ITEM.isAttachment = true
 ITEM.attSearch = { "cw_sil_pilad_scope",}
 ITEM.weight = 1.133
 ITEM.upgradeIcon = Material("materials/vgui/ui/stalker/weaponupgrades/8xmag.png")
-ITEM.flag = "4"
+   
 
 -- Slot Numbers Defined:
 

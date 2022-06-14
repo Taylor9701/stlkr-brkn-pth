@@ -10,7 +10,7 @@ ITEM.isAttachment = true
 ITEM.attSearch = { "kk_ins2_flashhider_big_shotgun", }
 ITEM.weight = 0.088
 ITEM.upgradeIcon = Material("materials/vgui/ui/stalker/weaponupgrades/9.png")
-ITEM.flag = "4"
+   
 
 
 -- Slot Numbers Defined:

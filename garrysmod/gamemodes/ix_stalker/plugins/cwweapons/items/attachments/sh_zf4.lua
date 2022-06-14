@@ -12,4 +12,4 @@ ITEM.Range = 10
 ITEM.isAttachment = true
 ITEM.weight = 0.65
 ITEM.attSearch = { "cw_sil_zf4"}
-ITEM.flag = "3"
+   

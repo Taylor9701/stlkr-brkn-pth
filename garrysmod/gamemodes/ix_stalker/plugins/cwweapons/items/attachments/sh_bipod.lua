@@ -11,7 +11,7 @@ ITEM.attSearch = { "kk_ins2_bipod", }
 ITEM.weight = 0.36
 ITEM.upgradeIcon = Material("materials/vgui/ui/stalker/weaponupgrades/grip.png")
 ITEM.Bal = 5
-ITEM.flag = "1"
+  
 
 
 -- Slot Numbers Defined:

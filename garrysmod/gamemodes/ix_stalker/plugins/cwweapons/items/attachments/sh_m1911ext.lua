@@ -10,7 +10,7 @@ ITEM.isAttachment = true
 ITEM.attSearch = { "kk_ins2_mag_m1911_15" }
 ITEM.weight = 0.5
 ITEM.upgradeIcon = Material("materials/vgui/ui/stalker/weaponupgrades/ammocap.png")
-ITEM.flag = "1"
+  
 
 
 -- Slot Numbers Defined:

@@ -5,7 +5,7 @@ ITEM.model = "models/silver/stalker/items/a_acog.mdl"
 ITEM.width = 2
 ITEM.height = 1
 ITEM.price = 11500
-ITEM.flag = "3"
+   
 ITEM.slot = 1
 ITEM.isAttachment = true
 ITEM.attSearch = { "kk_ins2_cstm_acog" }

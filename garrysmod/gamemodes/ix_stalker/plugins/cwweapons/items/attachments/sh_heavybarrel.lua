@@ -11,7 +11,7 @@ ITEM.attSearch = { "kk_ins2_hoovy", }
 ITEM.weight = 1.1
 ITEM.upgradeIcon = Material("materials/vgui/ui/stalker/weaponupgrades/4.png")
 ITEM.Range = 20
-ITEM.flag = "3"
+   
 
 -- Slot Numbers Defined:
 

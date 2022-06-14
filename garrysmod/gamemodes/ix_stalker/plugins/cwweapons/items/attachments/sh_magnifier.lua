@@ -12,7 +12,7 @@ ITEM.attSearch = { "kk_ins2_magnifier" }
 ITEM.weight = 0.1
 ITEM.upgradeIcon = Material("materials/vgui/ui/stalker/weaponupgrades/sights.png")
 ITEM.Bal = 6
-ITEM.flag = "3"
+   
 
 -- Slot Numbers Defined:
 

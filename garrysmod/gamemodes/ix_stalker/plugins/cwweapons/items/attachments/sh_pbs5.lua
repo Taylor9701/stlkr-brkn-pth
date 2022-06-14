@@ -10,7 +10,7 @@ ITEM.isAttachment = true
 ITEM.attSearch = { "kk_ins2_pbs5", "kk_ins2_suppressor_ins"}
 ITEM.weight = 0.69
 ITEM.upgradeIcon = Material("materials/vgui/ui/stalker/weaponupgrades/silenced.png")
-ITEM.flag = "3"
+   
 
 
 -- Slot Numbers Defined:

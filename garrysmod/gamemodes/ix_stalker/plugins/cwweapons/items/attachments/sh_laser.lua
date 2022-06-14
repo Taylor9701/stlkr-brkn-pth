@@ -11,7 +11,7 @@ ITEM.attSearch = { "kk_ins2_lam", }
 ITEM.weight = 0.175
 ITEM.upgradeIcon = Material("materials/vgui/ui/stalker/weaponupgrades/1.png")
 ITEM.Bal = 5
-ITEM.flag = "3"
+   
 
 -- Slot Numbers Defined:
 

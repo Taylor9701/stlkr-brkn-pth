@@ -10,7 +10,7 @@ ITEM.isAttachment = true
 ITEM.attSearch = { "kk_ins2_revolver_mag", }
 ITEM.weight = 0.090
 ITEM.upgradeIcon = Material("materials/vgui/ui/stalker/weaponupgrades/reloadspeed.png")
-ITEM.flag = "1"
+  
 
 -- Slot Numbers Defined:
 

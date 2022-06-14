@@ -11,7 +11,7 @@ ITEM.attSearch = { "cw_sil_pka_optic" }
 ITEM.weight = 0.45
 ITEM.upgradeIcon = Material("materials/vgui/ui/stalker/weaponupgrades/sights.png")
 ITEM.Bal = 5
-ITEM.flag = "1"
+  
 
 -- Slot Numbers Defined:
 

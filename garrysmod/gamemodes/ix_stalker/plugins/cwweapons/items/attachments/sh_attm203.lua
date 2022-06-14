@@ -10,7 +10,7 @@ ITEM.isAttachment = true
 ITEM.attSearch = { "kk_ins2_gl_m203", }
 ITEM.weight = 1.36
 ITEM.upgradeIcon = Material("materials/vgui/ui/stalker/weaponupgrades/grip.png")
-ITEM.flag = "4"
+   
 
 
 -- Slot Numbers Defined:

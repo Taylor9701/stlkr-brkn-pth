@@ -10,7 +10,7 @@ ITEM.isAttachment = true
 ITEM.attSearch = { "cw_sil_ppsh41_drum" }
 ITEM.weight = 1.5
 ITEM.upgradeIcon = Material("materials/vgui/ui/stalker/weaponupgrades/ammocap.png")
-ITEM.flag = "3"
+   
 
 
 -- Slot Numbers Defined:
