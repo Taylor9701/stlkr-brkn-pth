@@ -310,7 +310,7 @@ function SWEP:Think()
 				end
 			end
 		end
-		local dist = 401
+		local dist = 601
 		local ent = nil
 		for k,v in pairs(anoms) do
 			if v:GetPos():Distance(self.Owner:GetPos()) < dist then
@@ -318,7 +318,7 @@ function SWEP:Think()
 				ent = v
 			end
 		end
-		if dist < 400 and self.LastBeep + dist/400 - CurTime() <= 0 then
+		if dist < 600 and self.LastBeep + dist/600 - CurTime() <= 0 then
 			self.LastBeep = CurTime()
 			self.Owner:EmitSound(Sound("stalkerdetectors/echo.wav"), 100, 100)//math.Clamp(250-dist/2,50,250))
 		end
