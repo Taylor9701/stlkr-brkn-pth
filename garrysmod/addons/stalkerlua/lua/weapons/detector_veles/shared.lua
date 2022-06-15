@@ -287,7 +287,7 @@ function SWEP:Think()
 						local dest = self.Owner:GetPos():Distance(v:GetPos())-- plypos.x - v:GetPos().x, plypos.y - v:GetPos().y
 						local x, y = PointOnCircle( tstdeg, dest/30, -2, 21 )
 						
-						if dest < 500 then
+						if dest < 700 then
 							if v:GetClass() == "ix_item" then
 								if anomalies[string.lower(v:GetModel())] then
 									--print(v:GetClass())
@@ -320,7 +320,7 @@ function SWEP:Think()
 		end
 		if dist < 500 and self.LastBeep + dist/500 - CurTime() <= 0 then
 			self.LastBeep = CurTime()
-			self.Owner:EmitSound(Sound("stalkerdetectors/echo.wav"), 100, 100)//math.Clamp(350-dist/2,50,350))
+			self.Owner:EmitSound(Sound("stalkerdetectors/echo.wav"), 100, 100)//math.Clamp(300-dist/2,50,300))
 		end
 	end
 end
