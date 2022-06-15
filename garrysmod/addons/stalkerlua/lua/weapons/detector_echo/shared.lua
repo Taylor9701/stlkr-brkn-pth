@@ -173,6 +173,8 @@ anomalies["models/artefacts/grib.mdl"] = true
 anomalies["models/artefacts/sun.mdl"] = true -- Core
 anomalies["models/artefacts/yoyo.mdl"] = true -- Colony
 anomalies["models/srp/items/art_stoneflower.mdl"] = true -- Scorched
+anomalies["models/srp/items/art_mammasbeads.mdl"] = true -- Strand
+anomalies["models/tnb/stalker/artifacts/static.mdl"] = true -- Sheet
 
 
 --Uncommon Artifacts--
@@ -196,6 +198,10 @@ anomalies["models/artefacts/emerald.mdl"] = true -- Kryptonite
 anomalies["models/hunter/plates/plate.mdl"] = true -- Pacifier
 anomalies["models/props/de_inferno/wall_lamp_ring.mdl"] = true -- Wheel
 anomalies["models/artefacts/mica.mdl"] = true -- Crater
+anomalies["models/predatorcz/stalker/artifacts/medusa.mdl"] = true -- Mushroom
+anomalies["models/tnb/stalker/artifacts/slug.mdl"] = true -- Blue
+anomalies["models/artefacts/ball.mdl"] = true -- Meteorite
+anomalies["models/artefacts/bud.mdl"] = true -- Crystal Flower
 
 SWEP.LastBeep = 0
 function SWEP:Think()
