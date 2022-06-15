@@ -160,6 +160,8 @@ function SWEP:Deploy()
 	return true
 end
 
+local anomalies = {}
+
 --Common Artifacts--
 anomalies["models/nasca/etherealsrp_artifacts/droplet.mdl"] = true
 anomalies["models/nasca/etherealsrp_artifacts/jellyfish.mdl"] = true
@@ -229,7 +231,7 @@ function SWEP:Think()
 						self.VElements["echo"].skin = 1
 					end
 				end)
-				self.Owner:EmitSound(Sound("stalkerdetectors/echo.wav"), 100, 100)//math.Clamp(250-dist/2,50,250))
+				self.Owner:EmitSound(Sound("stalkerdetectors/echo.wav"), 100, 100)//math.Clamp(350-dist/2,50,350))
 			end
 		end
 	end
