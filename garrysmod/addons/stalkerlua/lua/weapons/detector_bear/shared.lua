@@ -260,7 +260,7 @@ if CLIENT then
 					end
 				end
 			end
-			local dist = 301
+			local dist = 401
 			local ent = nil
 			for k,v in pairs(anoms) do
 				if v:GetPos():Distance(LocalPlayer():GetPos()) < dist then
@@ -268,7 +268,7 @@ if CLIENT then
 					ent = v
 				end
 			end
-			if dist < 300 then
+			if dist < 400 then
 				local ang = ply:GetAngles();
 				local pos = ent:GetPos() - ply:GetShootPos()
 				surface.SetDrawColor(255, 255, 255, 255)
@@ -296,7 +296,7 @@ function SWEP:Think()
 				end
 			end
 		end
-		local dist = 351
+		local dist = 401
 		local ent = nil
 		for k,v in pairs(anoms) do
 			if v:GetPos():Distance(self.Owner:GetPos()) < dist then
@@ -304,9 +304,9 @@ function SWEP:Think()
 				ent = v
 			end
 		end
-		if dist < 350 and self.LastBeep + dist/350 - CurTime() <= 0 then
+		if dist < 400 and self.LastBeep + dist/400 - CurTime() <= 0 then
 			self.LastBeep = CurTime()
-			self.Owner:EmitSound(Sound("stalkerdetectors/echo.wav"), 100, 100)//math.Clamp(250-dist/2,50,250))
+			self.Owner:EmitSound(Sound("stalkerdetectors/echo.wav"), 100, 100)//math.Clamp(350-dist/2,50,350))
 		end
 	end
 end
