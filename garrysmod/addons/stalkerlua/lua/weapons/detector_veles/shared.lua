@@ -178,6 +178,9 @@ anomalies["models/artefacts/grib.mdl"] = true
 anomalies["models/artefacts/sun.mdl"] = true -- Core
 anomalies["models/artefacts/yoyo.mdl"] = true -- Colony
 anomalies["models/srp/items/art_stoneflower.mdl"] = true -- Scorched
+anomalies["models/srp/items/art_mammasbeads.mdl"] = true -- Strand
+anomalies["models/tnb/stalker/artifacts/static.mdl"] = true -- Sheet
+
 
 --Uncommon Artifacts--
 anomalies["models/nasca/etherealsrp_artifacts/battery.mdl"] = true
@@ -192,18 +195,18 @@ anomalies["models/nasca/etherealsrp_artifacts/meatchunk.mdl"] = true
 anomalies["models/artefacts/ice.mdl"] = true
 anomalies["models/tnb/stalker/artifacts/sponge.mdl"] = true
 anomalies["models/ethprops/consumable/flask_water.mdl"] = true
-anomalies["models/artefacts/plenka.mdl"] = true  -- Bastard
-anomalies["models/artefacts/moss.mdl"] = true -- Beard
+anomalies["models/artefacts/plenka.mdl"] = true
+anomalies["models/artefacts/moss.mdl"] = true
 anomalies["models/artefacts/spike.mdl"] = true -- Nugget
 anomalies["models/artefacts/chelust.mdl"] = true -- Pearls
 anomalies["models/artefacts/emerald.mdl"] = true -- Kryptonite
 anomalies["models/hunter/plates/plate.mdl"] = true -- Pacifier
 anomalies["models/props/de_inferno/wall_lamp_ring.mdl"] = true -- Wheel
 anomalies["models/artefacts/mica.mdl"] = true -- Crater
-
-
-
-
+anomalies["models/predatorcz/stalker/artifacts/medusa.mdl"] = true -- Mushroom
+anomalies["models/tnb/stalker/artifacts/slug.mdl"] = true -- Blue
+anomalies["models/artefacts/ball.mdl"] = true -- Meteorite
+anomalies["models/artefacts/bud.mdl"] = true -- Crystal Flower
 
 --Rare Artifacts--
 anomalies["models/artefacts/itcher.mdl"] = true
