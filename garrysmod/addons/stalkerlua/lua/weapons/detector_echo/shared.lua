@@ -231,7 +231,7 @@ function SWEP:Think()
 						self.VElements["echo"].skin = 1
 					end
 				end)
-				self.Owner:EmitSound(Sound("stalkerdetectors/echo.wav"), 100, 100)//math.Clamp(350-dist/2,50,350))
+				self.Owner:EmitSound(Sound("stalkerdetectors/echo.wav"), 100, 100)//math.Clamp(250-dist/2,50,250))
 			end
 		end
 	end
