@@ -9,7 +9,7 @@ ITEM.sound = "stalker/interface/inv_eat_pills_effect.ogg"
 ITEM.price = "8000"
 ITEM.flag = "1"
 ITEM.quantity = 4
-ITEM.weight = 0.01
+ITEM.weight = 0.1
 ITEM.stopsBleed = true
 
 function ITEM:GetDescription()
