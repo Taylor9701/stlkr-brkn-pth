@@ -1,15 +1,15 @@
 ITEM.name = "Cocaine"
 ITEM.description = "Imported cocaine."
-ITEM.longdesc = "Small aluminium case containing cocaine and the tools facilitating use. Cocaine is a powerful nervous system stimulant. Cocaine increases alertness, induces feelings of well-being, competence and sexuality. Anxiety, paranoia and restlessness are common side effects. With excessive dosage, tremors, convulsions and increased body temperature are observed. Bandits are known for sniffing this drug right before launching an assault or ambush."
+ITEM.longdesc = "Small gram sized case containing cocaine and a cut straw facilitating use. Cocaine is a powerful nervous system stimulant. Cocaine increases alertness, induces feelings of well-being, competence and sexuality. Anxiety, paranoia and restlessness are common side effects. With excessive dosage, tremors, convulsions and increased body temperature are observed. Bandits are known for sniffing this drug right before launching an assault or ambush. \n\n Removes a turn of stun when used immediately or prevents stun for three turns.\n +2 seconds of movement.\n Results in light stagger after five turns."
 ITEM.model = "models/kek1ch/drink_cocaine.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.category = "Medical"
-ITEM.price = "750"
+ITEM.price = "2500"
 ITEM.flag = "1"
-ITEM.quantity = 3
+ITEM.quantity = 1
 ITEM.sound = "stalkersound/inv_sniff_2.mp3"
-ITEM.weight = 0.05
+ITEM.weight = 0.1
 
 function ITEM:GetDescription()
 	if (!self.entity or !IsValid(self.entity)) then
