@@ -1,5 +1,5 @@
 ITEM.name = "Pseudogiant Eye"
-ITEM.model ="models/stalker/outfit/bandit3.mdl"
+ITEM.model ="models/jerry/items/flesheye.mdl"
 ITEM.description = "The gigantic eye of a Pseudogiant. Kinda creepy."
 ITEM.longdesc = "The gigantic, wet, rubbery eye of a Pseudogiant. Heavy and smelling horribly, the only real use is selling to the Ecologists, or if you're in need of a kickball."
 ITEM.width = 2
