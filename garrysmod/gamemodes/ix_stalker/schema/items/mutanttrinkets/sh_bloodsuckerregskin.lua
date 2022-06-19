@@ -1,5 +1,5 @@
 ITEM.name = "Regular Bloodsucker Skin"
-ITEM.model ="models/kek1ch/hide_chimera.mdl"
+ITEM.model ="models/kek1ch/hide_bloodsucker.mdl"
 ITEM.description = "The skin of a Bloodsucker. Looks sturdy. Feels leathery."
 ITEM.longdesc = "A cut of Bloodsucker hide that is extraordinarily rough, and absorbent of liquids. Smells like iron and old meat. Feels like leather."
 ITEM.width = 1
