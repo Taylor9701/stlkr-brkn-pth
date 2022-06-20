@@ -1,6 +1,6 @@
 ITEM.name = "ECS Limonite Stimpack"
 ITEM.description = "A stimpack made by the ECS program of the 'Mineral' variety. It's labeled as 'Limonite'"
-ITEM.longdesc = "A performance enhancing stimpack filled with unknown stimulants. It increases the reflex and doses the user with adrenaline. \n\n\ +4s movement for three friendly turns.\n +20 to reaction/melee rolls.\n Moderate stagger after use from extreme exhaustion.
+ITEM.longdesc = "A performance enhancing stimpack filled with unknown stimulants. It increases the reflex and doses the user with adrenaline. \n\n\ +4s movement for three friendly turns.\n +20 to reaction/melee rolls.\n Moderate stagger after use from extreme exhaustion."
 ITEM.model = "models/warz/items/syringe.mdl"
 ITEM.width = 1
 ITEM.height = 1
