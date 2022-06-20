@@ -1,6 +1,6 @@
 ITEM.name = "ECS Adamantite Stimpack"
 ITEM.description = "A stimpack made by the ECS program of the 'Mineral' variety. It's labeled as 'Adamantite'"
-ITEM.longdesc = "+1 Tier of Impact for eight turns up to T4.\n\n Heavily staggers user for use (Migraine), decreases to moderate stagger after effects ware (Headache). 
+ITEM.longdesc = "+1 Tier of Impact for eight turns up to T4.\n\n Heavily staggers user for use (Migraine), decreases to moderate stagger after effects ware (Headache)." 
 ITEM.model = "models/warz/items/syringe.mdl"
 ITEM.width = 1
 ITEM.height = 1
