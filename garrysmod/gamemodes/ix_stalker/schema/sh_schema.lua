@@ -39,7 +39,7 @@ ix.flag.Add("3", "T2 Trade.")
 ix.flag.Add("4", "T3 Trade.")
 ix.flag.Add("5", "Consumables")
 ix.flag.Add("6", "Armor Technician")
-ix.flag.add ("7", "Weapon Technician")
+ix.flag.Add ("7", "Weapon Technician")
 
 
 
