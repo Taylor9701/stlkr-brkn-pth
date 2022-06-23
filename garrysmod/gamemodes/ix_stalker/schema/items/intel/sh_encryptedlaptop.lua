@@ -4,5 +4,5 @@ ITEM.description = "A BIOS-Encrypted ruggerized laptop with anti-tamper measures
 ITEM.category = "Intel"
 ITEM.flag = "4"
 ITEM.price = 25000
-ITEM.width = 2
-ITEM.height = 2
+ITEM.width = 1
+ITEM.height = 1
