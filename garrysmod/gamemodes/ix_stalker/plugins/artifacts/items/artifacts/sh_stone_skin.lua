@@ -1,7 +1,7 @@
 ITEM.name = "Stone Skin"
 ITEM.model = "models/artefacts/signet.mdl"
 ITEM.description = "A small, mundane looking stone."
-ITEM.longdesc = "The artifact looks very mundane. On first glance, it is easy to mistake this for a rock. When picked up, there is no discernible tactile sensation where skin makes. When in use, deliberately closing your eyes will turn your skin to stone and you are unable to move. Bullets of high caliber can still penetrate, but they are likely to bounce off more often. Other blunt force trauma is greatly diminished. When you open your eyes, the effect ceases. All injuries that manage to penetrate the stone skin are transmitted to your body as soon as the effect ceases. \n\nImpact +3\nExtended use causes asphyxiation and stone-skin"
+ITEM.longdesc = "The artifact looks very mundane. On first glance, it is easy to mistake this for a rock. When picked up, there is no discernible tactile sensation where skin makes. When in use, deliberately closing your eyes for a few moments covers your body in a layer of stone that can improve ballistic and blunt force trauma protection, but temporarily immobilizes you.  \n\nWhen Active:\nImpact +1 Tier, Max 4\nAll ballistic armor values below III become III\nCan activate in response to any perceived threat regardless of whose turn it is, Stuns you and makes you immobile upon activation until the following turn"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.price = 39000
