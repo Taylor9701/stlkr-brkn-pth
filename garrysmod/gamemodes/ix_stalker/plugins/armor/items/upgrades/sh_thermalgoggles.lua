@@ -1,6 +1,5 @@
 ITEM.name = "Thermal Goggles"
 ITEM.description = "A set of high quality thermal goggles."
-ITEM.longdesc = "A set of thermal optic goggles with a high resolution image for seeing the unseen. \n\nAllows one to see cloaked individuals alongside usual applications of thermal optics "
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
