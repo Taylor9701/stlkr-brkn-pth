@@ -77,6 +77,7 @@ CustomizableWeaponry:registerAmmo("9x39MM -ZL-", "9x39MM Rounds -ZL-", 9, 39)
 --MATCHGRADE AMMO
 CustomizableWeaponry:registerAmmo("7.62x25MM -MG-", "7.62x25MM Rounds -MG-", 7.62, 25)
 CustomizableWeaponry:registerAmmo("7.62x39MM -MG-", "7.62x39MM Rounds -MG-", 7.62, 39)
+CustomizableWeaponry:registerAmmo("7.62x39MMB -MG-", "7.62x39MM Rounds -MG-", 7.62, 39)
 CustomizableWeaponry:registerAmmo("7.62x51MM -MG-", "7.62x51MM Rounds -MG-", 7.62, 51)
 CustomizableWeaponry:registerAmmo("7.62x51MMB -MG-", "7.62x51MMB -MG-", 7.62, 51)
 CustomizableWeaponry:registerAmmo("7.62x54MMR -MG-", "7.62x54MMR Rounds -MG-", 7.62, 39)
