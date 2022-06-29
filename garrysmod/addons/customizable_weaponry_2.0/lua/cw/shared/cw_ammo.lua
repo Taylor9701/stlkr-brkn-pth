@@ -104,8 +104,6 @@ CustomizableWeaponry:registerAmmo("9x19MM -MG-", "9x19MM Rounds -MG-", 9, 19)
 CustomizableWeaponry:registerAmmo("9x21MM -MG-", "9x21MM Rounds -MG-", 9, 21)
 CustomizableWeaponry:registerAmmo("9x39MM -MG-", "9x39MM Rounds -MG-", 9, 39)
 
---Armor Piercing Ammo
-CustomizableWeaponry:registerAmmo("9x19MM -AP-", "9x19MM Rounds -AP-", 9, 19)
 
 
 --Shotgun Ammo Variants
