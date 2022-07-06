@@ -180,6 +180,8 @@ anomalies["models/artefacts/yoyo.mdl"] = true -- Colony
 anomalies["models/srp/items/art_stoneflower.mdl"] = true -- Scorched
 anomalies["models/srp/items/art_mammasbeads.mdl"] = true -- Strand
 anomalies["models/tnb/stalker/artifacts/static.mdl"] = true -- Sheet
+anomalies["models/tnb/stalker/artifacts/wrenched.mdl"] = true -- Spike
+
 
 
 --Uncommon Artifacts--
@@ -207,6 +209,8 @@ anomalies["models/predatorcz/stalker/artifacts/medusa.mdl"] = true -- Mushroom
 anomalies["models/tnb/stalker/artifacts/slug.mdl"] = true -- Blue
 anomalies["models/artefacts/ball.mdl"] = true -- Meteorite
 anomalies["models/artefacts/bud.mdl"] = true -- Crystal Flower
+anomalies["models/spitball_medium.mdl"] = true -- Moody
+
 
 --Rare Artifacts--
 anomalies["models/artefacts/itcher.mdl"] = true
