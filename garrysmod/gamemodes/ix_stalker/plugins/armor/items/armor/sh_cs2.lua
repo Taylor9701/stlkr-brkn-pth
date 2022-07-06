@@ -27,7 +27,7 @@ ITEM.res = {
 	["Radiation"] = 0.20,
 	["Chemical"] = 0.20,
 	["Shock"] = 0.20,
-	["Psi"] = 0.20,
+	["Psi"] = 0.10,
 }
 
 ITEM.newSkin = 0
