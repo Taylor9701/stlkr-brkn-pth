@@ -1,13 +1,13 @@
 ITEM.name = "Hatchet"
-ITEM.description = "One handed light hatchet"
+ITEM.description = "One handed light hatchet for utility or combat use."
 ITEM.model = "models/weapons/tfa_nmrih/w_me_hatchet.mdl"
 ITEM.class = "tfa_nmrih_hatchet"
 ITEM.weaponCategory = "melee"
-ITEM.price = 1000
+ITEM.price = 1500
 ITEM.flag = "1"
-ITEM.height = 2
+ITEM.height = 3
 ITEM.width = 1
-ITEM.category = "Electronics"
+ITEM.category = "Tools"
 ITEM.canAttach = false
 ITEM.repairCost = ITEM.price/100*1
 ITEM.weight = 3
