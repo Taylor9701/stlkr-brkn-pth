@@ -5,4 +5,4 @@ ITEM.category = "Tools"
 ITEM.flag = "1"
 ITEM.price = 1000
 ITEM.width = 1
-ITEM.height = 1
+ITEM.height = 2
