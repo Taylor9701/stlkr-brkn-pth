@@ -1,15 +1,20 @@
-ITEM.name = "Ray Hemostimulator [Bleed]"
-ITEM.description = "Mounted on the back, this small wave emitter effectively increases blood clotting speed by about ten percent when worn constantly. \n\nBleeding -1"
+ITEM.name = "Mushroom Filter"
+ITEM.description = "A set of carefully carved down Jellyfish and Mushroom circles to be inserted into a gas mask's filters, that give off a potent earthy scent until its user becomes 'noseblind' to it. \n Bleeding -1"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
 ITEM.height = 2
-ITEM.price = 30000
-ITEM.slot = 4
+ITEM.price = 0
+ITEM.slot = 6
+ITEM.flag = "A"
 ITEM.isUpgrade = true
-ITEM.flag = "4"
-ITEM.weight = 0.75
-ITEM.isArmorUpg = true
+ITEM.weight = 0.05
+ITEM.isGasmaskUpg = true
+ 
+ITEM.res = {
+    ["Chemical"] = 0.10,
+	["Radiation"] = 0.10,
+}
 
 -- Slot Numbers Defined
 

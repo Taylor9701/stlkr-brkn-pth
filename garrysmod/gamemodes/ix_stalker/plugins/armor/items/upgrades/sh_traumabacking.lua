@@ -1,5 +1,5 @@
 ITEM.name = "Trauma Backing"
-ITEM.description = "Trauma backing to be inserted behind hard armor plates to provide additional cushioning when the main armor is hit. \n\nImpact +1"
+ITEM.description = "Trauma backing to be inserted behind hard armor plates to provide additional cushioning when the main armor is hit. \n\nImpact +1 \nCannot raise above 3"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2

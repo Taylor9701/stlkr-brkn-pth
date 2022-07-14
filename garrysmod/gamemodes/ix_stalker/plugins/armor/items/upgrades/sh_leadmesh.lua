@@ -1,11 +1,11 @@
 ITEM.name = "Lead Mesh [Elec/Chem]"
-ITEM.description = "Provides protection from both electrical discharges and radiation. \n\nElectric +1\nChemical +1"
+ITEM.description = "Provides protection from both electrical discharges and radiation. \n\nElectric +1\nChemical +1\nCannot raise above 3"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
 ITEM.height = 2
 ITEM.price = 60000
-ITEM.slot = 6
+ITEM.slot = 1
 ITEM.flag = "A"
 ITEM.isUpgrade = true
 ITEM.weight = 4.350

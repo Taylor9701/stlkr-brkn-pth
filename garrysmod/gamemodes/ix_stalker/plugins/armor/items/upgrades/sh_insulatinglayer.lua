@@ -1,11 +1,11 @@
 ITEM.name = "Insulating Layer [Elec + Heat]"
-ITEM.description = "Provides an insulating layer to protect from electrical discharges and heat. \n\nElectric +1\nThermal +1"
+ITEM.description = "Provides an insulating layer to protect from electrical discharges and heat. \n\nElectric +1\nThermal +1\nCannot raise above 3"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
 ITEM.height = 2
 ITEM.price = 30000
-ITEM.slot = 4
+ITEM.slot = 1
 ITEM.flag = "A"
 ITEM.isUpgrade = true
 ITEM.weight = 1.814

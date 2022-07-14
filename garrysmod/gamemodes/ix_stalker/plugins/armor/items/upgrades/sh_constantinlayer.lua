@@ -1,5 +1,5 @@
 ITEM.name = "Constantin-Based Inner Layer [Elec]"
-ITEM.description = "Provides an additional layer of protection against electrical discharges. \n\nElectrical +1"
+ITEM.description = "Provides an additional layer of protection against electrical discharges. \n\nElectrical +1\nCannot raise above 3"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2

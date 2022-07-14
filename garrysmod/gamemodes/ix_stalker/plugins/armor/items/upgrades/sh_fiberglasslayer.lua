@@ -1,10 +1,10 @@
 ITEM.name = "Fiberglass Layer [Therm]"
-ITEM.description = "Provides a fiberglass layer which is rather effective at protecting the wearer from heat. \n\nThermal +1"
+ITEM.description = "Provides a fiberglass layer which is rather effective at protecting the wearer from heat. \n\nThermal +1\nCannot raise above 3"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
 ITEM.height = 2
-ITEM.price = 3750
+ITEM.price = 6000
 ITEM.slot = 4
 ITEM.flag = "6"
 ITEM.isUpgrade = true
