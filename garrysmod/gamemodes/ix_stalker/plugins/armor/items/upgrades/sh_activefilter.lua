@@ -9,7 +9,7 @@ ITEM.slot = 2
 ITEM.flag = "A"
 ITEM.isUpgrade = true
 ITEM.weight = 0.05
-ITEM.isGasmaskUpg = true
+
  
 ITEM.res = {
     ["Chemical"] = 0.10,
