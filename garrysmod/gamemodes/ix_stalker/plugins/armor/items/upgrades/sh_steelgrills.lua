@@ -12,7 +12,7 @@ ITEM.weight = 0.2
 ITEM.res = {
 	["Psi"] = 0.10, 
 }
-ITEM.isHelmetUpg = true
+
 
 -- Slot Numbers Defined
 

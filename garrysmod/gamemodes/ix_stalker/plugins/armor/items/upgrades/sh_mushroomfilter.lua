@@ -9,12 +9,8 @@ ITEM.slot = 6
 ITEM.flag = "A"
 ITEM.isUpgrade = true
 ITEM.weight = 0.05
-ITEM.isGasmaskUpg = true
+
  
-ITEM.res = {
-    ["Chemical"] = 0.10,
-	["Radiation"] = 0.10,
-}
 
 -- Slot Numbers Defined
 
