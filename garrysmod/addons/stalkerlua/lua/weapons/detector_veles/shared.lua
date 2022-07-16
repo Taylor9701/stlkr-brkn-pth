@@ -247,7 +247,7 @@ anomalies["models/nasca/etherealsrp_artifacts/kolobok.mdl"] = true
 anomalies["models/nasca/etherealsrp_artifacts/mica.mdl"] = true
 anomalies["models/artefacts/cell.mdl"] = true
 anomalies["models/gibs/hgibs_rib.mdl"] = true
-
+anomalies["models/artefacts/ameba.mdl"] = true -- Mind
 
 --Special Artifacts--
 anomalies["models/nasca/etherealsrp_artifacts/firefly.mdl"] = true
@@ -257,7 +257,7 @@ anomalies["models/artefacts/setka.mdl"] = true
 anomalies["models/predatorcz/stalker/artifacts/dummy_dummy.mdl"] = true
 anomalies["models/artefacts/pin.mdl"] = true
 -- anomalies["models/artefacts/peas.mdl"] = true -- Dreamcatcher
--- anomalies["models/artefacts/ameba.mdl"] = true -- Mind
+
 
 if CLIENT then
 
