@@ -12,7 +12,7 @@ ITEM.functions.Use = {
 	sound = "items/battery_pickup.wav",
 	OnRun = function(itemTable)
 		local client = itemTable.player
-		ix.chat.Send(item.player, "iteminternal", "applies some "..item.name..".", false)
+
 
 	end
 }
