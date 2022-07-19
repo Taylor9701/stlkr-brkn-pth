@@ -1,7 +1,7 @@
 ITEM.name = "Painkillers"
 ITEM.description = "Tablets that help ease minor to moderate pain."
 ITEM.longdesc = "An ingestible drug to counter-act medium strength bleeding by means of accelerating clotting and increasing blood thickness."
-ITEM.longdesc = "Ingestible tablets that help ease minor to moderate pains, not providing much tangible relief for anything that is more severe."
+ITEM.longdesc = "Ingestible tablets that help ease minor to moderate pains, not providing much tangible relief for anything that is more severe. \n-1 Level Of Stagger"
 ITEM.model = "models/illusion/eftcontainers/ibuprofen.mdl"
 ITEM.width = 1
 ITEM.height = 1
