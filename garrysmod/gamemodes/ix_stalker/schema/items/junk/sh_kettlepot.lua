@@ -1,5 +1,5 @@
 ITEM.name = "Kettle Pot"
-ITEM.model = "models/illusion/eftcontainers/weaponparts.mdl"
+ITEM.model = "models/kek1ch/item_pot.mdl"
 ITEM.description = "An old army kettle for storing freshly made stew, soups, or cooking MREs on the go."
 ITEM.category = "junk"
 ITEM.flag = "1"
