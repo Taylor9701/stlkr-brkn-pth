@@ -204,12 +204,12 @@ else
 		-- Long description customization
 
 		local longdescL = vgui.Create("DLabel", scroll)
-		longdescC:SetText("Long Description:")
+		longdescL:SetText("Long Description:")
 		longdescL:Dock(TOP)
 
-		local longdescL = vgui.Create("DTextEntry", scroll)
-		descC:SetText(longdesc or "")
-		descC:Dock(TOP)
+		local longdescC = vgui.Create("DTextEntry", scroll)
+		longdescC:SetText(longdesc or "")
+		longdescC:Dock(TOP)
 
 		--model customization
 		local modelL = vgui.Create("DLabel", scroll)
