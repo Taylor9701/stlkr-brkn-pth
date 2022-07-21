@@ -41,6 +41,7 @@ if(SERVER) then
 		itemInfo.id = item.id
 		itemInfo.name = item:GetName() or item.name
 		itemInfo.description = item.description
+		itemInfo.longdesc = item.longdesc
 		--itemInfo.color = customData.color or item.color or ix.config.Get("color") or Color(255, 255, 255)
 		itemInfo.model = customData.model or item.model
 		itemInfo.material = customData.material or item.material
@@ -157,6 +158,7 @@ else
 		--current values of item
 		local name = item.name
 		local desc = item.description
+		local longdesc = item.longdesc
 		--local color = item.color
 		local model = item.model
 		local material = item.material or ""
@@ -197,6 +199,16 @@ else
 
 		local descC = vgui.Create("DTextEntry", scroll)
 		descC:SetText(desc or "")
+		descC:Dock(TOP)
+
+		-- Long description customization
+
+		local longdescL = vgui.Create("DLabel", scroll)
+		longdescC:SetText("Long Description:")
+		longdescL:Dock(TOP)
+
+		local longdescL = vgui.Create("DTextEntry", scroll)
+		descC:SetText(longdesc or "")
 		descC:Dock(TOP)
 
 		--model customization
@@ -377,6 +389,7 @@ else
 
 			customData[2].name = nameC:GetValue()
 			customData[2].desc = descC:GetValue()
+			customData[2].longdesc = longdescC.GetValue()
 			
 			--customData[2].color = colorC:GetColor()
 			
