@@ -56,6 +56,7 @@ SWEP.MuzzleEffectWorld = "muzzleflash_m9_3rd"
 SWEP.Attachments = {
 	{header = "Lasers", offset = {500, -400}, atts = {"kk_ins2_lam", "kk_ins2_flashlight", "kk_ins2_m6x"}},
 	{header = "Barrel", offset = {-500, -400}, atts = {"kk_ins2_suppressor_pistol"}},
+	{header = "Caliber", offset = {-800, 350}, atts = {"am_cal_357deagle"}},
 	["+reload"] = {header = "Ammo", offset = {500, 150}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
