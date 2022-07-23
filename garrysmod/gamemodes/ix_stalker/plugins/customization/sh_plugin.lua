@@ -388,8 +388,8 @@ else
 			customData[2] = {}
 
 			customData[2].name = nameC:GetValue()
-			customData[2].desc = descC:GetValue()
-			customData[2].longdesc = longdescC:GetValue()
+			customData[2].desc = descC:GetValue().. "\n" ..longdescC:GetValue()
+			
 			
 			--customData[2].color = colorC:GetColor()
 			
