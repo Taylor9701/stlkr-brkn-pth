@@ -16,7 +16,6 @@ ix.command.Add("CreateCustomItem", {
 	arguments = {
 		ix.type.string,
 		ix.type.string,
-		ix.type.string,
 		ix.type.string
 	},
 	OnRun = function(self, client, name, model, description)
