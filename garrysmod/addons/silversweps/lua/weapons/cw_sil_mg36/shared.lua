@@ -140,7 +140,7 @@ SWEP.AdminSpawnable		= CustomizableWeaponry_KK.ins2.isContentMounted4(SWEP)
 SWEP.Primary.ClipSize		= 100
 SWEP.Primary.DefaultClip	= 100
 SWEP.Primary.Automatic		= true
-SWEP.Primary.Ammo			= "5.56x45mm"
+SWEP.Primary.Ammo			= "5.56x45MM"
 
 SWEP.FireDelay = 60/750
 SWEP.FireSound = "CW_KK_INS2_M16A4_FIRE"

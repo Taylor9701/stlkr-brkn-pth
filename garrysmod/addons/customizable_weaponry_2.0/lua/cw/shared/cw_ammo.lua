@@ -111,3 +111,5 @@ CustomizableWeaponry:registerAmmo("12 Gauge -SG-", "12 Gauge Slug Shells", 5, 10
 CustomizableWeaponry:registerAmmo("12 Gauge -BD-", "12 Gauge Bird Shells", 5, 10)
 CustomizableWeaponry:registerAmmo("12 Gauge -TR-", "12 Gauge Tri Rounds", 5, 10)
 CustomizableWeaponry:registerAmmo("12 Gauge -ZL-", "12 Gauge Zone Loaded", 5, 10)
+CustomizableWeaponry:registerAmmo("23mm Shell", "23mm Shell", 23, 75)
+CustomizableWeaponry:registerAmmo("23mm Shell -P-", "23mm Shell Penetrator", 23, 75)

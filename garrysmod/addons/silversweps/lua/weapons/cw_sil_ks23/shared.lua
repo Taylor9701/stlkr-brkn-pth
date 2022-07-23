@@ -6,9 +6,9 @@ AddCSLuaFile("sh_soundscript.lua")
 include("sh_sounds.lua")
 include("sh_soundscript.lua")
 
-CustomizableWeaponry:registerAmmo("23mm Shell", "23mm Shell", 23, 75)
-CustomizableWeaponry:registerAmmo("23mm Shell Slug", "23mm Shell Slug", 23, 76)
-CustomizableWeaponry:registerAmmo("23mm Shell Flechette", "23mm Shell Flechette", 23, 76)
+--CustomizableWeaponry:registerAmmo("23mm Shell", "23mm Shell", 23, 75)
+--CustomizableWeaponry:registerAmmo("23mm Shell Slug", "23mm Shell Slug", 23, 76)
+--CustomizableWeaponry:registerAmmo("23mm Shell Flechette", "23mm Shell Flechette", 23, 76)
 
 if CLIENT then
 	SWEP.DrawCrosshair = false
@@ -90,7 +90,7 @@ SWEP.Attachments = {
 	{header = "Lasers", offset = {125, 400}, atts = {"kk_ins2_lam", "kk_ins2_flashlight", "kk_ins2_anpeq15"}},
 	{header = "More Sight", offset = {1000, 0}, atts = {"kk_ins2_magnifier"}, dependencies = CustomizableWeaponry_KK.ins2.magnifierDependencies},
 	["+use"] = {header = "Sight Contract", offset = {400, 0}, atts = {"kk_ins2_sights_cstm"}},
-	["+reload"] = {header = "Ammo", offset = {900, 500}, atts = {"am_slugrounds", "am_flechetterounds"}}
+	["+reload"] = {header = "Ammo", offset = {900, 500}, atts = {"am_penetrator"}}
 }
 
 SWEP.Animations = {
