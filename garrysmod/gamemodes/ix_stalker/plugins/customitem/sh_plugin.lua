@@ -23,7 +23,7 @@ ix.command.Add("CreateCustomItem", {
 		client:GetCharacter():GetInventory():Add("customitem", 1, {
 			name = name,
 			model = model,
-			description = description,
+			description = description
 			
 			
 		})
