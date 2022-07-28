@@ -1,5 +1,5 @@
 ITEM.name = "Mushroom Filter"
-ITEM.description = "A set of carefully carved down Jellyfish and Mushroom circles to be inserted into a gas mask's filters, that give off a potent earthy scent until its user becomes 'noseblind' to it. \n\n Bleeding -1"
+ITEM.description = "A gel created from a crushed Nugget and Crystal Flower that can be applied to a suit's fabric to slightly increase its thermal protection. \n\n Thermal +1p"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
