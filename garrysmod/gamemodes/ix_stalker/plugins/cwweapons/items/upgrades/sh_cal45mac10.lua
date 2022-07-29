@@ -8,7 +8,7 @@ ITEM.flag = "7"
 ITEM.price = 10000
 ITEM.slot = 1
 ITEM.isAttachment = true
-ITEM.attSearch = { "am_cal_357deagle", }
+ITEM.attSearch = { "am_cal_45mac10", }
 ITEM.weight = 0.25
 ITEM.upgradeIcon = Material("materials/vgui/ui/stalker/weaponupgrades/rechamber.png")
 
