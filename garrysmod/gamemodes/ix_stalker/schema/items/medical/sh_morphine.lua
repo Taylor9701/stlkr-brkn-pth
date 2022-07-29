@@ -1,7 +1,7 @@
 ITEM.name = "Morphine Auto-Injector"
 ITEM.description = "A blue auto-injector with a capped needle."
 ITEM.longdesc = "A blue, pen-like object with a 10mg dose of Morphine-Sulfate. Used on the battle-field or in emergency situations for near instant pain-relief. Causes the blood to thin.\n\n-2 Stagger Tiers\n+1 Bleeding for already existing bleeds"
-ITEM.model = "models/ethprops/medical/booster.mdl"
+ITEM.model = "models/illusion/eftcontainers/morphine.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.category = "Medical"

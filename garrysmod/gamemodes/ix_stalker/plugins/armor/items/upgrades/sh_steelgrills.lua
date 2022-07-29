@@ -9,6 +9,7 @@ ITEM.slot = 15
 ITEM.flag = "4"
 ITEM.isUpgrade = true
 ITEM.weight = 0.2
+ITEM.isArmorUpg = true
 ITEM.res = {
 	["Psi"] = 0.10, 
 }

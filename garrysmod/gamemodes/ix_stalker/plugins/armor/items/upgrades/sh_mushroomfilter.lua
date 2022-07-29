@@ -8,6 +8,7 @@ ITEM.price = 0
 ITEM.slot = 6
 ITEM.flag = "A"
 ITEM.isUpgrade = true
+ITEM.isArmorUpg = true
 ITEM.weight = 0.05
 
  
