@@ -1,5 +1,5 @@
 ITEM.name = ".50 Beowulf Conversion Kit"
-ITEM.description = "A conversion kit for applicable weapons to fire the heavy .50 Beowulf round. The resulting weapon has reduced capacity and notably higher recoil."
+ITEM.description = "A conversion kit for applicable weapons to fire the heavy .50 Beowulf round. The resulting weapon has reduced capacity and notably higher recoil. \n\nHalves ROF (round up)"
 ITEM.category = "Upgrades"
 ITEM.model = "models/Items/BoxSRounds.mdl"
 ITEM.width = 2
