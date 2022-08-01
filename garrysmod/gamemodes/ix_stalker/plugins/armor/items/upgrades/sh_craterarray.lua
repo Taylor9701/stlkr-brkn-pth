@@ -1,15 +1,17 @@
-ITEM.name = "ComTacs"
-ITEM.description = "Reduces the chance of hearing loss while also amplifying quiet sounds in the environment."
+ITEM.name = "Crater Array"
+ITEM.description = "An assembly of several Crater artifacts, wires, and Droplet artifacts put together to create a moderately effective electric diffusing grid.\nOccupies Slot: Artifact Body \n\n Electrical +2p"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
 ITEM.height = 2
-ITEM.price = 5000
-ITEM.slot = 2
-ITEM.flag = "6"
+ITEM.price = 0
+ITEM.slot = 3
+ITEM.flag = "A"
 ITEM.isUpgrade = true
-ITEM.weight = 0.2
-ITEM.isHelmetUpg = true
+ITEM.isArmorUpg = true
+ITEM.weight = 0.05
+
+ 
 
 -- Slot Numbers Defined
 

@@ -1,11 +1,11 @@
 ITEM.name = "Thermal Goggles"
-ITEM.description = "A set of high quality thermal goggles."
+ITEM.description = "A set of high quality thermal goggles. \nOccupies Slot: Head"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
 ITEM.height = 2
 ITEM.price = 150000
-ITEM.slot = 3
+ITEM.slot = 2
 ITEM.flag = "A"
 ITEM.isUpgrade = true
 ITEM.weight = 2

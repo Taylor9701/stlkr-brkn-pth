@@ -1,11 +1,11 @@
 ITEM.name = "Nighvision Goggles"
-ITEM.description = "Nightvision goggles that enable the user to see in the dark when enabled."
+ITEM.description = "Nightvision goggles that enable the user to see in the dark when enabled. \nOccupies Slot: Head"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
 ITEM.height = 1
 ITEM.price = 20000
-ITEM.slot = 3
+ITEM.slot = 2
 ITEM.flag = "6"
 ITEM.isUpgrade = true
 ITEM.weight = 0.175

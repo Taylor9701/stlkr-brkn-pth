@@ -1,11 +1,11 @@
 ITEM.name = "Ray Hemostimulator [Bleed]"
-ITEM.description = "Mounted on the back, this small wave emitter effectively increases blood clotting speed by about ten percent when worn constantly. \n\nBleeding -1"
+ITEM.description = "Mounted on the back, this small wave emitter effectively increases blood clotting speed by about ten percent when worn constantly. \nOccupies Slot: Head  \n\nBleeding -1"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
 ITEM.height = 2
 ITEM.price = 45000
-ITEM.slot = 4
+ITEM.slot = 2
 ITEM.isUpgrade = true
 ITEM.flag = "4"
 ITEM.weight = 0.75

@@ -1,5 +1,5 @@
 ITEM.name = "Plexiglass Inserts [Rad]"
-ITEM.description = "Provides an additional layer of protection against radiation. \n\nRadiation +1 \nCannot raise above 3"
+ITEM.description = "Provides an additional layer of protection against radiation. \nOccupies Slot: Body \n\nRadiation +1 \nCannot raise above 3"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2

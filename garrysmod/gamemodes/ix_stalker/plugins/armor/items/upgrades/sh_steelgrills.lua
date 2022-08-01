@@ -1,12 +1,12 @@
 ITEM.name = "Steel Grills"
-ITEM.description = "A psionic upgrade that assists the user in dulling the effects of Psi fields. \n\n Psi +1 \nCannot raise above 2"
+ITEM.description = "A psionic upgrade that assists the user in dulling the effects of Psi fields. \nOccupies Slot: Head \n\n Psi +1 \nCannot raise above 2"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
 ITEM.height = 2
 ITEM.price = 16000
 ITEM.slot = 15
-ITEM.flag = "4"
+ITEM.flag = "2"
 ITEM.isUpgrade = true
 ITEM.weight = 0.2
 ITEM.isArmorUpg = true

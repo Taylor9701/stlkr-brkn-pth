@@ -1,15 +1,17 @@
-ITEM.name = "ComTacs"
-ITEM.description = "Reduces the chance of hearing loss while also amplifying quiet sounds in the environment."
+ITEM.name = "Battery Booster"
+ITEM.description = "Quarter Battery and Jellyfish chunks to be put into one's boots to slightly increase leg muscle function. Tends to be a mild hinderance when one is already quick unassisted.\nOccupies Slot: Artifact Body \n\n+1s Movement \nNo additional movement seconds from low weight suit"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
 ITEM.height = 2
-ITEM.price = 5000
-ITEM.slot = 2
-ITEM.flag = "6"
+ITEM.price = 0
+ITEM.slot = 3
+ITEM.flag = "A"
 ITEM.isUpgrade = true
-ITEM.weight = 0.2
-ITEM.isHelmetUpg = true
+ITEM.isArmorUpg = true
+ITEM.weight = 0.05
+
+ 
 
 -- Slot Numbers Defined
 

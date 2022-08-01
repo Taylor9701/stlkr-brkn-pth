@@ -1,11 +1,11 @@
-ITEM.name = "Sun Biostimulator [Heal]"
-ITEM.description = "Mounted on the chest, this small wave emitter effectively increases the rate at which wounds heal by about ten percent. \n\nReduces TI time by 25%. Stacks with artifacts."
+ITEM.name = "Sun Biostimulator"
+ITEM.description = "Mounted on the collar, this small wave emitter effectively increases the rate at which wounds heal by about ten percent.\nOccupies Slot: Head \n\nReduces TI time by 25%. Stacks with artifacts."
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
 ITEM.height = 2
 ITEM.price = 60000
-ITEM.slot = 4
+ITEM.slot = 2
 ITEM.isUpgrade = true
 ITEM.flag = "4"
 ITEM.weight = 0.75

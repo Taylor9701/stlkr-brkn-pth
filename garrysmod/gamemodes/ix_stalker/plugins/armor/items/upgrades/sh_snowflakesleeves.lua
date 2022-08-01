@@ -1,15 +1,17 @@
-ITEM.name = "ComTacs"
-ITEM.description = "Reduces the chance of hearing loss while also amplifying quiet sounds in the environment."
+ITEM.name = "Snowflake Sleeves"
+ITEM.description = "Crushed Snowflake chunks installed in one's sleeves to increase in reaction speed from the upper body, similar to its lesser Shell-based cousin but with higher potency. The powder is electrically conductive.\nOccupies Slot: Artifact Body \n\n+15 to reaction rolls, does not stack with other boosts \n-1 Tier Electrical"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
 ITEM.height = 2
-ITEM.price = 5000
-ITEM.slot = 2
-ITEM.flag = "6"
+ITEM.price = 0
+ITEM.slot = 3
+ITEM.flag = "A"
 ITEM.isUpgrade = true
-ITEM.weight = 0.2
-ITEM.isHelmetUpg = true
+ITEM.isArmorUpg = true
+ITEM.weight = 0.05
+
+ 
 
 -- Slot Numbers Defined
 

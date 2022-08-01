@@ -1,11 +1,11 @@
 ITEM.name = "Polarized Lenses"
-ITEM.description = "A pair of polarized lenses used for installation into any eye covering or screen that lessens the brightness of extremely bright things and provides a cleaner, sharper image in brightly lit areas.\n\n -1 Step status effect from Flashbangs (Stunned become Extreme Stagger, etc)"
+ITEM.description = "A pair of polarized lenses used for installation into any eye covering or screen that lessens the brightness of extremely bright things and provides a cleaner, sharper image in brightly lit areas.\nOccupies Slot: Head\n\n -1 Step status effect from Flashbangs (Stunned become Extreme Stagger, etc)"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
 ITEM.height = 2
 ITEM.price = 16000
-ITEM.slot = 3
+ITEM.slot = 2
 ITEM.flag = "6"
 ITEM.isUpgrade = true
 ITEM.weight = 0.5

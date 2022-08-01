@@ -1,5 +1,5 @@
 ITEM.name = "Active Filtering [Chem/Rad]"
-ITEM.description = "An active filtering system that provides additional general respiratory protection. \n\nChemical +1\nRadiation +1\nCannot raise above 3"
+ITEM.description = "An active filtering system that provides additional general respiratory protection.\nOccupies Slot: Head \n\nChemical +1\nRadiation +1\nCannot raise above 3"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2

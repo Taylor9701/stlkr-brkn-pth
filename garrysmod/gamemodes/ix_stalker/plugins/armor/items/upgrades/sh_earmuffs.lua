@@ -1,11 +1,11 @@
 ITEM.name = "Ear Muffs"
-ITEM.description = "Reduces the likelihood of the wearer to suffer hearing loss."
+ITEM.description = "Reduces the likelihood of the wearer to suffer hearing loss. \nOccupies Slot: Head"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
 ITEM.height = 2
 ITEM.price = 3000
-ITEM.slot = 4
+ITEM.slot = 2
 ITEM.flag = "6"
 ITEM.isUpgrade = true
 ITEM.weight = 0.2

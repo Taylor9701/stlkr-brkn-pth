@@ -1,15 +1,17 @@
-ITEM.name = "ComTacs"
-ITEM.description = "Reduces the chance of hearing loss while also amplifying quiet sounds in the environment."
+ITEM.name = "Mind Grills"
+ITEM.description = "A set of ordinary steel grills coated with a melted Mind artifact as well as a Wrenched. \nOccupies Slot: Artifact Head AND Head \n\n Psy +1 Tier, Max 3\nElec +1 Tier, Max 3"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
 ITEM.height = 2
-ITEM.price = 5000
-ITEM.slot = 2
-ITEM.flag = "6"
+ITEM.price = 0
+ITEM.slot = 4
+ITEM.flag = "A"
 ITEM.isUpgrade = true
-ITEM.weight = 0.2
-ITEM.isHelmetUpg = true
+ITEM.isArmorUpg = true
+ITEM.weight = 0.05
+
+ 
 
 -- Slot Numbers Defined
 

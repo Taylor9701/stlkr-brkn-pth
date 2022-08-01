@@ -1,5 +1,5 @@
 ITEM.name = "Bismuth Inserts [Chem/Therm]"
-ITEM.description = "Provides protection from both chemicals and heat. \n\nChemical +1\nThermal +1\nCannot raise above 3"
+ITEM.description = "Provides protection from both chemicals and heat.\nOccupies slot: Body \n\nChemical +1\nThermal +1\nCannot raise above 3"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2

@@ -1,11 +1,11 @@
 ITEM.name = "Mushroom Filter"
-ITEM.description = "A set of carefully carved down Jellyfish and Mushroom circles to be inserted into a gas mask's filters, that give off a potent earthy scent until its user becomes 'noseblind' to it. \n\n Bleeding -1"
+ITEM.description = "A set of carefully carved down Jellyfish and Mushroom circles to be inserted into a gas mask's filters, that give off a potent earthy scent until its user becomes 'noseblind' to it. \nOccupies Slot: Artifact Head \n\n Bleeding -1"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
 ITEM.height = 2
 ITEM.price = 0
-ITEM.slot = 6
+ITEM.slot = 4
 ITEM.flag = "A"
 ITEM.isUpgrade = true
 ITEM.isArmorUpg = true

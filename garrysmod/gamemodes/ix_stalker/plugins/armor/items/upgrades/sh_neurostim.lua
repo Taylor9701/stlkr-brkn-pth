@@ -1,11 +1,11 @@
 ITEM.name = "Reflection Neurostimulator [Psi]"
-ITEM.description = "This wave emitter is mounted on the neck, and while its mechanism and method of operation are unclear, it has a strong calming effect. \n\n50% Increase in Psi Hotspot and Background duration"
+ITEM.description = "This wave emitter is mounted on the neck, and while its mechanism and method of operation are unclear, it has a strong calming effect. \nOccupies Slot: Head \n\n50% Increase in Psi Hotspot and Background duration"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
 ITEM.height = 2
 ITEM.price = 65000
-ITEM.slot = 4
+ITEM.slot = 2
 ITEM.isUpgrade = true
 ITEM.flag = "4"
 ITEM.weight = 1.25

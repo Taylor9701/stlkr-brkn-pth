@@ -1,5 +1,5 @@
 ITEM.name = "Plate Carrier [SEVA]"
-ITEM.description = "A steel plate carrier. Only usable in a PSZ-Based suit. \n\nUpgrades torso protection to III+\n-1 Electric "
+ITEM.description = "A steel plate carrier. Only usable in a PSZ-Based suit. \nOccupies Slot: Body  \n\nUpgrades torso protection to III+\n-1 Electric Tier "
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2

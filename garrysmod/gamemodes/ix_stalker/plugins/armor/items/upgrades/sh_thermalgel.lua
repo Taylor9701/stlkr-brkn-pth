@@ -1,11 +1,11 @@
 ITEM.name = "Thermal Gel"
-ITEM.description = "A gel created from a crushed Nugget and Crystal Flower that can be applied to a suit's fabric to slightly increase its thermal protection. \n\n Thermal +1p"
+ITEM.description = "A gel created from a crushed Nugget and Crystal Flower that can be applied to a suit's fabric to slightly increase its thermal protection.\nOccupies Slot: Artifact Body \n\n Thermal +1p"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
 ITEM.height = 2
 ITEM.price = 0
-ITEM.slot = 5
+ITEM.slot = 3
 ITEM.flag = "A"
 ITEM.isUpgrade = true
 ITEM.isArmorUpg = true

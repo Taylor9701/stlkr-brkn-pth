@@ -1,12 +1,12 @@
 ITEM.name = "Canvas Layer [Chem]"
-ITEM.description = "Provides a canvas layer to protect from corrosive chemicals. \n\nChemical +1\nCannot raise above 3"
+ITEM.description = "Provides a canvas layer to protect from corrosive chemicals.\nOccupies Slot: Body \n\nChemical +1\nCannot raise above 3"
 ITEM.category = "Upgrades"
 ITEM.model = "models/ethprops/crafting/armor_repair_pro.mdl"
 ITEM.width = 2
 ITEM.height = 2
 ITEM.price = 12000
 ITEM.slot = 1
-ITEM.flag = "6"
+ITEM.flag = "1"
 ITEM.isUpgrade = true
 ITEM.weight = 2
 ITEM.res = {
