@@ -45,7 +45,7 @@ for flag, lang in pairs(languages) do
         CanSay = function(self, speaker, text)
             if speaker:GetCharacter():HasFlags(flag) then
                 return
-            else client.Notify("You can't speak this language!", client)
+            else player:Notify("You can't speak this language!")
                 return false
             end
         end,
@@ -69,7 +69,7 @@ for flag, lang in pairs(languages) do
         CanSay = function(self, speaker, text)
             if speaker:GetCharacter():HasFlags(flag) then
                 return
-            else client.Notify("You can't speak this language!", client)
+            else player:Notify("You can't speak this language!")
                 return false
             end
         end,
@@ -93,7 +93,7 @@ for flag, lang in pairs(languages) do
         CanSay = function(self, speaker, text)
         if speaker:GetCharacter():HasFlags(flag) then
                 return
-            else client.Notify("You can't speak this language!", client)
+            else player:Notify("You can't speak this language!")
                 return false
             end
         end,
