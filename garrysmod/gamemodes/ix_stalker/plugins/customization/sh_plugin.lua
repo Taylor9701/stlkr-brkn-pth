@@ -40,8 +40,8 @@ if(SERVER) then
 		local itemInfo = {}
 		itemInfo.id = item.id
 		itemInfo.name = item:GetName() or item.name
-		itemInfo.description = item.description
-		itemInfo.longdesc = item.longdesc
+		itemInfo.description = customData.desc or item.description
+		itemInfo.longdesc = customData.longdesc or item.longdesc or ""
 		--itemInfo.color = customData.color or item.color or ix.config.Get("color") or Color(255, 255, 255)
 		itemInfo.model = customData.model or item.model
 		itemInfo.material = customData.material or item.material

@@ -8,6 +8,7 @@ ITEM.model = "models/props_c17/BriefCase001a.mdl"
 ITEM.playermodel = nil
 ITEM.isBodyArmor = true
 ITEM.resistance = true
+ITEM.longdesc = "No longer description available."
 ITEM.category = "Armor"
 ITEM.res = {
 	["Fall"] = 0,
@@ -679,7 +680,7 @@ ITEM.functions.Value = {
 
 function ITEM:GetDescription()
 	local quant = self:GetData("quantity", 1)
-	local str = self.description.."\n"..self.longdesc
+	local str = self.description.."\n\n"..self.longdesc
 	local cc = false
 	local bodyap = 0
 	local limbap = 0
@@ -693,7 +694,8 @@ function ITEM:GetDescription()
 
 	local customData = self:GetData("custom", {})
 	if(customData.desc) then
-		str = customData.desc
+		str = customData.desc.. "\n" ..customData.longdesc
+		
 	end
 	
 	if self.res then

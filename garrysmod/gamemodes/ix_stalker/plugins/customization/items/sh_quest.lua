@@ -88,7 +88,7 @@ function ITEM:GetDescription(partial)
 	
 	local customData = self:GetData("custom", {})
 	if(customData.desc) then
-		desc = customData.desc
+		desc = customData.desc .. "\n" ..customData.longdesc
 	end
 		
 	if(!partial) then
