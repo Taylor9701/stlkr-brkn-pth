@@ -213,7 +213,7 @@ function ITEM:GetDescription()
 	
 	local customData = self:GetData("custom", {})
 	if(customData.desc) then
-		str = customData.desc.. "\n" ..customData.longdesc or ""
+		str = customData.desc.. "\n\n" ..customData.longdesc or ""
 	end
 	
 	if atts then
