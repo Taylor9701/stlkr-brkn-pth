@@ -786,12 +786,12 @@ function ITEM:GetDescription()
 		
 
 		
-			if k == "Fall" then
-				str = str.."\n".."Impact"..": T"..(v*100)
-			else
-				str = str.."\n"..k..": T"..(v*100)
-			end
+		if k == "Fall" then
+			str = str.."\n".."Impact"..": T"..(v*100)
+		else
+			str = str.."\n"..k..": T"..(v*100)
 		end
+		
 	end
 	
 	if self.ballisticrpglevels then
