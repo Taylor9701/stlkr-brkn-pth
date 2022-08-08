@@ -740,7 +740,7 @@ function ITEM:GetDescription()
 				if modres then
 					for k,v in pairs(modres) do
 						if resistances[k] then
-							resistances[k] = resistances[k] + v * 10
+							resistances[k] = resistances[k] + v
 						end
 					end 
 				end
@@ -785,13 +785,22 @@ function ITEM:GetDescription()
 		str = str.."\n\nResistances:"
 		
 
-		
-		if k == "Fall" then
-			str = str.."\n".."Impact"..": T"..(v*100)
-		else
-			str = str.."\n"..k..": T"..(v*100)
+		local multinum = 100
+
+		for k,v in pairs(resistances) do
+
+			if tonumber(v) < 1 then
+				multinum = 100
+			else
+				multinum = 100
+			end
+
+			if k == "Fall" then
+				str = str.."\n".."Impact"..": T"..(v*multinum)
+			else
+				str = str.."\n"..k..": T"..(v*multinum)
+			end
 		end
-		
 	end
 	
 	if self.ballisticrpglevels then
