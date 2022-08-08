@@ -785,14 +785,14 @@ function ITEM:GetDescription()
 		str = str.."\n\nResistances:"
 		
 
-		local multinum = 100
+		local multinum = 10
 
 		for k,v in pairs(resistances) do
 
 			if tonumber(v) < 1 then
-				multinum = 100
+				multinum = 10
 			else
-				multinum = 100
+				multinum = 10
 			end
 
 			if k == "Fall" then
