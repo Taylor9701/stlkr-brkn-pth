@@ -740,7 +740,7 @@ function ITEM:GetDescription()
 				if modres then
 					for k,v in pairs(modres) do
 						if resistances[k] then
-							resistances[k] = resistances[k] + v
+							resistances[k] = resistances[k] + v * 10
 						end
 					end 
 				end

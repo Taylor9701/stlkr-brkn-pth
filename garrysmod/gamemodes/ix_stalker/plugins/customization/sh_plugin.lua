@@ -381,7 +381,7 @@ else
 			duraC:Dock(TOP)
 
 
-			-- Seperator for Anomaly Protection --
+			-- Seperator for Anomaly Protection
 			local aSep = vgui.Create("DLabel", scroll)
 			aSep:SetText("Anomaly Protections. Can be in whole number (1) or decimal (0.1) format")
 			aSep:Dock(TOP)		
