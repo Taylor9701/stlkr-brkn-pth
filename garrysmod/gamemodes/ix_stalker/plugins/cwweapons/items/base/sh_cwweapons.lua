@@ -204,7 +204,7 @@ if (CLIENT) then
 end
 
 function ITEM:GetDescription()
-	local str = self.description.." \n\n"..self.longdesc
+	local str = self.description.." \n\n"..self.longdesc or ""
 	local dmg = self.Dmg
 	local range = self.Range
 	local cal
@@ -213,7 +213,7 @@ function ITEM:GetDescription()
 	
 	local customData = self:GetData("custom", {})
 	if(customData.desc) then
-		str = customData.desc.. "\n" ..customData.longdesc
+		str = customData.desc.. "\n" ..customData.longdesc or ""
 	end
 	
 	if atts then

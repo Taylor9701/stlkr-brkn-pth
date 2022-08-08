@@ -680,7 +680,7 @@ ITEM.functions.Value = {
 
 function ITEM:GetDescription()
 	local quant = self:GetData("quantity", 1)
-	local str = self.description.."\n\n"..self.longdesc
+	local str = self.description.."\n\n"..self.longdesc or ""
 	local cc = false
 	local bodyap = 0
 	local limbap = 0
