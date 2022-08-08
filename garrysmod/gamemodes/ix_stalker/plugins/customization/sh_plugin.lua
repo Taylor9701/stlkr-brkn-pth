@@ -59,6 +59,15 @@ if(SERVER) then
 			itemInfo.armor = true
 			
 			itemInfo.dura = item:GetData("durability", 100)
+			itemInfo.impact = customData.impact or item.res["Fall"]
+			itemInfo.shock = customData.shock or item.res["Shock"]
+			itemInfo.burn = customData.burn or item.res["Burn"]
+			itemInfo.radiation = customData.radiation or item.res["Radiation"]
+			itemInfo.chemical = customData.chemical or item.res["Chemical"]
+			itemInfo.psi = customData.psi or item.res["Psi"]
+
+
+
 		end
 
 		if(item.quantity or item.maxStack or item.ammoAmount) then
@@ -164,6 +173,12 @@ else
 		local material = item.material or ""
 		local quality = item.quality or "None"
 		local img = item.img
+		local impact = item.impact
+		local shock = item.shock
+		local burn = item.burn
+		local radiation = item.radiation
+		local chemical = item.chemical
+		local psi = item.psi
 		
 		local dura = item.dura
 		local quantity = (item.maxStack or item.ammoAmount or item.quantity)
@@ -172,6 +187,7 @@ else
 		local acc = item.wepAcc
 		local rec = item.wepRec
 		local mag = item.wepMag
+		
 
 		local frame = vgui.Create("DFrame")
 		frame:SetSize(450, 600)
@@ -363,6 +379,80 @@ else
 			duraC = vgui.Create("DTextEntry", scroll)
 			duraC:SetText(dura or 100)
 			duraC:Dock(TOP)
+
+
+			-- Seperator for Anomaly Protection --
+			local aSep = vgui.Create("DLabel", scroll)
+			aSep:SetText("Anomaly Protections. Can be in whole number (1) or decimal (0.1) format")
+			aSep:Dock(TOP)		
+			
+
+			-- Impact
+
+			local impactL = vgui.Create("DLabel", scroll)
+			impactL:SetText( " Impact")
+			impactL:Dock(TOP)
+
+			impactC = vgui.Create("DTextEntry", scroll)
+			impactC:SetText(impact or 0)
+			impactC:Dock(TOP)
+
+
+			-- Electrical
+
+			local shockL = vgui.Create("DLabel", scroll)
+			shockL:SetText(" Shock")
+			shockL:Dock(TOP)
+
+			shockC = vgui.Create("DTextEntry", scroll)
+			shockC:SetText(shock or 0)
+			shockC:Dock(TOP)
+
+			-- Burn
+
+
+			local burnL = vgui.Create("DLabel", scroll)
+			burnL:SetText( " Burn")
+			burnL:Dock(TOP)
+
+			burnC = vgui.Create("DTextEntry", scroll)
+			burnC:SetText(burn or 0)
+			burnC:Dock(TOP)
+
+			-- Radiation
+
+			local radiationL = vgui.Create("DLabel", scroll)
+			radiationL:SetText(" Radiation")
+			radiationL:Dock(TOP)
+
+			radiationC = vgui.Create("DTextEntry", scroll)
+			radiationC:SetText(radiation or 0)
+			radiationC:Dock(TOP)
+
+
+			-- Chemical
+
+			local chemicalL = vgui.Create("DLabel", scroll)
+			chemicalL:SetText(" Chemical")
+			chemicalL:Dock(TOP)
+
+			chemicalC = vgui.Create("DTextEntry", scroll)
+			chemicalC:SetText(chemical or 0)
+			chemicalC:Dock(TOP)
+
+
+			-- Psi
+
+			local psiL = vgui.Create("DLabel", scroll)
+			psiL:SetText(" Psi")
+			psiL:Dock(TOP)
+
+			psiC = vgui.Create("DTextEntry", scroll)
+			psiC:SetText(psi or 0)
+			psiC:Dock(TOP)
+
+
+
 		end
 
 		local quantityC
@@ -406,6 +496,15 @@ else
 			if item.weapon or item.armor then
 				customData[2].dura = tonumber(duraC:GetValue())
 			end
+
+			if item.armor then	
+				customData[2].impact = impactC:GetValue()
+				customData[2].shock = shockC:GetValue()
+				customData[2].burn = burnC:GetValue()
+				customData[2].radiation = radiationC:GetValue()
+				customData[2].chemical = chemicalC:GetValue()
+				customData[2].psi = psiC:GetValue()
+			end 
 			
 			if(item.weapon and wepC:GetChecked()) then
 				--customData[2].quality = qualityC:GetValue()

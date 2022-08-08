@@ -711,12 +711,27 @@ function ITEM:GetDescription()
 			["Psi"] = 0,
 		}
 		
+
+
 		for k,v in pairs(self.res) do
 			if resistances[k] then
 				resistances[k] = resistances[k] + v
 			end
 		end
-		
+
+	
+		if(customData.impact) then
+			resistances["Fall"] = customData.impact
+			resistances["Shock"] = customData.shock
+			resistances["Burn"] = customData.burn
+			resistances["Radiation"] = customData.radiation
+			resistances["Chemical"] = customData.chemical
+			resistances["Psi"] = customData.psi
+		end
+	
+
+
+
 		if mods then
 			for x,y in pairs(mods) do
 				local moditem = ix.item.Get(y[1])
@@ -769,11 +784,21 @@ function ITEM:GetDescription()
 		
 		str = str.."\n\nResistances:"
 		
+
+		local multinum = 1
+
 		for k,v in pairs(resistances) do
-			if k == "Fall" then
-				str = str.."\n".."Impact"..": "..(v*100).."%"
+
+			if tonumber(v) < 1 then
+				multinum = 10
 			else
-				str = str.."\n"..k..": "..(v*100).."%"
+				multinum = 1
+			end
+
+			if k == "Fall" then
+				str = str.."\n".."Impact"..": T"..(v*multinum)
+			else
+				str = str.."\n"..k..": T"..(v*multinum)
 			end
 		end
 	end
