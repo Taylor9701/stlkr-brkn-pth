@@ -1,5 +1,6 @@
 ITEM.name = "Consumable"
 ITEM.description = "Something to eat"
+ITEM.longdesc = ""
 ITEM.model = "models/kleiner.mdl"
 ITEM.width = 1
 ITEM.height = 1
@@ -19,6 +20,10 @@ function ITEM:GetDescription()
 	local customData = self:GetData("custom", {})
 	if(customData.desc) then
 		str = customData.desc
+	end
+
+	if (customData.longdesc) then
+		str = str.."\n"..customData.longdesc or ""
 	end
 
 	if (self.entity) then

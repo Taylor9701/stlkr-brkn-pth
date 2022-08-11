@@ -27,7 +27,25 @@ function ITEM:GetName()
 end
 
 function ITEM:GetDescription()
-	return self:GetData("description", "Custom item description.")
+	local str = self.description
+	if self.longdesc then
+		str = str.."\n"..(self.longdesc or "")
+	end
+
+	local customData = self:GetData("custom", {})
+	if(customData.desc) then
+		str = customData.desc
+	end
+
+	if (customData.longdesc) then
+		str = str.."\n"..customData.longdesc or ""
+	end
+
+	if (self.entity) then
+		return (self.description)
+	else
+        return (str)
+	end
 end
 
 function ITEM:GetLongDescription()
