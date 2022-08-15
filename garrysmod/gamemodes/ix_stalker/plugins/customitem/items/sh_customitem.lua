@@ -27,7 +27,7 @@ function ITEM:GetName()
 end
 
 function ITEM:GetDescription()
-	local str = self.description
+	local str = self:GetData("description", "Custom Description")
 	if self.longdesc then
 		str = str.."\n"..(self.longdesc or "")
 	end
@@ -48,9 +48,6 @@ function ITEM:GetDescription()
 	end
 end
 
-function ITEM:GetLongDescription()
-	return self:GetData("longdesc", "Custom item long description.")
-end
 
 function ITEM:GetModel()
 	return self:GetData("model", "models/Gibs/HGIBS.mdl")
