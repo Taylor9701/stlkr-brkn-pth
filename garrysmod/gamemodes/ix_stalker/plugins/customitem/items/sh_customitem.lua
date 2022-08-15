@@ -2,7 +2,7 @@
 ITEM.name = "Generic Item"
 ITEM.description = "Generic Description"
 ITEM.model = Model("models/maxofs2d/hover_rings.mdl")
-ITEM.longdesc = "Long Generic Description"
+ITEM.longdesc = ""
 
 
 ITEM.functions.Custom = {
