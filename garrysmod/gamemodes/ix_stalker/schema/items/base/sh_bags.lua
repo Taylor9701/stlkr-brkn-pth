@@ -1,4 +1,3 @@
-w
 if (SERVER) then
 	util.AddNetworkString("ixBagDrop")
 end
