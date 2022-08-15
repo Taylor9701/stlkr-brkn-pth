@@ -1,7 +1,7 @@
 
 ITEM.name = "Generic Item"
 ITEM.description = "Generic Description"
-ITEM.model = Model("models/maxofs2d/hover_rings.mdl")
+ITEM.model = "models/maxofs2d/hover_rings.mdl"
 ITEM.longdesc = ""
 
 
@@ -23,7 +23,14 @@ ITEM.functions.Custom = {
 
 
 function ITEM:GetName()
-	return self:GetData("name", "Custom Item")
+	local str = self:GetData("name", "Generic Name")
+	
+	local customData = self:GetData("custom", {})
+	if(customData.name) then
+		str = customData.name
+	end
+
+	return (str)
 end
 
 function ITEM:GetDescription()
@@ -50,5 +57,12 @@ end
 
 
 function ITEM:GetModel()
-	return self:GetData("model", "models/Gibs/HGIBS.mdl")
+	local str = self:GetData("model", "models/Gibs/HGIBS.mdl")
+
+	local customData = self:GetData("custom", {})
+	if(customData.model) then
+		str = customData.model
+	end
+
+	return (str)
 end
