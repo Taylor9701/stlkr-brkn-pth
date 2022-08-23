@@ -1,5 +1,5 @@
 ITEM.name = "Cowboy Coffee"
-ITEM.model = "models/kek1ch/dev_drink_stalker.mdl"
+ITEM.model = "models/illusion/eftcontainers/coffee.mdl"
 ITEM.thirst = 60
 ITEM.description = "Canned Coffee."
 ITEM.longdesc = "Canned Coffee is extremely popular throughout the world, often times as an alternative to Energy Drinks and Soda. The Zone is no different, and this particular drink is especially popular among Duty soldiers, and technicians. This particular one is flavored with artificial sweeteners to resemble vanilla. This brand is made in the United States, but is mostly an exported item."
