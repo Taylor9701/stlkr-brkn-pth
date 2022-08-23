@@ -5,6 +5,7 @@ ITEM.model = "models/props_junk/garbage_bag001a.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.flag = "A"
+ITEM.price = 0
 ITEM.category = "Kits"
 ITEM.itemsForcedDrop = {}
 ITEM.items = {}
