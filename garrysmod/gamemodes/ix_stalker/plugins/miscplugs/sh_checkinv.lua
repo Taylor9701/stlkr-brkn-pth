@@ -1,8 +1,9 @@
+--[[
 local PLUGIN = PLUGIN
-
 PLUGIN.name = "Check Inventory"
 PLUGIN.author = "some faggot"
 PLUGIN.desc = "Simple command to check inventory of target player"
+--]]
 
 ix.command.Add("charcheckinv", {
 	adminOnly = true,
@@ -54,11 +55,17 @@ if CLIENT then
 
 		if (inventory and inventory.slots) then
 			
+			local inventory2 = LocalPlayer():GetCharacter():GetInventory()
+			
+			if (inventory == inventory2) then
+				return
+			end
+			
 			ix.gui.inv1 = vgui.Create("ixInventory")
 			ix.gui.inv1:ShowCloseButton(true)
 			ix.gui.inv1:SetPos(ScrW()*0.5, ScrH()*0.2)
 
-			local inventory2 = LocalPlayer():GetCharacter():GetInventory()
+			
 
 			if (inventory2) then
 				ix.gui.inv1:SetInventory(inventory2)

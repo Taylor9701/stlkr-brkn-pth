@@ -1,7 +1,8 @@
+--[[
 PLUGIN.name = "CW2.0 Raise/Lower"
 PLUGIN.author = "Verne & Lt. Taylor"
 PLUGIN.desc = "Allows the use of CW2.0 weapons."
-
+--]]
     -- We can't get the owner in this hook, which is why we don't use setWepRaised here
 function PLUGIN:WeaponEquip(weapon)
     if (!IsValid(weapon)) then return end

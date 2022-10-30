@@ -1,9 +1,9 @@
+--[[
 local PLUGIN = PLUGIN
-
 PLUGIN.Name = "STALKER Model Animations"
 PLUGIN.Author = "Vath"
 PLUGIN.Description = "Animations for ixchernobyl models."
-
+--]]
 --Admin models
 
 ix.anim.SetModelClass("models/nasca/stalker/admin_degtyarev.mdl", "player")

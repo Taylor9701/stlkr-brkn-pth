@@ -1,6 +1,8 @@
+--[[
 PLUGIN.name = "Climb"
 PLUGIN.author = "Hoooldini"
 PLUGIN.description = "Adds the ability to climb up ledges."
+--]]
 
 if (SERVER) then
 	function PLUGIN:KeyPress( ply, key )

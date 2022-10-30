@@ -3,6 +3,8 @@ PLUGIN.name = "Extra Chat Commands"
 PLUGIN.author = "Chancer"
 PLUGIN.desc = "Screaming, long ranged /me, long ranged /it, etc."
 
+ix.util.Include("sh_extracommands.lua")
+
 --regular chat replacement
 ix.chat.Register("ic", {
 	format = "%s says \"%s\"",

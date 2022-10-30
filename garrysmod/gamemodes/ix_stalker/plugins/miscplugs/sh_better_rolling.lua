@@ -1,6 +1,8 @@
+--[[
 PLUGIN.name = "Better Rolling"
 PLUGIN.author = "Taylor"
 PLUGIN.desc = "Gently adjusts roll results towards the average for more perceptibly fair results."
+--]]
 
 ix.config.Add("rollAdjustment", 2, "What % of the max to increase rolls by when making adjustments.", nil, {
 	data = {min = 0, max = 50, decimals = 0},

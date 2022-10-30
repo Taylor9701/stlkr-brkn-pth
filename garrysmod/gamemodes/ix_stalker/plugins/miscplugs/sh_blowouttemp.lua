@@ -1,6 +1,8 @@
+--[[
 PLUGIN.name = "Temporary Blowout Control"
 PLUGIN.author = "some faggot"
 PLUGIN.desc = "Lets you control the blowout addon from helix."
+--]]
 
 ix.command.Add("blowouttriggerinstant", {
 	adminOnly = true,

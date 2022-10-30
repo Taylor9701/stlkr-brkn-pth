@@ -1,6 +1,8 @@
+--[[
 PLUGIN.name = "Corpse Destroyer"
-PLUGIN.author = "Tracks and deletes corpse ragdolls regularly to avoid clutter."
+PLUGIN.author = "Taylor"
 PLUGIN.desc = "Handles corpses from dead muties"
+--]]
 
 if CLIENT then return end
 

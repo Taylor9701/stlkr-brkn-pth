@@ -1,6 +1,8 @@
+--[[
 PLUGIN.name = "Override Thirdperson"
 PLUGIN.description = "Override Thirdperson."
 PLUGIN.author = "ZeMysticalTaco / TFA"
+--]]
 
 if SERVER then
 	AddCSLuaFile()

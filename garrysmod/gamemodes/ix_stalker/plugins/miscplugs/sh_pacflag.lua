@@ -1,8 +1,9 @@
+--[[
 local PLUGIN = PLUGIN
-
 PLUGIN.name = "PAC3 Flag"
 PLUGIN.author = "Luna"
 PLUGIN.desc = "Adds a flag to PAC3."
+--]]
 
 function PLUGIN:PrePACConfigApply(client)
 	if client:GetCharacter() then

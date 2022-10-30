@@ -82,7 +82,7 @@ ITEM.functions.Equip = {
 		end
 
 		item:SetData("equip", true)
-		item.player:AddPart(item.uniqueID, item)
+		--item.player:AddPart(item.uniqueID, item)
 
 		if (item.attribBoosts) then
 			for k, v in pairs(item.attribBoosts) do
@@ -131,17 +131,20 @@ ITEM.functions.Sell = {
 	OnRun = function(item)
 		local client = item.player
 		local sellprice = item.price/1.32
-		
-		if item.quantity > 1 then
-			sellprice = ((item.price/1.32) * (item:GetData("quantity",item.quantity)/item.quantity))
-		end
 		sellprice = math.Round(sellprice)
 		client:Notify( "Sold for "..(sellprice).." rubles." )
 		client:GetCharacter():GiveMoney(sellprice)
 		
 	end,
-	OnCanRun = function(item)
-		return !IsValid(item.entity) and item:GetOwner():GetCharacter():HasFlags("1")
+	OnCanRun = function(item)	-- made it multiple if's just because it was getting too long
+		if table.IsEmpty(item:GetInventory():GetItems()) then
+			if (!IsValid(item.entity) and item:GetData("equip") == false) then
+				if item:GetOwner():GetCharacter():HasFlags("1") then
+					return true
+				end
+			end
+		end
+		return false
 	end
 }
 
@@ -152,10 +155,6 @@ ITEM.functions.Value = {
 	OnRun = function(item)
 		local client = item.player
 		local sellprice = (item.price/1.32)
-		
-		if item.quantity > 1 then
-			sellprice = (sellprice * (item:GetData("quantity",item.quantity)/item.quantity))
-		end
 		sellprice = math.Round(sellprice)
 		client:Notify( "Item is sellable for "..(sellprice).." rubles." )
 		return false
@@ -316,7 +315,7 @@ function ITEM:RemovePart(client)
 	local char = client:GetCharacter()
 
 	self:SetData("equip", false)
-	client:RemovePart(self.uniqueID)
+	--client:RemovePart(self.uniqueID)
 
 	if (self.attribBoosts) then
 		for k, _ in pairs(self.attribBoosts) do

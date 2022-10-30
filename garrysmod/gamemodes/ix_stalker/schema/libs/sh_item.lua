@@ -437,9 +437,9 @@ do
 						local icon
 						
 						if ((item.image != nil) and (item.image != "")) then
-							icon = self:AddIconImg(item.image, x, y, item.width, item.height, item:GetSkin())
+							icon = panel:AddIconImg(item.image, x, y, item.width, item.height, item:GetSkin())
 						else
-							icon = self:AddIcon(item:GetModel() or "models/props_junk/popcan01a.mdl", x, y, item.width, item.height, item:GetSkin())
+							icon = panel:AddIcon(item:GetModel() or "models/props_junk/popcan01a.mdl", x, y, item.width, item.height, item:GetSkin())
 						end
 
 						if (IsValid(icon)) then

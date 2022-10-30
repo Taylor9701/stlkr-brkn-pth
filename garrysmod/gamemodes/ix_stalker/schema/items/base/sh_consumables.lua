@@ -13,6 +13,47 @@ ITEM.quantMax = 1
 ITEM.useName = "Consume" -- "Eat" or "Drink" generally
 ITEM.useIcon = "icon16/stalker/drink.png" -- or "icon16/stalker/eat.png"
 
+ITEM.functions.Sell = {
+	name = "Sell",
+	icon = "icon16/stalker/sell.png",
+	sound = "physics/metal/chain_impact_soft2.wav",
+	OnRun = function(item)
+		local client = item.player
+		local sellprice = item.price/1.32
+		
+		if item.quantity > 1 then
+			sellprice = ((item.price/1.32) * (item:GetData("quantity",item.quantity)/item.quantity))
+		end
+		sellprice = math.Round(sellprice)
+		client:Notify( "Sold for "..(sellprice).." rubles." )
+		client:GetCharacter():GiveMoney(sellprice)
+		return true 
+	end,
+	OnCanRun = function(item)
+		return !IsValid(item.entity) and item:GetOwner():GetCharacter():HasFlags("1")
+	end
+}
+
+ITEM.functions.Value = {
+	name = "Value",
+	icon = "icon16/help.png",
+	sound = "physics/metal/chain_impact_soft2.wav",
+	OnRun = function(item)
+		local client = item.player
+		local sellprice = (item.price/1.32)
+		
+		if item.quantity > 1 then
+			sellprice = (sellprice * (item:GetData("quantity",item.quantity)/item.quantity))
+		end
+		sellprice = math.Round(sellprice)
+		client:Notify( "Item is sellable for "..(sellprice).." rubles." )
+		return false
+	end,
+	OnCanRun = function(item)
+		return !IsValid(item.entity) and item:GetOwner():GetCharacter():HasFlags("1")
+	end
+}
+
 function ITEM:GetDescription()
 	local quant = self:GetData("quantity", 1)
 	local str = self.description

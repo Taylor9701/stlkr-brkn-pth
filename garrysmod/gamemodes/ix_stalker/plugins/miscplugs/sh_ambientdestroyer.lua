@@ -1,6 +1,8 @@
+--[[
 PLUGIN.name = "Ambient Sound Destroyer"
 PLUGIN.author = "Chancer"
 PLUGIN.description = "This tries to turn off ambient noises on the map, can be helpful with lots of things."
+--]]
 
 ix.config.Add("ambienceOff", false, "Whether or not to kill ambient sound entities.", nil, {
 	category = "Map"
