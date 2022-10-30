@@ -564,7 +564,7 @@ if CLIENT then
 			infoback:SetWidth(((.328125)*ScrW()))
 			infoback:Dock(TOP)
 			infoback:DockMargin(0,(.0092592592592593*ScrH()),0,0)
-			if desc then
+			if backstory then
 				infoback:SetValue(backstory)
 			else
 				infoback:SetValue("N/A")
