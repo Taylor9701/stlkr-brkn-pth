@@ -31,6 +31,7 @@ ITEM.radProt = 0
 ITEM.equipIcon = Material("materials/vgui/ui/stalker/misc/equip.png")
 ITEM.skincustom = {}
 ITEM.outfitCategory = "model"
+ITEM.image = ""
 
 ITEM:Hook("drop", function(item)
 	if (item:GetData("equip")) then

@@ -7,14 +7,6 @@ ITEM.price = 0
 ITEM.width = 1
 ITEM.height = 1
 ITEM.flag = "A"
-
-ITEM.functions.Use = {
-	sound = "items/battery_pickup.wav",
-	OnRun = function(itemTable)
-		local client = itemTable.player
-
-
-	end
-}
-
+ITEM.sound = "items/battery_pickup.wav"
 ITEM.weight = 0.1
+ITEM.useText = {"does something with ", " to their suit"} -- I have no idea wtf this is supposed to be

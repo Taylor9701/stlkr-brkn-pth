@@ -4,8 +4,6 @@ PLUGIN.author = "Subleader"
 PLUGIN.desc = "Another description with more capacity."
 DESCRIPTIONLIMIT = 2000
 
-ix.plugin.SetUnloaded("descenhanced", true) -- i can't delete a lone folder in github so this is the best i can do without dling the repo (hassle)
-
 if (CLIENT) then
 	netstream.Hook("ixReceiveDescription", function(client, contents, url, sheetdata, isadmin)
 		local description = vgui.Create("ixDescriptionEn")

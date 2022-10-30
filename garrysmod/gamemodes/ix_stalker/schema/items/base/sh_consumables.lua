@@ -9,6 +9,9 @@ ITEM.hunger = 0
 ITEM.thirst = 0
 ITEM.empty = false
 ITEM.quantity = 1
+ITEM.quantMax = 1
+ITEM.useName = "Consume" -- "Eat" or "Drink" generally
+ITEM.useIcon = "icon16/stalker/drink.png" -- or "icon16/stalker/eat.png"
 
 function ITEM:GetDescription()
 	local quant = self:GetData("quantity", 1)
@@ -127,172 +130,99 @@ if (CLIENT) then
 		local cooked = item:GetData("cooked", 1)
 		local quantity = item:GetData("quantity", item.quantity)
 
-		draw.SimpleText(quantity.."/"..item.quantity, "DermaDefault", 3, h - 1, color_white, TEXT_ALIGN_LEFT, TEXT_ALIGN_BOTTOM, 1, color_black)
+		draw.SimpleText(quantity.."/"..item.quantMax, "DermaDefault", 3, h - 1, color_white, TEXT_ALIGN_LEFT, TEXT_ALIGN_BOTTOM, 1, color_black)
 	end
 end
 
-function ITEM:DecideFunction()
-	if ITEM.thirst > 0 then
-		ITEM.functions.use = {
-			name = "Drink",
-			icon = "icon16/stalker/drink.png",
-			OnCanRun = function(item)
-				if !IsValid(item.entity) then
-					if item.thirst != 0 then
-						if item.player:GetCharacter():GetData("thirst", 100) >= 100 then
-							return false
-						end
-					end
-					if item.hunger != 0 then
-						if item.player:GetCharacter():GetData("hunger", 100) >= 100 then
-							return false
-						end
-					end
-				end
-			end,
-			OnRun = function(item)
-				local itemtable = item
-				local player = itemtable.player
-				local hunger = player:GetCharacter():GetData("hunger", 100)
-				local thirst = player:GetCharacter():GetData("thirst", 100)
-				local quantity = itemtable:GetData("quantity", itemtable.quantity)
+ITEM.functions.combine = {
+	OnCanRun = function(item, data)
+		if !data then
+			return false
+		end
+		
+		if !data[1] then
+			return false
+		end
+		
+		local targetItem = ix.item.instances[data[1]]
+
+		if targetItem.uniqueID == item.uniqueID then
+			return true
+		else
+			return false
+		end
+	end,
+	OnRun = function(item, data)
+		local targetItem = ix.item.instances[data[1]]
+		local localQuant = item:GetData("quantity", item.quantity)
+		local targetQuant = targetItem:GetData("quantity", targetItem.quantity)
+		local combinedQuant = (localQuant + targetQuant)
+
+		item.player:EmitSound("stalkersound/inv_properties.mp3", 110)
+
+		if combinedQuant <= item.quantMax then
+			targetItem:SetData("quantity", combinedQuant)
+			return true
+		elseif localQuant >= targetQuant then
+			targetItem:SetData("quantity",item.quantity)
+			item:SetData("quantity",(localQuant - (item.quantity - targetQuant)))
+			return false
+		else
+			targetItem:SetData("quantity",(targetQuant - (item.quantity - localQuant)))
+			item:SetData("quantity",item.quantity)
+			return false
+		end
+	end,
+}
+
+ITEM.functions.use = {
+	name = ITEM.useName,
+	icon = ITEM.useIcon,
+	OnCanRun = function(item)
+		plyThirst = item.player:GetCharacter():GetData("thirst", 100)
+		plyHunger = item.player:GetCharacter():GetData("hunger", 100)
+		
+		if !IsValid(item.entity) then
+			if (item.thirst > 0 and plyThirst >= 100) then
+				return false
+			elseif(item.hunger > 0 and plyHunger >= 100) then
+				return false
+			end
+		end
+	end,
+	OnRun = function(item)
+		local itemtable = item
+		local player = itemtable.player
+		local hunger = player:GetCharacter():GetData("hunger", 100)
+		local thirst = player:GetCharacter():GetData("thirst", 100)
+		local quantity = itemtable:GetData("quantity", itemtable.quantity)
+		local newhealth = math.Clamp(player:Health() + itemtable.heal, 1, 100)
+		player:SetHealth(newhealth)
+		player:SetHunger(hunger + itemtable.hunger)
+		player:SetThirst(thirst + itemtable.thirst)
+		player:UpdateThirstState(itemtable.player)
+		if itemtable.empty then
+			local inv = player:GetCharacter():GetInventory()
+			inv:Add(itemtable.empty)
+		end
+		
+		if itemtable.healot and not timer.Exists("foodheal") then
+			timer.Create("foodheal", 3, 5, function()
 				local newhealth = math.Clamp(player:Health() + itemtable.heal, 1, 100)
 				player:SetHealth(newhealth)
-				player:SetHunger(hunger + itemtable.hunger)
-				player:SetThirst(thirst + itemtable.thirst)
-				player:UpdateThirstState(itemtable.player)
-				if itemtable.empty then
-					local inv = player:GetCharacter():GetInventory()
-					inv:Add(itemtable.empty)
-				end
-				
-				if itemtable.healot and not timer.Exists("foodheal") then
-					timer.Create("foodheal", 3, 5, function()
-						local newhealth = math.Clamp(player:Health() + itemtable.heal, 1, 100)
-						player:SetHealth(newhealth)
-					end)
-				elseif itemtable.healot and timer.Exists("foodheal") then
-					timer.Adjust("foodheal", 3, 5, function()
-						local newhealth = math.Clamp(player:Health() + itemtable.heal, 1, 100)
-						player:SetHealth(newhealth)
-					end)
-				end
-
-				quantity = quantity - 1
-				
-				if (quantity >= 1) then
-					itemtable:SetData("quantity", quantity)
-					return false
-				end
-			end
-		}
-	elseif ITEM.hunger > 0 then
-		ITEM.functions.use = {
-			name = "Eat",
-			icon = "icon16/stalker/eat.png",
-			OnCanRun = function(item)
-				if !IsValid(item.entity) then
-					if item.thirst != 0 then
-						if item.player:GetCharacter():GetData("thirst", 100) >= 100 then
-							return false
-						end
-					end
-					if item.hunger != 0 then
-						if item.player:GetCharacter():GetData("hunger", 100) >= 100 then
-							return false
-						end
-					end
-				end
-			end,
-			OnRun = function(item)
-				local itemtable = item
-				local player = itemtable.player
-				local hunger = player:GetCharacter():GetData("hunger", 100)
-				local thirst = player:GetCharacter():GetData("thirst", 100)
-				local quantity = itemtable:GetData("quantity", itemtable.quantity)
+			end)
+		elseif itemtable.healot and timer.Exists("foodheal") then
+			timer.Adjust("foodheal", 3, 5, function()
 				local newhealth = math.Clamp(player:Health() + itemtable.heal, 1, 100)
 				player:SetHealth(newhealth)
-				player:SetHunger(hunger + itemtable.hunger)
-				player:SetThirst(thirst + itemtable.thirst)
-				player:UpdateThirstState(itemtable.player)
-				if itemtable.empty then
-					local inv = player:GetCharacter():GetInventory()
-					inv:Add(itemtable.empty)
-				end
-				
-				if itemtable.healot and not timer.Exists("foodheal") then
-					timer.Create("foodheal", 3, 5, function()
-						local newhealth = math.Clamp(player:Health() + itemtable.heal, 1, 100)
-						player:SetHealth(newhealth)
-					end)
-				elseif itemtable.healot and timer.Exists("foodheal") then
-					timer.Adjust("foodheal", 3, 5, function()
-						local newhealth = math.Clamp(player:Health() + itemtable.heal, 1, 100)
-						player:SetHealth(newhealth)
-					end)
-				end
+			end)
+		end
 
-				quantity = quantity - 1
-				
-				if (quantity >= 1) then
-					itemtable:SetData("quantity", quantity)
-					return false
-				end
-			end
-		}
-	elseif ITEM.hunger > 0 and ITEM.thirst > 0 then
-		ITEM.functions.use = {
-			name = "Consume",
-			icon = "icon16/stalker/eat.png",
-			OnCanRun = function(item)
-				if !IsValid(item.entity) then
-					if item.thirst != 0 then
-						if item.player:GetCharacter():GetData("thirst", 100) >= 100 then
-							return false
-						end
-					end
-					if item.hunger != 0 then
-						if item.player:GetCharacter():GetData("hunger", 100) >= 100 then
-							return false
-						end
-					end
-				end
-			end,
-			OnRun = function(item)
-				local itemtable = item
-				local player = itemtable.player
-				local hunger = player:GetCharacter():GetData("hunger", 100)
-				local thirst = player:GetCharacter():GetData("thirst", 100)
-				local quantity = itemtable:GetData("quantity", itemtable.quantity)
-				local newhealth = math.Clamp(player:Health() + itemtable.heal, 1, 100)
-				player:SetHealth(newhealth)
-				player:SetHunger(hunger + itemtable.hunger)
-				player:SetThirst(thirst + itemtable.thirst)
-				player:UpdateThirstState(itemtable.player)
-				if itemtable.empty then
-					local inv = player:GetCharacter():GetInventory()
-					inv:Add(itemtable.empty)
-				end
-				
-				if itemtable.healot and not timer.Exists("foodheal") then
-					timer.Create("foodheal", 3, 5, function()
-						local newhealth = math.Clamp(player:Health() + itemtable.heal, 1, 100)
-						player:SetHealth(newhealth)
-					end)
-				elseif itemtable.healot and timer.Exists("foodheal") then
-					timer.Adjust("foodheal", 3, 5, function()
-						local newhealth = math.Clamp(player:Health() + itemtable.heal, 1, 100)
-						player:SetHealth(newhealth)
-					end)
-				end
-
-				quantity = quantity - 1
-				
-				if (quantity >= 1) then
-					itemtable:SetData("quantity", quantity)
-					return false
-				end
-			end
-		}
-	end	
-end
+		quantity = quantity - 1
+		
+		if (quantity >= 1) then
+			itemtable:SetData("quantity", quantity)
+			return false
+		end
+	end
+}

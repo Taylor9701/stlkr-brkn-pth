@@ -10,43 +10,5 @@ ITEM.price = "1000"
 ITEM.flag = "1"
 ITEM.quantity = 2
 ITEM.weight = 0.05
-
-function ITEM:GetDescription()
-	if (!self.entity or !IsValid(self.entity)) then
-		local quant = self:GetData("quantity", self.quantity)
-		local str = self.longdesc.."\n \nThere's only "..quant.." uses left."
-
-		return str
-	else
-		return self.desc
-	end
-end
-
-if (CLIENT) then
-	function ITEM:PaintOver(item, w, h)
-
-		draw.SimpleText(item:GetData("quantity", item.quantity).."/"..item.quantity, "DermaDefault", 3, h - 1, color_white, TEXT_ALIGN_LEFT, TEXT_ALIGN_BOTTOM, 1, color_black)
-	end
-end
-
-ITEM.functions.use = {
-	name = "Swallow",
-	icon = "icon16/stalker/swallow.png",
-	OnRun = function(item)
-		local quantity = item:GetData("quantity", item.quantity)
-		item.player:AddBuff("buff_radiationremoval", 8, { amount = 5 })
-		ix.chat.Send(item.player, "iteminternal", "swallows some "..item.name..".", false)
-		quantity = quantity - 1
-
-		if (quantity >= 1) then
-			item:SetData("quantity", quantity)
-			return false
-		end
-		
-		
-		return true
-	end,
-	OnCanRun = function(item)
-		return (!IsValid(item.entity))
-	end
-}
+ITEM.useName = "Swallow"
+ITEM.useText = {"opens an ", " and swallows one."}

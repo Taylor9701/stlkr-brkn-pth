@@ -4,11 +4,6 @@ ITEM.description = "Drug designed to protect the body from nervous overload by m
 ITEM.category = "Medical"
 ITEM.price = 6000
 ITEM.flag = "1"
-
-ITEM.functions.Use = {
-	sound = "stalker/interface/inv_eat_pills_effect.ogg",
-	OnRun = function(itemTable)
-		local client = itemTable.player
-
-	end
-}
+ITEM.sound = "stalker/interface/inv_eat_pills_effect.ogg"
+ITEM.useName = "Swallow"
+ITEM.useText = {"opens a ", " and swallows one."}

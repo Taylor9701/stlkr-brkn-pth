@@ -5,8 +5,6 @@ if (SERVER) then
 	util.AddNetworkString("ixShipmentOpen")
 
 	net.Receive("ixBusinessBuy", function(length, client)
-		local items = net.ReadTable()
-
 		if (client.ixNextBusiness and client.ixNextBusiness > CurTime()) then
 			client:NotifyLocalized("businessTooFast")
 			return
@@ -18,7 +16,14 @@ if (SERVER) then
 			return
 		end
 
-		if (table.Count(items) < 1) then
+		local indicies = net.ReadUInt(8)
+		local items = {}
+
+		for _ = 1, indicies do
+			items[net.ReadString()] = net.ReadUInt(8)
+		end
+
+		if (table.IsEmpty(items)) then
 			return
 		end
 

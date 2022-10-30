@@ -5,6 +5,8 @@ ITEM.category = "Mutant Trinkets"
 ITEM.model = "models/Gibs/HGIBS.mdl"
 ITEM.width = 1
 ITEM.height = 1
+ITEM.quantity = 1
+ITEM.quantMax = 5
 ITEM.pacData = {}
 ITEM.equipIcon = Material("materials/vgui/ui/stalker/misc/equip.png")
 
@@ -159,4 +161,51 @@ ITEM.functions.Clone = {
 		local client = item.player
 		return client:GetCharacter():HasFlags("N") and !IsValid(item.entity)
 	end
+}
+
+if (CLIENT) then
+	function ITEM:PaintOver(item, w, h)
+		draw.SimpleText(item:GetData("quantity", item.quantity).."/"..item.quantMax, "DermaDefault", 3, h - 1, color_white, TEXT_ALIGN_LEFT, TEXT_ALIGN_BOTTOM, 1, color_black)
+	end
+end
+
+ITEM.functions.combine = {
+	OnCanRun = function(item, data)
+		if !data then
+			return false
+		end
+		
+		if !data[1] then
+			return false
+		end
+		
+		local targetItem = ix.item.instances[data[1]]
+
+		if targetItem.uniqueID == item.uniqueID then
+			return true
+		else
+			return false
+		end
+	end,
+	OnRun = function(item, data)
+		local targetItem = ix.item.instances[data[1]]
+		local localQuant = item:GetData("quantity", item.quantity)
+		local targetQuant = targetItem:GetData("quantity", targetItem.quantity)
+		local combinedQuant = (localQuant + targetQuant)
+
+		item.player:EmitSound("stalkersound/inv_properties.mp3", 110)
+
+		if combinedQuant <= item.quantMax then
+			targetItem:SetData("quantity", combinedQuant)
+			return true
+		elseif localQuant >= targetQuant then
+			targetItem:SetData("quantity",item.quantity)
+			item:SetData("quantity",(localQuant - (item.quantity - targetQuant)))
+			return false
+		else
+			targetItem:SetData("quantity",(targetQuant - (item.quantity - localQuant)))
+			item:SetData("quantity",item.quantity)
+			return false
+		end
+	end,
 }

@@ -4,10 +4,11 @@ ITEM.width = 1
 ITEM.height = 1
 ITEM.ammo = "pistol" -- type of the ammo
 ITEM.ammoAmount = 30 -- amount of the ammo
-ITEM.loadSize = {1,5,15, ITEM.ammoAmount}
+ITEM.ammoMax = 150
 ITEM.description = "A box with %s rounds of ammunition."
 ITEM.category = "Ammunition"
 ITEM.busflag = {"dev"}
+ITEM.splitSize = {5, 10, 15, 30}
 ITEM.isAmmo = true
 
 function ITEM:GetDescription()
@@ -122,7 +123,7 @@ ITEM.functions.Clone = {
 if (CLIENT) then
 	function ITEM:PaintOver(item, w, h)
 		draw.SimpleText(
-			item:GetData("quantity", item.ammoAmount).."/"..item.ammoAmount, "DermaDefault", 3, h - 1, color_white, TEXT_ALIGN_LEFT, TEXT_ALIGN_BOTTOM, 1, color_black
+			item:GetData("quantity", item.ammoAmount).."/"..item.ammoMax, "DermaDefault", 3, h - 1, color_white, TEXT_ALIGN_LEFT, TEXT_ALIGN_BOTTOM, 1, color_black
 		)
 	end
 end
@@ -136,11 +137,11 @@ ITEM.functions.split = {
 		local targets = {}
         local quantity = item:GetData("quantity", item.ammoAmount)
 		
-        for i=1,#item.loadSize-1 do
-			if quantity > item.loadSize[i] then
+        for i=1,#item.splitSize-1 do
+			if quantity > item.splitSize[i] then
 				table.insert(targets, {
-					name = item.loadSize[i],
-					data = {item.loadSize[i]},
+					name = item.splitSize[i],
+					data = {item.splitSize[i]},
 				})
 			end
 		end
@@ -197,16 +198,16 @@ ITEM.functions.combine = {
 
 		item.player:EmitSound("stalkersound/inv_properties.mp3", 110)
 
-		if combinedQuant <= item.ammoAmount then
+		if combinedQuant <= item.ammoMax then
 			targetItem:SetData("quantity", combinedQuant)
 			return true
 		elseif localQuant >= targetQuant then
-			targetItem:SetData("quantity",item.ammoAmount)
-			item:SetData("quantity",(localQuant - (item.ammoAmount - targetQuant)))
+			targetItem:SetData("quantity",item.ammoMax)
+			item:SetData("quantity",(localQuant - (item.ammoMax - targetQuant)))
 			return false
 		else
-			targetItem:SetData("quantity",(targetQuant - (item.ammoAmount - localQuant)))
-			item:SetData("quantity",item.ammoAmount)
+			targetItem:SetData("quantity",(targetQuant - (item.ammoMax - localQuant)))
+			item:SetData("quantity",item.ammoMax)
 			return false
 		end
 	end,
