@@ -24,8 +24,8 @@ ITEM.functions.Custom = {
 
 function ITEM:GetName()
 	local str = self:GetData("name", "Generic Name")
-	
 	local customData = self:GetData("custom", {})
+	
 	if(customData.name) then
 		str = customData.name
 	end
@@ -48,11 +48,7 @@ function ITEM:GetDescription()
 		str = str.."\n"..customData.longdesc or ""
 	end
 
-	if (self.entity) then
-		return (self.description)
-	else
-        return (str)
-	end
+	return (str)
 end
 
 
