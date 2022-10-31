@@ -20,7 +20,7 @@ function PLUGIN:PlayerInteractItem(client, action, item)
 	end
 
 	if action == "take" then
-		ix.chat.Send(client, "iteminternal", Format("picks up the %s.", item.name), false)
+		ix.chat.Send(client, "iteminternal", Format("picks up the %s.", item:GetName()), false)
 	end
 end
 
