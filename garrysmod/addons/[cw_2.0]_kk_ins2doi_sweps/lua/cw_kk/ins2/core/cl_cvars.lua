@@ -1,10 +1,11 @@
+
 CustomizableWeaponry_KK.ins2.conVars = CustomizableWeaponry_KK.ins2.conVars or {}
 CustomizableWeaponry_KK.ins2.conVars.main = CustomizableWeaponry_KK.ins2.conVars.main or {}
 CustomizableWeaponry_KK.ins2.conVars.other = CustomizableWeaponry_KK.ins2.conVars.other or {}
 
 if CLIENT then
 	local tab = CustomizableWeaponry_KK.ins2.conVars.main
-	tab["cw_kk_ins2_rig"] = CreateClientConVar("cw_kk_ins2_rig", 1, true, true)
+	tab["cw_kk_ins2_rig"] = CreateClientConVar("cw_kk_ins2_rig", 2, true, true)
 	tab["cw_kk_ins2_rigskin"] = CreateClientConVar("cw_kk_ins2_rigskin", 0, true, true)
 	tab["cw_kk_ins2_shell_sound"] = CreateClientConVar("cw_kk_ins2_shell_sound", 3, true, false)
 	tab["cw_kk_ins2_shell_time"] = CreateClientConVar("cw_kk_ins2_shell_time", 30, true, false)

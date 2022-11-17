@@ -124,15 +124,15 @@ if SERVER then
 		for _,ply in pairs(player.GetAll()) do
 			wep = ply:GetActiveWeapon()
 
-			--if !IsValid(wep) then return end
-			--if !wep.CW20Weapon then return end
-			if IsValid(wep) and wep.CW20Weapon then 
-				if self:hasFL(wep) then 
-					ply:AllowFlashlight(true)
-					return
-				end
+			if !IsValid(wep) then return end
+			if !wep.CW20Weapon then return end
+			if !self:hasFL(wep) then return end
+
+			if ply:FlashlightIsOn() then
+				ply:Flashlight(false)
 			end
 		end
 	end
+
 	hook.Add("Think", CustomizableWeaponry_KK.ins2.flashlight, CustomizableWeaponry_KK.ins2.flashlight.Think)
 end
