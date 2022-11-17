@@ -126,18 +126,44 @@ ITEM.functions.use = {
 
 function ITEM:GetDescription()
 	local quant = self:GetData("quantity", 1)
-	local str = self.description.."\n"..self.longdesc.."\n\n"
-
+	local str = self.description
+	
+	if self.longdesc and !IsValid(self.entity) then
+		str = str.."\n"..(self.longdesc or "")
+	end
+	
 	local customData = self:GetData("custom", {})
 	if(customData.desc) then
 		str = customData.desc
+	end
+	
+	if (customData.longdesc) and !IsValid(self.entity) then
+		str = str.."\n"..(customData.longdesc or "")
 	end
 
 	if (self.entity) then
 		return self.description.."\n \nThis tool has "..math.Round(quant).." uses left durability."
 	else
-        return (str.."Amount of durability restored: "..self.repairAmount.."% \nMinimum durability percentage: "..(self.repairTreshhold / 100).."%".."\n \nThis tool has "..quant.."/"..self.maxStack.." uses left.")
+        return (str.."\n".."Amount of durability restored: "..self.repairAmount.."% \nMinimum durability percentage: "..(self.repairTreshhold / 100).."%".."\n \nThis tool has "..quant.."/"..self.maxStack.." uses left.")
 	end
+end
+
+function ITEM:GetDescription()
+	local str = self.description
+	if self.longdesc and !IsValid(self.entity) then
+		str = str.."\n"..(self.longdesc or "")
+	end
+
+	local customData = self:GetData("custom", {})
+	if(customData.desc) then
+		str = customData.desc
+	end
+	
+	if (customData.longdesc) and !IsValid(self.entity) then
+		str = str.."\n"..(customData.longdesc or "")
+	end
+
+    return (str)
 end
 
 function ITEM:GetName()

@@ -175,7 +175,19 @@ ITEM.functions.Value = {
 }
 
 function ITEM:GetDescription()
-	local description = self.description
-	description = description.."\nWeight: "..self.weight.."kg"
-	return description
+	local str = self.description
+	if self.longdesc and !IsValid(self.entity) then
+		str = str.."\n"..(self.longdesc or "")
+	end
+
+	local customData = self:GetData("custom", {})
+	if(customData.desc) then
+		str = customData.desc
+	end
+	
+	if (customData.longdesc) and !IsValid(self.entity) then
+		str = str.."\n"..(customData.longdesc or "")
+	end
+
+    return (str.."\nWeight: "..self.weight.."kg")
 end

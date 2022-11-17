@@ -51,11 +51,19 @@ ITEM.functions.Value = {
 
 function ITEM:GetDescription()
 	local quant = self:GetData("quantity", 1)
-	local str = self.longdesc
+	local str = self.description
+	
+	if self.longdesc and !IsValid(self.entity) then
+		str = str.."\n"..(self.longdesc or "")
+	end
 
 	local customData = self:GetData("custom", {})
 	if(customData.desc) then
 		str = customData.desc
+	end
+	
+	if (customData.longdesc) and !IsValid(self.entity) then
+		str = str.."\n"..(customData.longdesc or "")
 	end
 
 	if (self.entity) then

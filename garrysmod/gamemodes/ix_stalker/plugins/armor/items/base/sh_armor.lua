@@ -374,22 +374,8 @@ ITEM:Hook("drop", function(item)
 	if (item:GetData("equip")) then
 		item.player:ReevaluateOverlay()
 		item:RemoveOutfit(item:GetOwner())
-		item:RemovePart(item.player)
 	end
 end)
-
-function ITEM:RemovePart(client)
-	local char = client:GetCharacter()
-
-	self:SetData("equip", false)
-	client:RemovePart(self.uniqueID)
-
-	if (self.attribBoosts) then
-		for k, _ in pairs(self.attribBoosts) do
-			char:RemoveBoost(self.uniqueID, k)
-		end
-	end
-end
 
 ITEM.functions.EquipUn = { -- sorry, for name order.
 	name = "Unequip",
@@ -397,12 +383,8 @@ ITEM.functions.EquipUn = { -- sorry, for name order.
 	icon = "icon16/stalker/unequip.png",
 	OnRun = function(item)
 		local client = item.player
-				
 		item:RemoveOutfit(item.player)
-		item:RemovePart(item.player)
-		
 		item.player:ReevaluateOverlay()
-		
 		return false
 	end,
 	OnCanRun = function(item)
@@ -446,7 +428,6 @@ ITEM.functions.Equip = {
 		end
 
 		item:SetData("equip", true)
-		item.player:AddPart(item.uniqueID, item)
 
 		local origbgroups = {}
 		for k, v in ipairs(client:GetBodyGroups()) do
@@ -582,17 +563,6 @@ function ITEM:CanTransfer(oldInventory, newInventory)
 	return true
 end
 
-function ITEM:OnRemoved()
-	local inventory = ix.item.inventories[self.invID]
-	local owner = inventory.GetOwner and inventory:GetOwner()
-
-	if (IsValid(owner) and owner:IsPlayer()) then
-		if (self:GetData("equip")) then
-			self:RemovePart(owner)
-		end
-	end
-end
-
 function ITEM:OnEquipped()
 	self.player:EmitSound("stalkersound/inv_slot.mp3")
 end
@@ -655,7 +625,7 @@ ITEM.functions.Sell = {
 		client:GetCharacter():GiveMoney(sellprice)
 	end,
 	OnCanRun = function(item)
-		return !IsValid(item.entity) and item:GetOwner():GetCharacter():HasFlags("1")
+		return !IsValid(item.entity) and item:GetOwner():GetCharacter():HasFlags("1") and !item:GetData("equip",false)
 	end
 }
 
@@ -680,26 +650,29 @@ ITEM.functions.Value = {
 }
 
 function ITEM:GetDescription()
-	local quant = self:GetData("quantity", 1)
-	local str = self.description.."\n\n"..self.longdesc or ""
+	local str = self.description
 	local cc = false
 	local bodyap = 0
 	local limbap = 0
 	local headap = 0
 	
+	if self.longdesc then
+		str = str.."\n"..(self.longdesc or "")
+	end
+
+	local customData = self:GetData("custom", {})
+	if customData.desc then
+		str = customData.desc
+	end
+
+	if customData.longdesc then
+		str = str.. "\n" ..customData.longdesc 
+	end
+	
 	if self.ballisticrpglevels then
 		bodyap = tonumber(self.ballisticrpglevels["body"]) or 0
 		limbap = tonumber(self.ballisticrpglevels["limb"]) or 0
 		headap = tonumber(self.ballisticrpglevels["head"]) or 0
-	end
-
-	local customData = self:GetData("custom", {})
-	if(customData.desc) then
-		str = customData.desc
-	end
-
-	if (customData.longdesc) then
-		str = str.. "\n\n" ..customData.longdesc 
 	end
 	
 	if self.res then
@@ -825,7 +798,7 @@ function ITEM:GetDescription()
 	end
 
 	if (self.entity) then
-		return (self.description .. "\n \nDurability: " .. math.floor(self:GetData("durability", 100)) .. "%")
+		return (self.description .. "\n\nDurability: " .. math.floor(self:GetData("durability", 100)) .. "%")
 	else
         return (str)
 	end

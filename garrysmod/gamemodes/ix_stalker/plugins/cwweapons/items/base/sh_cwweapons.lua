@@ -210,12 +210,16 @@ if (CLIENT) then
 end
 
 function ITEM:GetDescription()
-	local str = self.description.." \n\n"..self.longdesc or ""
+	local str = self.description
 	local dmg = self.Dmg
 	local range = self.Range
 	local cal
 	local upgrades = self:GetData("upgrades")
 	local atts = self:GetData("attachments")
+	
+	if self.longdesc then
+		str = str.."\n"..(self.longdesc or "")
+	end
 	
 	local customData = self:GetData("custom", {})
 	if(customData.desc) then
@@ -223,7 +227,7 @@ function ITEM:GetDescription()
 	end
 
 	if (customData.longdesc) then
-		str = str.. "\n\n" ..customData.longdesc 
+		str = str.. "\n" ..customData.longdesc 
 	end
 	
 	if atts then
@@ -335,8 +339,6 @@ ITEM:Hook("drop", function(item)
 			character:SetData("wepSlots",wepslots)
 			owner:EmitSound("stalkersound/inv_drop.mp3", 80)
 		end
-
-		item:RemovePAC(owner)
 	end
 end)
 
@@ -376,7 +378,7 @@ ITEM.functions.Value = {
 		return false
 	end,
 	OnCanRun = function(item)
-		return !IsValid(item.entity) and item:GetOwner():GetCharacter():HasFlags("1") and !item:GetData("equip")
+		return !IsValid(item.entity) and item:GetOwner():GetCharacter():HasFlags("1")
 	end
 }
 
@@ -411,18 +413,6 @@ ITEM.functions.Equip = {
 		return !IsValid(item.entity) and IsValid(client) and item:GetData("equip") != true
 	end
 }
-
-function ITEM:WearPAC(client)
-	if (ix.pac and self.pacData) then
-		client:AddPart(self.uniqueID, self)
-	end
-end
-
-function ITEM:RemovePAC(client)
-	if (ix.pac and self.pacData) then
-		client:RemovePart(self.uniqueID)
-	end
-end
 
 function ITEM:Equip(client)
 	local character = client:GetCharacter()
@@ -567,7 +557,6 @@ function ITEM:Unequip(client, bPlaySound, bRemoveItem)
 	wepslots[self.weaponCategory] = nil
 	character:SetData("wepSlots",wepslots)
 	self:SetData("equip", nil)
-	self:RemovePAC(client)
 
 	if (self.OnUnequipWeapon) then
 		self:OnUnequipWeapon(client, weapon)
@@ -657,8 +646,6 @@ function ITEM:OnRemoved()
 		if (IsValid(weapon)) then
 			weapon:Remove()
 		end
-
-		self:RemovePAC(owner)
 	end
 end
 
@@ -1044,10 +1031,6 @@ hook.Add("PlayerDeath", "ixStripClip", function(client)
 	for _, v in pairs(client:GetCharacter():GetInventory():GetItems()) do
 		if (v.isWeapon and v:GetData("equip")) then
 			v:SetData("equip", nil)
-			
-			if (v.pacData) then
-				v:RemovePAC(client)
-			end
 		end
 	end
 end)
