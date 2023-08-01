@@ -13,7 +13,6 @@ ITEM.invWidth = 4
 ITEM.invHeight = 2
 ITEM.isBag = true
 ITEM.outfitCategory = "backpack"
-ITEM.pacData = {}
 ITEM.equipIcon = Material("materials/vgui/ui/stalker/misc/equip.png")
 ITEM.functions.View = {
 	icon = "icon16/stalker/read.png",
@@ -72,7 +71,7 @@ ITEM.functions.Equip = {
 				local itemTable = ix.item.instances[v.id]
 				
 				if itemTable then
-					if (itemTable.pacData and v.outfitCategory == item.outfitCategory and itemTable:GetData("equip")) then
+					if (v.outfitCategory == item.outfitCategory and itemTable:GetData("equip")) then
 						item.player:Notify("You're already equipping this kind of outfit")
 
 						return false
@@ -82,7 +81,6 @@ ITEM.functions.Equip = {
 		end
 
 		item:SetData("equip", true)
-		item.player:AddPart(item.uniqueID, item)
 
 		if (item.attribBoosts) then
 			for k, v in pairs(item.attribBoosts) do
@@ -106,8 +104,6 @@ ITEM.functions.EquipUn = { -- sorry, for name order.
 	tip = "equipTip",
 	icon = "icon16/stalker/unequip.png",
 	OnRun = function(item)
-		item:RemovePart(item.player)
-
 		return false
 	end,
 	OnClick = function(item)
@@ -131,17 +127,20 @@ ITEM.functions.Sell = {
 	OnRun = function(item)
 		local client = item.player
 		local sellprice = item.price/1.32
-		
-		if item.quantity > 1 then
-			sellprice = ((item.price/1.32) * (item:GetData("quantity",item.quantity)/item.quantity))
-		end
 		sellprice = math.Round(sellprice)
 		client:Notify( "Sold for "..(sellprice).." rubles." )
 		client:GetCharacter():GiveMoney(sellprice)
 		
 	end,
-	OnCanRun = function(item)
-		return !IsValid(item.entity) and item:GetOwner():GetCharacter():HasFlags("1")
+	OnCanRun = function(item)	-- made it multiple if's just because it was getting too long
+		if table.IsEmpty(item:GetInventory():GetItems()) then
+			if (!IsValid(item.entity) and item:GetData("equip",false) == false) then
+				if item:GetOwner():GetCharacter():HasFlags("1") then
+					return true
+				end
+			end
+		end
+		return false
 	end
 }
 
@@ -152,10 +151,6 @@ ITEM.functions.Value = {
 	OnRun = function(item)
 		local client = item.player
 		local sellprice = (item.price/1.32)
-		
-		if item.quantity > 1 then
-			sellprice = (sellprice * (item:GetData("quantity",item.quantity)/item.quantity))
-		end
 		sellprice = math.Round(sellprice)
 		client:Notify( "Item is sellable for "..(sellprice).." rubles." )
 		return false
@@ -165,34 +160,22 @@ ITEM.functions.Value = {
 	end
 }
 
-ITEM:Hook("drop", function(item)
-	if (item:GetData("equip")) then
-		item:RemovePart(item.player)
-	end
-end)
-
 function ITEM:GetDescription()
-	local quant = self:GetData("quantity", 1)
 	local str = self.description
-	if self.longdesc then
+	if self.longdesc and !IsValid(self.entity) then
 		str = str.."\n"..(self.longdesc or "")
 	end
 
 	local customData = self:GetData("custom", {})
-	
 	if(customData.desc) then
 		str = customData.desc
 	end
-
-	if (customData.longdesc) then
+	
+	if (customData.longdesc) and !IsValid(self.entity) then
 		str = str.."\n"..customData.longdesc or ""
 	end
 
-	if (self.entity) then
-		return (self.description .. "\n \nDurability: " .. math.floor(self:GetData("durability", 100)) .. "%")
-	else
-        return (str)
-	end
+    return (str)
 end
 
 function ITEM:GetName()
@@ -312,21 +295,6 @@ if (CLIENT) then
 	end
 end
 
-function ITEM:RemovePart(client)
-	local char = client:GetCharacter()
-
-	self:SetData("equip", false)
-	client:RemovePart(self.uniqueID)
-
-	if (self.attribBoosts) then
-		for k, _ in pairs(self.attribBoosts) do
-			char:RemoveBoost(self.uniqueID, k)
-		end
-	end
-
-	self:OnUnequipped()
-end
-
 -- Called when a new instance of this item has been made.
 function ITEM:OnInstanced(invID, x, y)
 	local inventory = ix.item.inventories[invID]
@@ -427,15 +395,6 @@ function ITEM:OnRemoved()
 			query:Where("inventory_id", index)
 		query:Execute()
 	end
-
-	local inventory = ix.item.inventories[self.invID]
-	local owner = inventory.GetOwner and inventory:GetOwner()
-
-	if (IsValid(owner) and owner:IsPlayer()) then
-		if (self:GetData("equip")) then
-			self:RemovePart(owner)
-		end
-	end
 end
 
 -- Called when the item should tell whether or not it can be transfered between inventories.
@@ -495,7 +454,7 @@ end
 
 -- Called after the item is registered into the item tables.
 function ITEM:OnRegistered()
-	ix.item.RegisterInv(self.uniqueID, self.invWidth, self.invHeight, true)
+	ix.inventory.Register(self.uniqueID, self.invWidth, self.invHeight, true)
 end
 
 function ITEM:OnEquipped()

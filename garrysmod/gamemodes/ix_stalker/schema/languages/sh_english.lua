@@ -4,9 +4,9 @@ NAME = "English"
 LANGUAGE = {
 	helix = "Helix",
 
-	introTextOne = "infinity networks presents",
-	introTextTwo = "a STALKER Gamemode created by verne",
-	introContinue = "press space to continue",
+	introTextOne = "Broken Path presents",
+	introTextTwo = "a STALKER Gamemode",
+	introContinue = "Press Space to Continue",
 
 	helpIdle = "Select a category",
 	helpCommands = "Command parameters with <arrows> are required, while [brackets] are optional.",
@@ -324,6 +324,7 @@ LANGUAGE = {
 
 	resetDefault = "Reset to default",
 	resetDefaultDescription = "This will reset \"%s\" to its default value of \"%s\".",
+	optDisablehud = "Disable Compass",
 	optPersonalchatcolor = "Personal Chat Color",
 	optGasmaskoverlay = "Dynamic Gasmask Overlays",
 	optCursor = "STALKER Cursor",

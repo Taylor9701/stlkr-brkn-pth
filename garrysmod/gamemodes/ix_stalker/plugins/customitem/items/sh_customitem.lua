@@ -34,8 +34,8 @@ function ITEM:GetName()
 end
 
 function ITEM:GetDescription()
-	local str = self:GetData("description", "Custom Description")
-	if self.longdesc then
+	local str = self.description
+	if self.longdesc and !IsValid(self.entity) then
 		str = str.."\n"..(self.longdesc or "")
 	end
 
@@ -43,12 +43,12 @@ function ITEM:GetDescription()
 	if(customData.desc) then
 		str = customData.desc
 	end
-
-	if (customData.longdesc) then
-		str = str.."\n"..customData.longdesc or ""
+	
+	if (customData.longdesc) and !IsValid(self.entity) then
+		str = str.."\n"..(customData.longdesc or "")
 	end
 
-	return (str)
+    return (str)
 end
 
 

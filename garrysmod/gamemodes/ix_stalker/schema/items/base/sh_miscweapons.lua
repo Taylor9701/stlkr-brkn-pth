@@ -52,7 +52,7 @@ ITEM.functions.Sell = {
 		client:GetCharacter():GiveMoney(sellprice)
 	end,
 	OnCanRun = function(item)
-		return !IsValid(item.entity) and item:GetOwner():GetCharacter():HasFlags("1")
+		return !IsValid(item.entity) and item:GetOwner():GetCharacter():HasFlags("1") and !item:GetData("equip",false)
 	end
 }
 
@@ -79,28 +79,20 @@ ITEM.functions.Value = {
 function ITEM:GetDescription()
 	local quant = self:GetData("quantity", 1)
 	local str = self.description
-	if self.longdesc then
-		str = str.."\n"..(self.longdesc or "").."\n\n"
+	if self.longdesc and !IsValid(self.entity) then
+		str = str.."\n"..(self.longdesc or "").."\n \nDurability: "..(math.floor(self:GetData("durability", 10000))/100).."%"
 	end
 
 	local customData = self:GetData("custom", {})
 	if(customData.desc) then
 		str = customData.desc
 	end
-
-	if (customData.longdesc) then
-		str = str.."\n"..customData.longdesc or ""
+	
+	if (customData.longdesc) and !IsValid(self.entity) then
+		str = str.."\n"..(customData.longdesc or "").."\n \nDurability: "..(math.floor(self:GetData("durability", 10000))/100).."%"
 	end
 
-	if (self.entity) then
-		return self.description
-	else
-		if self:GetData("durability") then
-			return (str .. "\n \nDurability: " .. (math.floor(self:GetData("durability", 10000))/100) .. "%")
-		else
-			return str
-		end
-	end
+    return (str)
 end
 
 function ITEM:GetName()
@@ -237,8 +229,6 @@ ITEM:Hook("drop", function(item)
 			owner.carryWeapons[item.weaponCategory] = nil
 			owner:EmitSound("stalkersound/inv_drop.mp3", 80)
 		end
-		
-		item:RemovePAC(owner)
 	end
 end)
 
@@ -273,18 +263,6 @@ ITEM.functions.Equip = {
 		return !IsValid(item.entity) and IsValid(client) and item:GetData("equip") != true
 	end
 }
-
-function ITEM:WearPAC(client)
-	if (ix.pac and self.pacData) then
-		client:AddPart(self.uniqueID, self)
-	end
-end
-
-function ITEM:RemovePAC(client)
-	if (ix.pac and self.pacData) then
-		client:RemovePart(self.uniqueID)
-	end
-end
 
 function ITEM:Equip(client)
 	local character = client:GetCharacter()
@@ -385,7 +363,6 @@ function ITEM:Unequip(client, bPlaySound, bRemoveItem)
 	wepslots[self.weaponCategory] = nil
 	character:SetData("wepSlots",wepslots)
 	self:SetData("equip", nil)
-	self:RemovePAC(client)
 
 	if (self.OnUnequipWeapon) then
 		self:OnUnequipWeapon(client, weapon)
@@ -448,8 +425,6 @@ function ITEM:OnRemoved()
 		if (IsValid(weapon)) then
 			weapon:Remove()
 		end
-
-		self:RemovePAC(owner)
 	end
 end
 
@@ -461,10 +436,6 @@ hook.Add("PlayerDeath", "ixStripClip", function(client)
 		if (v.isWeapon and v:GetData("equip")) then
 			v:SetData("ammo", nil)
 			v:SetData("equip", nil)
-
-			if (v.pacData) then
-				v:RemovePAC(client)
-			end
 		end
 	end
 end)

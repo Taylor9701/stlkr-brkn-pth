@@ -449,6 +449,14 @@ function SKIN:PaintChatboxEntry(panel, width, height)
 	surface.DrawOutlinedRect(0, 0, width, height)
 end
 
+function SKIN:PaintInventorySlot(panel, width, height)
+	surface.SetDrawColor(35, 35, 35, 85)
+	surface.DrawRect(1, 1, width - 2, height - 2)
+
+	surface.SetDrawColor(0, 0, 0, 250)
+	surface.DrawOutlinedRect(1, 1, width - 2, height - 2)
+end
+
 function SKIN:DrawChatboxPreviewBox(x, y, text, color)
 	color = color or ix.config.Get("color")
 

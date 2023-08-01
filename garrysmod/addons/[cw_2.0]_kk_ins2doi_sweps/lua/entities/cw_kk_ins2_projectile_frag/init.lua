@@ -21,7 +21,7 @@ function ENT:Initialize()
 		phys:Wake()
 	end
 
-	--self:GetPhysicsObject():SetBuoyancyRatio(0)
+	self:GetPhysicsObject():SetBuoyancyRatio(0)
 
 	self.dangerSound = ents.Create("ai_sound")
 

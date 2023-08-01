@@ -10,6 +10,39 @@ ITEM.repairTreshhold = 80
 ITEM.maxStack = 3
 ITEM.sound = "stalkersound/inv_repair_sewing_kit_fast.mp3"
 ITEM.weight = 0.2
+
+ITEM.functions.Sell = {
+	name = "Sell",
+	icon = "icon16/stalker/sell.png",
+	sound = "physics/metal/chain_impact_soft2.wav",
+	OnRun = function(item)
+		local client = item.player
+		local sellprice = item.price/1.32
+		sellprice = math.Round(sellprice * (item.maxStack / item:GetData("quantity",1)))
+		client:Notify( "Sold for "..(sellprice).." rubles." )
+		client:GetCharacter():GiveMoney(sellprice)
+		
+	end,
+	OnCanRun = function(item)
+		return !IsValid(item.entity) and item:GetOwner():GetCharacter():HasFlags("1")
+	end
+}
+
+ITEM.functions.Value = {
+	name = "Value",
+	icon = "icon16/help.png",
+	sound = "physics/metal/chain_impact_soft2.wav",
+	OnRun = function(item)
+		local client = item.player
+		local sellprice = (item.price/1.32)
+		sellprice = math.Round(sellprice * (item.maxStack / item:GetData("quantity",1)))
+		client:Notify( "Item is sellable for "..(sellprice).." rubles." )
+		return false
+	end,
+	OnCanRun = function(item)
+		return !IsValid(item.entity) and item:GetOwner():GetCharacter():HasFlags("1")
+	end
+}
  
 ITEM.functions.use = {
 	name = "Stitch up outfit",
@@ -93,17 +126,25 @@ ITEM.functions.use = {
 
 function ITEM:GetDescription()
 	local quant = self:GetData("quantity", 1)
-	local str = self.description.."\n"..self.longdesc.."\n\n"
-
+	local str = self.description
+	
+	if self.longdesc and !IsValid(self.entity) then
+		str = str.."\n"..(self.longdesc or "")
+	end
+	
 	local customData = self:GetData("custom", {})
 	if(customData.desc) then
 		str = customData.desc
+	end
+	
+	if (customData.longdesc) and !IsValid(self.entity) then
+		str = str.."\n"..(customData.longdesc or "")
 	end
 
 	if (self.entity) then
 		return self.description.."\n \nThis tool has "..math.Round(quant).." uses left durability."
 	else
-        return (str.."Amount of durability restored: "..self.repairAmount.."% \nMinimum durability percentage: "..self.repairTreshhold.."%".."\n \nThis tool has "..quant.."/"..self.maxStack.." uses left.")
+        return (str.."\n".."Amount of durability restored: "..self.repairAmount.."% \nMinimum durability percentage: "..(self.repairTreshhold / 100).."%".."\n \nThis tool has "..quant.."/"..self.maxStack.." uses left.")
 	end
 end
 

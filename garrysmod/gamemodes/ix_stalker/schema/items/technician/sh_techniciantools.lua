@@ -16,13 +16,54 @@ ITEM.repairAmount = 25
 ITEM.sound = "stalkersound/inv_repair_kit_use_fast.mp3"
 ITEM.weight = 0.012
 
+ITEM.functions.Sell = {
+	name = "Sell",
+	icon = "icon16/stalker/sell.png",
+	sound = "physics/metal/chain_impact_soft2.wav",
+	OnRun = function(item)
+		local client = item.player
+		local sellprice = item.price/1.32
+		sellprice = math.Round(sellprice * (item.maxStack / self:GetData("quantity",1)))
+		client:Notify( "Sold for "..(sellprice).." rubles." )
+		client:GetCharacter():GiveMoney(sellprice)
+		
+	end,
+	OnCanRun = function(item)
+		return !IsValid(item.entity) and item:GetOwner():GetCharacter():HasFlags("1")
+	end
+}
+
+ITEM.functions.Value = {
+	name = "Value",
+	icon = "icon16/help.png",
+	sound = "physics/metal/chain_impact_soft2.wav",
+	OnRun = function(item)
+		local client = item.player
+		local sellprice = (item.price/1.32)
+		sellprice = math.Round(sellprice * (item.maxStack / self:GetData("quantity",1)))
+		client:Notify( "Item is sellable for "..(sellprice).." rubles." )
+		return false
+	end,
+	OnCanRun = function(item)
+		return !IsValid(item.entity) and item:GetOwner():GetCharacter():HasFlags("1")
+	end
+}
+
 function ITEM:GetDescription()
 	local quant = self:GetData("quantity", 1)
-	local str = self.longdesc
+	local str = self.description
+	
+	if self.longdesc and !IsValid(self.entity) then
+		str = str.."\n"..(self.longdesc or "")
+	end
 
 	local customData = self:GetData("custom", {})
 	if(customData.desc) then
 		str = customData.desc
+	end
+	
+	if (customData.longdesc) and !IsValid(self.entity) then
+		str = str.."\n"..(customData.longdesc or "")
 	end
 
 	if (self.entity) then

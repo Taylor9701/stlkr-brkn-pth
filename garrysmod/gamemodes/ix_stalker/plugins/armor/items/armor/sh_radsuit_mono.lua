@@ -35,3 +35,5 @@ ITEM.newSkin = 0
 ITEM.bodyGroups = {
 	["Servomotors"] = 1,
 }
+
+ITEM.image = "test/example.png"

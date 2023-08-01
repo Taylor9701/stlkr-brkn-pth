@@ -2,9 +2,9 @@
 -- The shared init file. You'll want to fill out the info for your schema and include any other files that you need.
 
 -- Schema info
-Schema.name = "Call of the Zone"
-Schema.author = "faggot, verne"
-Schema.description = "A STALKER Roleplaying gamemode with tabletop elements."
+Schema.name = "Broken Path"
+Schema.author = "Taylor"
+Schema.description = "New Zone, same Hell"
 --Schema.logo = "vgui/background/wallpaper.jpg"
 
 

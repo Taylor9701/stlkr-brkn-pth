@@ -14,7 +14,7 @@ ITEM.functions.Sell = {
 	sound = "physics/metal/chain_impact_soft2.wav",
 	OnRun = function(item)
 		local client = item.player
-		local sellprice = item.price/1.32
+		local sellprice = math.Round(item.price/1.32)
 		
 		if item.quantity > 1 then
 			sellprice = ((item.price/1.32) * (item:GetData("quantity",item.quantity)/item.quantity))
@@ -35,7 +35,7 @@ ITEM.functions.Value = {
 	sound = "physics/metal/chain_impact_soft2.wav",
 	OnRun = function(item)
 		local client = item.player
-		local sellprice = (item.price/1.32)
+		local sellprice = math.Round(item.price/1.32)
 		
 		if item.quantity > 1 then
 			sellprice = (sellprice * (item:GetData("quantity",item.quantity)/item.quantity))
@@ -50,9 +50,8 @@ ITEM.functions.Value = {
 }
 
 function ITEM:GetDescription()
-	local quant = self:GetData("quantity", 1)
 	local str = self.description
-	if self.longdesc then
+	if self.longdesc and !IsValid(self.entity) then
 		str = str.."\n"..(self.longdesc or "")
 	end
 
@@ -60,16 +59,12 @@ function ITEM:GetDescription()
 	if(customData.desc) then
 		str = customData.desc
 	end
-
-	if (customData.longdesc) then
-		str = str.."\n"..customData.longdesc or ""
+	
+	if (customData.longdesc) and !IsValid(self.entity) then
+		str = str.."\n"..(customData.longdesc or "")
 	end
 
-	if (self.entity) then
-		return (self.description)
-	else
-        return (str)
-	end
+    return (str)
 end
 
 function ITEM:GetName()

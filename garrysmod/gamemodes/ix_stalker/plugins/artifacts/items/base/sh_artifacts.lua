@@ -8,22 +8,21 @@ ITEM.equipIcon = Material("materials/vgui/ui/stalker/misc/equip.png")
 ITEM.price = 1
 
 function ITEM:GetDescription()
-    local quant = self:GetData("quantity", 1)
-    local str = self.description
-    if self.longdesc then
-        str = str.."\n"..(self.longdesc or "")
-    end
+	local str = self.description
+	if self.longdesc and !IsValid(self.entity) then
+		str = str.."\n"..(self.longdesc or "")
+	end
 
-    local customData = self:GetData("custom", {})
-    if(customData.desc) then
-        str = customData.desc
-    end
+	local customData = self:GetData("custom", {})
+	if(customData.desc) then
+		str = customData.desc
+	end
+	
+	if (customData.longdesc) and !IsValid(self.entity) then
+		str = str.."\n"..(customData.longdesc or "")
+	end
 
-    if (self.entity) then
-        return (self.description)
-    else
-        return (str)
-    end
+    return (str)
 end
 
 function ITEM:OnLoadout()
@@ -159,13 +158,13 @@ ITEM.functions.Equip =
         local curr = 0
         
         for k, invItem in pairs(items) do
-            if invItem.isArtefact and invItem:GetData("equip") then
+            if invItem.isArtefact and invItem:GetData("equip",false) then
                 curr = curr + 1
             end
         end
         
         if cap > curr then
-            return (!IsValid(item.entity) and item:GetData("equip") ~= true)
+            return (!IsValid(item.entity) and !item:GetData("equip",false))
         else
             return false
         end

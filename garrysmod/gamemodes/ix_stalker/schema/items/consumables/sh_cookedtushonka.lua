@@ -16,4 +16,3 @@ end)
 ITEM.weight = 0.1
 ITEM.heal = 3
 ITEM.healot = 2
-ITEM:DecideFunction()

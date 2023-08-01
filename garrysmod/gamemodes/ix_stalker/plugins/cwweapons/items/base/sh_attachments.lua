@@ -24,10 +24,55 @@ ITEM.quantity = 1
 
 -- Additional slots can be added so long as they line up with the SWEP's attachment code appropriately.
 
+ITEM.functions.Sell = {
+	name = "Sell",
+	icon = "icon16/stalker/sell.png",
+	sound = "physics/metal/chain_impact_soft2.wav",
+	OnRun = function(item)
+		local client = item.player
+		local sellprice = item.price/1.32
+		sellprice = math.Round(sellprice)
+		client:Notify( "Sold for "..(sellprice).." rubles." )
+		client:GetCharacter():GiveMoney(sellprice)
+		
+	end,
+	OnCanRun = function(item)
+		return !IsValid(item.entity) and item:GetOwner():GetCharacter():HasFlags("1")
+	end
+}
+
+ITEM.functions.Value = {
+	name = "Value",
+	icon = "icon16/help.png",
+	sound = "physics/metal/chain_impact_soft2.wav",
+	OnRun = function(item)
+		local client = item.player
+		local sellprice = (item.price/1.32)
+		sellprice = math.Round(sellprice)
+		client:Notify( "Item is sellable for "..(sellprice).." rubles." )
+		return false
+	end,
+	OnCanRun = function(item)
+		return !IsValid(item.entity) and item:GetOwner():GetCharacter():HasFlags("1")
+	end
+}
+
 function ITEM:GetDescription()
-	local description = self.description
-	description = description.."\nWeight: "..self.weight.."kg"
-	return description
+	local str = self.description
+	if self.longdesc and !IsValid(self.entity) then
+		str = str.."\n"..(self.longdesc or "")
+	end
+
+	local customData = self:GetData("custom", {})
+	if(customData.desc) then
+		str = customData.desc
+	end
+	
+	if (customData.longdesc) and !IsValid(self.entity) then
+		str = str.."\n"..(customData.longdesc or "")
+	end
+
+    return (str.."\nWeight: "..self.weight.."kg")
 end
 
 local function attachment(item, data)

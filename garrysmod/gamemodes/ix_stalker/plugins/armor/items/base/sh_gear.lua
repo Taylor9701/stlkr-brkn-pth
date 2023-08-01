@@ -1,11 +1,10 @@
-ITEM.name = "PAC Outfit"
-ITEM.description = "A PAC Outfit Base."
+ITEM.name = "Gear Item"
+ITEM.description = "Default Desc."
 ITEM.longdesc = "No Longer Description Available"
 ITEM.category = "Outfit"
 ITEM.model = "models/Gibs/HGIBS.mdl"
 ITEM.width = 2
 ITEM.height = 2
-ITEM.pacData = {}
 ITEM.br = 0
 ITEM.fbr = 0
 ITEM.ar = 0
@@ -108,13 +107,18 @@ end,
 function ITEM:GetDescription()
 	local quant = self:GetData("quantity", 1)
 	local str = self.description
-	if self.longdesc then
+	
+	if self.longdesc and !IsValid(self.entity) then
 		str = str.."\n"..(self.longdesc or "")
 	end
 
 	local customData = self:GetData("custom", {})
-	if(customData.desc) then
+	if customData.desc then
 		str = customData.desc
+	end
+	
+	if customData.longdesc then
+		str = str.."\n"..(customData.longdesc or "")
 	end
 	
 	if self.res then
@@ -294,32 +298,11 @@ function ITEM:OnInstanced()
 	self:SetData("durability", 100)
 end
 
-function ITEM:RemovePart(client)
-	local char = client:GetCharacter()
-
-	self:SetData("equip", false)
-	client:RemovePart(self.uniqueID)
-
-	if (self.attribBoosts) then
-		for k, _ in pairs(self.attribBoosts) do
-			char:RemoveBoost(self.uniqueID, k)
-		end
-	end
-
-	self:OnUnequipped()
-end
-
-function ITEM:TogglePart(client)
-	local char = client:GetCharacter()
-	client:RemovePart(self.uniqueID)
-end
-
 -- On item is dropped, Remove a weapon from the player and keep the ammo in the item.
 ITEM:Hook("drop", function(item)
 	if (item:GetData("equip")) then
 		item.player:RecalculateResistances()
 		item.player:ReevaluateOverlay()
-		item:RemovePart(item.player)
 	end
 end)
 
@@ -329,7 +312,6 @@ ITEM.functions.EquipUn = { -- sorry, for name order.
 	tip = "equipTip",
 	icon = "icon16/stalker/unequip.png",
 	OnRun = function(item)
-		item:RemovePart(item.player)
 		item.player:GetCharacter():setRPGValues()
 		item.player:RecalculateResistances()
 		item.player:ReevaluateOverlay()
@@ -342,19 +324,6 @@ ITEM.functions.EquipUn = { -- sorry, for name order.
 		return !IsValid(item.entity) and IsValid(client) and item:GetData("equip") == true and
 			hook.Run("CanPlayerUnequipItem", client, item) != false and item.invID == client:GetCharacter():GetInventory():GetID()
 	end
-}
-
-ITEM.functions.ModelOff = {
-	name = "Model Off",
-	tip = "equipTip",
-	icon = "icon16/stalker/unequip.png",
-	OnRun = function(item)
-		item:TogglePart(item.player)
-		return false
-	end,
-	OnCanRun = function(item)
-		return !IsValid(item.entity) and item:GetData("equip")
-	end,
 }
 
 -- On player eqipped the item, Gives a weapon to player and load the ammo data from the item.
@@ -385,7 +354,6 @@ ITEM.functions.Equip = {
 		end
 
 		item:SetData("equip", true)
-		item.player:AddPart(item.uniqueID, item)
 
 		if (item.attribBoosts) then
 			for k, v in pairs(item.attribBoosts) do
@@ -415,17 +383,6 @@ function ITEM:CanTransfer(oldInventory, newInventory)
 	return true
 end
 
-function ITEM:OnRemoved()
-	local inventory = ix.item.inventories[self.invID]
-	local owner = inventory.GetOwner and inventory:GetOwner()
-
-	if (IsValid(owner) and owner:IsPlayer()) then
-		if (self:GetData("equip")) then
-			self:RemovePart(owner)
-		end
-	end
-end
-
 function ITEM:OnEquipped()
 	if self.isGasmask == true then
 		self.player:EmitSound("stalkersound/gasmask_on.ogg")
@@ -440,25 +397,6 @@ function ITEM:OnUnequipped()
 		return
 	end
 	self.player:GetCharacter():setRPGValues()
-end
-
-function ITEM:pacAdjust(pacdata, client)
-	
-	if not client then return end
-	
-	if (client:GetModel() == "models/nasca/stalker/male_berill1.mdl") then
-		client:Notify("berill1")
-    	return self.pacDataBerill1
-	elseif (client:GetModel() == "models/nasca/stalker/male_expedition.mdl") then
-	  	client:Notify("expedition")
-	   	return self.pacDataExpedition
-	elseif (client:GetModel() == "models/nasca/stalker/male_nbc_lone.mdl" or client:GetModel() == "models/nasca/stalker/male_nbc_mono.mdl" or client:GetModel() == "models/nasca/stalker/male_nbc_free.mdl" or client:GetModel() == "models/nasca/stalker/male_nbc_duty.mdl") then
-	  	client:Notify("nbc")
-	   	return self.pacDataNBC
-    else
-    	client:Notify("generic")
-    	return self.pacData
-	end
 end
 
 ITEM.functions.Sell = {
@@ -477,7 +415,7 @@ ITEM.functions.Sell = {
 		client:GetCharacter():GiveMoney(sellprice)
 	end,
 	OnCanRun = function(item)
-		return !IsValid(item.entity) and item.player:GetCharacter():HasFlags("1") and !item:GetData("equip")
+		return !IsValid(item.entity) and item.player:GetCharacter():HasFlags("1") and !item:GetData("equip",false)
 	end
 }
 
@@ -497,6 +435,6 @@ ITEM.functions.Value = {
 		return false
 	end,
 	OnCanRun = function(item)
-		return !IsValid(item.entity) and item.player:GetCharacter():HasFlags("1") and !item:GetData("equip")
+		return !IsValid(item.entity) and item.player:GetCharacter():HasFlags("1") and !item:GetData("equip",false)
 	end
 }

@@ -17,5 +17,4 @@ ITEM:Hook("use", function(item)
 end)
 ITEM.weight = 0.1
 ITEM.heal = 1
-ITEM.healot = 1
-ITEM:DecideFunction()
+ITEM.healot = 1 

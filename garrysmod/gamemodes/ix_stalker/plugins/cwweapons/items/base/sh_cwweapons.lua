@@ -85,61 +85,67 @@ attachments["md_eotech"] = {name = "Eotech Holographic Sight", slot = 1, uID = "
 attachments["md_reflex"] = {name = "King Arms MR", slot = 1, uID = "kingarmsmr"}
 attachments["md_kobra"] = {name = "Kobra Sight", slot = 1, uID = "kobra"}
 attachments["md_acog"] = {name = "Trijicon ACOG Sight", slot = 1, uID = "acog"}
+attachments["cw_sil_ekp_optic"] = {name = "EKP-08-02 Red Dot Sight", slot = 1, uID = "ekp8"}
+attachments["cw_sil_pk1_optic"] = {name = "PK-1 Red Dot Sight", slot = 1, uID = "pk1"}
+attachments["cw_sil_pka_optic"] = {name = "PK-A Red Dot Sight", slot = 1, uID = "pka"}
+attachments["cw_sil_gauss_scope"] = {name = "Gauss Rifle Optic", slot = 1, uID = "gaussscope"}
+attachments["cw_sil_okp7_optic"] = {name = "OKP-7 Red Dot Sight", slot = 1, uID = "okp7"}
+attachments["cw_sil_pso1_scope"] = {name = "PSO-01", slot = 1, uID = "pso1optic"}
+attachments["cw_sil_ip29_scope"] = {name = "1P-29 Tulip", slot = 1, uID = "ip29optic"}
+attachments["cw_sil_ip78_scope"] = {name = "1P-78 Kashtan", slot = 1, uID = "ip78optic"}
+attachments["cw_sil_pu_scope"] = {name = "PU Scope", slot = 1, uID = "puoptic"}
+attachments["cw_sil_zf4"] = {name = "ZF4 Scope", slot = 1, uID = "zf4optic"}
+attachments["cw_sil_leupold_scope"] = {name = "Leupold x24", slot = 1, uID = "leupoldscope"}
+attachments["cw_sil_pilad_scope"] = {name = "VOMZ Pilad x3", slot = 1, uID = "pilad"}
 attachments["md_pbs1"] = {name = "PBS Supressor", slot = 2, uID = "pbssuppressor"}
 attachments["md_cobram2"] = {name = "Cobra M2 Suppressor", slot = 2, uID = "cobrasuppressor"}
 attachments["md_tundra9mm"] = {name = "Tundra Supressor", slot = 2, uID = "tundrasuppressor"}
 attachments["md_saker"] = {name = "SAKER Supressor", slot = 2, uID = "sakersuppressor"}
 attachments["md_foregrip"] = {name = "Foregrip", slot = 3, uID = "foregrip"}
-attachments["cw_sil_ekp_optic"] = {name = "EKP-08", slot = 1, uID = "ekp8"}
-attachments["cw_sil_pk1_optic"] = {name = "PK-1", slot = 1, uID = "pk1"}
-attachments["cw_sil_pka_optic"] = {name = "PK-A", slot = 1, uID = "pka"}
-attachments["cw_sil_gauss_scope"] = {name = "Item 62 Optic", slot = 1, uID = "gaussscope"}
-attachments["cw_sil_okp7_optic"] = {name = "OKP-07", slot = 1, uID = "okp7"}
-attachments["cw_sil_pso1_scope"] = {name = "PSO-01", slot = 1, uID = "pso1optic"}
-attachments["cw_sil_ip29_scope"] = {name = "1P-29 Tulip", slot = 1, uID = "ip29optic"}
-attachments["cw_sil_ip78_scope"] = {name = "1P-78 Kashtan", slot = 1, uID = "ip78optic"}
-attachments["cw_sil_pu_scope"] = {name = "PU Optic", slot = 1, uID = "puoptic"}
-attachments["cw_sil_zf4"] = {name = "ZF4 Optic", slot = 1, uID = "zf4optic"}
-attachments["cw_sil_leupold_scope"] = {name = "Leupold x24", slot = 1, uID = "leupoldscope"}
-attachments["cw_sil_pilad_scope"] = {name = "VOMZ Pilad x3", slot = 1, uID = "pilad"}
-
 attachments["cw_sil_vss_20"] = {name = "Vintorez Extended Magazine", slot = 6, uID = "vssext"}
 attachments["cw_sil_val_30"] = {name = "AS VAL Extended Magazine", slot = 6, uID = "valext"}
 attachments["cw_sil_saiga_10"] = {name = "Saiga-12 Pro Magazine", slot = 6, uID = "saiga12promag"}
 attachments["cw_sil_saiga_20"] = {name = "Saiga-12 Drum Magazine", slot = 6, uID = "saiga12drum"}
 
 -- KK INS2 Attachments
-attachments["kk_ins2_cstm_acog"] = {name = "Trijicon ACOG 4x32 Scope", slot = 1, uID = "acog"}
-attachments["kk_ins2_aimpoint"] = {name = "Aimpoint Red Dot Sight", slot = 1, uID = "aimpoint"}
-attachments["kk_ins2_anpeq15"] = {name = "AN/PEQ-15", slot = 4, uID = "anpeq"}
-attachments["kk_ins2_gl_m203"] = {name = "M203 Grenade Launcher", slot = 3, uID = "attm203"}
-attachments["kk_ins2_cstm_barska"] = {name = "Barska Electro Sight", slot = 1, uID = "barska"}
-attachments["kk_ins2_bipod"] = {name = "Bipod", slot = 3, uID = "bipod"}
+
+attachments["kk_ins2_po4"] = {name = "PO 4x24 Scope", slot = 1, uID = "po4"}
+attachments["kk_ins2_scope_m40"] = {name = "x8 Scope", slot = 1, uID = "m40scope"}
+attachments["kk_ins2_kobra"] = {name = "Kobra Red Dot Sight", slot = 1, uID = "kobra"}
+attachments["bg_foldsight"] = {name = "Folding RIS Irons", slot = 1, uID = "foldsight"}
+attachments["kk_ins2_scope_mosin"] = {name = "Leupold Scope", slot = 1, uID = "leupold"}
+attachments["kk_ins2_cstm_eotechxps"] = {name = "Eotech XPS", slot = 1, uID = "eotechxps"}
+attachments["kk_ins2_elcan"] = {name = "Elcan C79 Optical Scope", slot = 1, uID = "elcan"}
 attachments["kk_ins2_cstm_cmore"] = {name = "C-More Red Dot Sight", slot = 1, uID = "cmore"}
 attachments["kk_ins2_cstm_compm4s"] = {name = "Aimpoint CompM4S", slot = 1, uID = "compm4s"}
-attachments["kk_ins2_elcan"] = {name = "Elcan Optical Scope", slot = 1, uID = "elcan"}
 attachments["kk_ins2_eotech"] = {name = "Eotech Holographic Sight", slot = 1, uID = "eotech"}
-attachments["kk_ins2_cstm_eotechxps"] = {name = "Eotech XPS2", slot = 1, uID = "eotechxps"}
-attachments["kk_ins2_gl_gp25"] = {name = "GP-25 Grenade Launcher", slot = 3, uID = "gp25"}
-attachments["kk_ins2_hoovy"] = {name = "Heavy Barrel", slot = 5, uID = "heavybarrel"}
-attachments["kk_ins2_kobra"] = {name = "Kobra Red Dot Sight", slot = 1, uID = "kobra"}
-attachments["kk_ins2_lam"] = {name = "Laser Sight", slot = 4, uID = "laser"}
-attachments["kk_ins2_scope_mosin"] = {name = "Leupold Scope", slot = 1, uID = "leupold"}
-attachments["kk_ins2_flashlight"] = {name = "Flashlight", slot = 4, uID = "light"}
-attachments["kk_ins2_m6x"] = {name = "M6X", slot = 4, uID = "m6x"}
+attachments["kk_ins2_cstm_acog"] = {name = "Trijicon ACOG 4x32 Scope", slot = 1, uID = "acog"}
+attachments["kk_ins2_cstm_barska"] = {name = "Barska Electro Sight", slot = 1, uID = "barska"}
+attachments["kk_ins2_aimpoint"] = {name = "Aimpoint Red Dot Sight", slot = 1, uID = "aimpoint"}
 attachments["kk_ins2_cstm_microt1"] = {name = "Micro T-1 Red Dot Sight", slot = 1, uID = "microt1"}
-attachments["kk_ins2_pbs1"] = {name = "PBS-1 Suppressor", slot = 2, uID = "pbs1"}
-attachments["kk_ins2_scope_m40"] = {name = "M40a1 Scope", slot = 1, uID = "m40scope"}
 attachments["kk_ins2_pbs5"] = {name = "PBS-5 Suppressor", slot = 2, uID = "pbs5"}
-attachments["kk_ins2_po4"] = {name = "PO 4x24 Scope", slot = 1, uID = "po4"}
-attachments["kk_ins2_mag_saiga_20"] = {name = "Saiga-12 Drum Magazine", slot = 6, uID = "saiga12drum"}
-attachments["kk_ins2_mag_galil_75"] = {name = "IWI Galil ACE Drum Magazine", slot = 5, uID = "galilacedrum"}
-attachments["kk_ins2_flashhider_big_shotgun"] = {name = "Saiga-12 Flash Hider", slot = 2, uID = "saigafh"}
-attachments["kk_ins2_revolver_mag"] = {name = "Speed Loader", slot = 1, uID = ""}
-attachments["kk_ins2_suppressor_shotgun"] = {name = "12 Gauge Suppressor", slot = 2, uID = "supp12"}
+attachments["kk_ins2_pbs1"] = {name = "PBS-1 Suppressor", slot = 2, uID = "pbs1"}
 attachments["kk_ins2_suppressor_sec"] = {name = "NATO Suppressor", slot = 2, uID = "suppnato"}
+attachments["kk_ins2_suppressor_shotgun"] = {name = "12 Gauge Suppressor", slot = 2, uID = "supp12"}
 attachments["kk_ins2_suppressor_pistol"] = {name = "Pistol Suppressor", slot = 2, uID = "supppistol"}
-attachments["kk_ins2_vertgrip"] = {name = "Vertical Foregrip", slot = 1, uID = "vertgrip"}
+attachments["kk_ins2_flashhider_big_shotgun"] = {name = "Saiga-12 Flash Hider", slot = 2, uID = "saigafh"}
+attachments["kk_ins2_bipod"] = {name = "Bipod", slot = 3, uID = "bipod"}
+attachments["kk_ins2_gl_gp25"] = {name = "GP-25 Grenade Launcher", slot = 3, uID = "gp25"}
+attachments["kk_ins2_vertgrip"] = {name = "Vertical Foregrip", slot = 3, uID = "vertgrip"}
+attachments["kk_ins2_gl_m203"] = {name = "M203 Grenade Launcher", slot = 3, uID = "attm203"}
+attachments["kk_ins2_m6x"] = {name = "M6X", slot = 4, uID = "m6x"}
+attachments["kk_ins2_lam"] = {name = "Laser Sight", slot = 4, uID = "laser"}
+attachments["kk_ins2_anpeq15"] = {name = "AN/PEQ-15", slot = 4, uID = "anpeq"}
+attachments["kk_ins2_flashlight"] = {name = "Flashlight", slot = 4, uID = "light"}
+attachments["kk_ins2_hoovy"] = {name = "Heavy Barrel", slot = 5, uID = "heavybarrel"}
+attachments["cw_sil_ppsh41_drum"] = {name = "PPSh-41 Drum", slot = 6, uID = "ppshdrum"}
+attachments["kk_ins2_revolver_mag"] = {name = "Speed Loader", slot = 6, uID = "revspeed"}
+attachments["kk_ins2_mag_fal_30"] = {name = "FAL Extended Magazine", slot = 6, uID = "fal30"}
+attachments["kk_ins2_mag_m1911_15"] = {name = "M1911 Extended Magazine", slot = 6, uID = "m1911ext"}
+attachments["kk_ins2_mag_saiga_20"] = {name = "Saiga-12 Drum Magazine", slot = 6, uID = "saiga12drum"}
+attachments["kk_ins2_mag_galil_75"] = {name = "IWI Galil ACE Drum Magazine", slot = 6, uID = "galilacedrum"}
+attachments["kk_ins2_fnfal_skin2"] = {name = "FAL Spraypaint", slot = 7, uID = "falpaint" }
+attachments["kk_ins2_magnifier"] = {name = "Aimpoint/XPS x2 Magnifier", slot = 8, uID = "magnifier" }
 
 -- Inventory drawing
 if (CLIENT) then
@@ -204,12 +210,16 @@ if (CLIENT) then
 end
 
 function ITEM:GetDescription()
-	local str = self.description.." \n\n"..self.longdesc or ""
+	local str = self.description
 	local dmg = self.Dmg
 	local range = self.Range
 	local cal
 	local upgrades = self:GetData("upgrades")
 	local atts = self:GetData("attachments")
+	
+	if self.longdesc then
+		str = str.."\n"..(self.longdesc or "")
+	end
 	
 	local customData = self:GetData("custom", {})
 	if(customData.desc) then
@@ -217,7 +227,7 @@ function ITEM:GetDescription()
 	end
 
 	if (customData.longdesc) then
-		str = str.. "\n\n" ..customData.longdesc 
+		str = str.. "\n" ..customData.longdesc 
 	end
 	
 	if atts then
@@ -329,8 +339,6 @@ ITEM:Hook("drop", function(item)
 			character:SetData("wepSlots",wepslots)
 			owner:EmitSound("stalkersound/inv_drop.mp3", 80)
 		end
-
-		item:RemovePAC(owner)
 	end
 end)
 
@@ -370,7 +378,7 @@ ITEM.functions.Value = {
 		return false
 	end,
 	OnCanRun = function(item)
-		return !IsValid(item.entity) and item:GetOwner():GetCharacter():HasFlags("1") and !item:GetData("equip")
+		return !IsValid(item.entity) and item:GetOwner():GetCharacter():HasFlags("1")
 	end
 }
 
@@ -405,18 +413,6 @@ ITEM.functions.Equip = {
 		return !IsValid(item.entity) and IsValid(client) and item:GetData("equip") != true
 	end
 }
-
-function ITEM:WearPAC(client)
-	if (ix.pac and self.pacData) then
-		client:AddPart(self.uniqueID, self)
-	end
-end
-
-function ITEM:RemovePAC(client)
-	if (ix.pac and self.pacData) then
-		client:RemovePart(self.uniqueID)
-	end
-end
 
 function ITEM:Equip(client)
 	local character = client:GetCharacter()
@@ -561,7 +557,6 @@ function ITEM:Unequip(client, bPlaySound, bRemoveItem)
 	wepslots[self.weaponCategory] = nil
 	character:SetData("wepSlots",wepslots)
 	self:SetData("equip", nil)
-	self:RemovePAC(client)
 
 	if (self.OnUnequipWeapon) then
 		self:OnUnequipWeapon(client, weapon)
@@ -651,8 +646,6 @@ function ITEM:OnRemoved()
 		if (IsValid(weapon)) then
 			weapon:Remove()
 		end
-
-		self:RemovePAC(owner)
 	end
 end
 
@@ -1038,10 +1031,6 @@ hook.Add("PlayerDeath", "ixStripClip", function(client)
 	for _, v in pairs(client:GetCharacter():GetInventory():GetItems()) do
 		if (v.isWeapon and v:GetData("equip")) then
 			v:SetData("equip", nil)
-			
-			if (v.pacData) then
-				v:RemovePAC(client)
-			end
 		end
 	end
 end)

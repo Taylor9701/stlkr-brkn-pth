@@ -1,0 +1,13 @@
+ITEM.name = "Cigarettes"
+ITEM.description = "An old pack of cigarettes, a bit damaged, but still smokable."
+ITEM.longdesc = "Old Russian cigarettes commonly sold throughout the exclusion zone, containing tobacco and various other chemicals within it. Notoriously bad for someone's health."
+ITEM.model = "models/ethprops/consumable/cigar1.mdl"
+ITEM.width = 1
+ITEM.height = 1
+ITEM.category = "Consumables"
+ITEM.sound = "stalkersound/inv_smoke.mp3"
+ITEM.price = "500"
+ITEM.flag = "1"
+ITEM.quantity = 6
+ITEM.weight = 0.1
+ITEM.useText = {"takes out a ", " and smokes it."}
