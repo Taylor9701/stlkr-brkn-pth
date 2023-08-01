@@ -708,11 +708,6 @@ do
 
 			local character = client:GetCharacter()
 
-            print(oldX)
-            print(oldY)
-            print(x)
-            print(y)
-
 			if (character) then
 				local inventory = ix.item.inventories[invID]
 
@@ -742,7 +737,6 @@ do
 							return
 						end
                         
-                        print(item)
 						if (inventory:CanItemFit(x, y, item.width, item.height, item)) then
                             
 							item.gridX = x
