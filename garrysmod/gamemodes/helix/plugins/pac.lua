@@ -37,6 +37,19 @@ if (CLIENT) then
 	concommand.Add("pac_clear_parts", function()
 		RunConsoleCommand("pac_restart")
 	end)
+
+	-- you need the proper permission to open the editor
+	function PLUGIN:PrePACEditorOpen()
+		if (!CAMI.PlayerHasAccess(LocalPlayer(), "Helix - Manage PAC", nil)) then
+			return false
+		end
+	end
+end
+
+function PLUGIN:pac_CanWearParts(client)
+	if (!CAMI.PlayerHasAccess(client, "Helix - Manage PAC", nil)) then
+		return false
+	end
 end
 
 local meta = FindMetaTable("Player")
@@ -126,6 +139,28 @@ if (SERVER) then
 
 		if (newItem and newItem.isWeapon and newItem.pacData) then
 			newItem:RemovePAC(client)
+		end
+	end
+
+	-- Hides PAC parts when a player enters observer.
+	function PLUGIN:OnPlayerObserve(client, state)
+		local curParts = client:GetParts()
+
+		-- Remove all the parts
+		if (curParts) then
+			client:ResetParts()
+		end
+
+		-- If exiting of observer, re-add all parts.
+		if (!state) then
+			local character = client:GetCharacter()
+			local inventory = character:GetInventory()
+
+			for _, v in pairs(inventory:GetItems()) do
+				if (v:GetData("equip") == true and v.pacData) then
+					client:AddPart(v.uniqueID, v)
+				end
+			end
 		end
 	end
 else

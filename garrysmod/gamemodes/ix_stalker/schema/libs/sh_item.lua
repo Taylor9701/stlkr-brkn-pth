@@ -58,6 +58,8 @@ end
 
 function ix.item.Instance(index, uniqueID, itemData, x, y, callback, characterID, playerID)
 	if (!uniqueID or ix.item.list[uniqueID]) then
+        itemData = istable(itemData) and itemData or {}
+
 		local query = mysql:Insert("ix_items")
 			query:Insert("inventory_id", index)
 			query:Insert("unique_id", uniqueID)
@@ -706,6 +708,11 @@ do
 
 			local character = client:GetCharacter()
 
+            print(oldX)
+            print(oldY)
+            print(x)
+            print(y)
+
 			if (character) then
 				local inventory = ix.item.inventories[invID]
 
@@ -713,8 +720,7 @@ do
 					inventory:Sync(client)
 				end
 
-				if ((!inventory.owner or (inventory.owner and inventory.owner == character:GetID())) or
-					inventory:OnCheckAccess(client)) then
+				if ((inventory.owner and inventory.owner == character:GetID()) or inventory:OnCheckAccess(client)) then
 					local item = inventory:GetItemAt(oldX, oldY)
 
 					if (item) then
@@ -735,8 +741,10 @@ do
 
 							return
 						end
-
+                        
+                        print(item)
 						if (inventory:CanItemFit(x, y, item.width, item.height, item)) then
+                            
 							item.gridX = x
 							item.gridY = y
 

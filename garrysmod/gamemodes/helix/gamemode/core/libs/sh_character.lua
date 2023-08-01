@@ -327,12 +327,6 @@ do
 		default = "John Doe",
 		index = 1,
 		OnValidate = function(self, value, payload, client)
-			print(self)
-			PrintTable(self)
-			print(value)
-			print(payload)
-			PrintTable(payload)
-			print(client)
 			if (!value) then
 				return false, "invalid", "name"
 			end

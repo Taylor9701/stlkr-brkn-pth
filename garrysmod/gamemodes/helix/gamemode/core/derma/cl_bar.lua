@@ -94,7 +94,6 @@ function PANEL:Organize()
 end
 
 function PANEL:Think()
-	
 	local menu = (IsValid(ix.gui.characterMenu) and !ix.gui.characterMenu:IsClosing()) and ix.gui.characterMenu
 		or IsValid(ix.gui.menu) and ix.gui.menu
 	local fraction = menu and 1 - menu.currentAlpha / 255 or 1
@@ -112,28 +111,28 @@ function PANEL:Think()
 
 	for _, v in ipairs(self.bars) do
 		local info = ix.bar.list[v:GetID()]
-		
-		if not info then return end
-		
-		local realValue, barText = info.GetValue()
 
-		if (bShouldHide or realValue == false) then
-			v:SetVisible(false)
-			continue
-		end
+        if info then
+            local realValue, barText = info.GetValue()
 
-		if (v:GetDelta() != realValue) then
-			v:SetLifetime(curTime + 5)
-		end
+            if (bShouldHide or realValue == false) then
+                v:SetVisible(false)
+                continue
+            end
 
-		if (v:GetLifetime() < curTime and !info.visible and !bAlwaysShow and !hook.Run("ShouldBarDraw", info)) then
-			v:SetVisible(false)
-			continue
-		end
+            if (v:GetDelta() != realValue) then
+                v:SetLifetime(curTime + 5)
+            end
 
-		v:SetVisible(true)
-		v:SetValue(realValue)
-		v:SetText(isstring(barText) and barText or "")
+            if (v:GetLifetime() < curTime and !info.visible and !bAlwaysShow and !hook.Run("ShouldBarDraw", info)) then
+                v:SetVisible(false)
+                continue
+            end
+
+            v:SetVisible(true)
+            v:SetValue(realValue)
+            v:SetText(isstring(barText) and barText or "")
+        end
 	end
 
 	self:Organize()
