@@ -315,15 +315,15 @@ for id,wepdata in pairs(weapons.GetList()) do
 			
 			if IsValid(self.Owner) then
 				if not self.OwnerAttachBoneID then
-					self.OwnerAttachBoneID = EntLookupBone(self.Owner, "ValveBiped.Bip01_R_Hand")
+					self.OwnerAttachBoneID = self.Owner:LookupBone("ValveBiped.Bip01_R_Hand")
 				end
 				
 				if isnumber(self.OwnerAttachBoneID) then
-					m = EntGetBoneMatrix(self.Owner, self.OwnerAttachBoneID)
+					m = self.Owner:GetBoneMatrix(self.OwnerAttachBoneID)
 					
 					if not m then
-						if isnumber(EntLookupBone(self.Owner, "ValveBiped.Bip01_R_Hand")) then
-							m = EntGetBoneMatrix(self.Owner, EntLookupBone(self.Owner, "ValveBiped.Bip01_R_Hand"))
+						if isnumber(self.Owner:LookupBone("ValveBiped.Bip01_R_Hand")) then
+							m = self.Owner:GetBoneMatrix(self.Owner, self.Owner:LookupBone("ValveBiped.Bip01_R_Hand"))
 				
 							if not m then
 								return
@@ -334,11 +334,11 @@ for id,wepdata in pairs(weapons.GetList()) do
 					pos = m:GetTranslation()
 					ang = m:GetAngles()
 			
-					pos = pos + AngForward(ang) * self.WMPos.x + AngRight(ang) * self.WMPos.y + AngUp(ang) * self.WMPos.z
+					pos = pos + ang:Forward() * self.WMPos.x + ang:Right() * self.WMPos.y + ang:Up() * self.WMPos.z
 			
-					AngRotateAroundAxis(ang, AngUp(ang), self.WMAng.y)
-					AngRotateAroundAxis(ang, AngRight(ang), self.WMAng.x)
-					AngRotateAroundAxis(ang, AngForward(ang), self.WMAng.z)
+					ang:RotateAroundAxis(ang:Up(), self.WMAng.y)
+					ang:RotateAroundAxis(ang:Right(), self.WMAng.x)
+					ang:RotateAroundAxis(ang:Forward(), self.WMAng.z)
 				end
 			else
 				self.OwnerAttachBoneID = false
@@ -384,9 +384,11 @@ for id,wepdata in pairs(weapons.GetList()) do
 			if IsValid(self.Owner) and self.Owner == LocalPlayer() then
 				cam.IgnoreZ(true)
 				self:drawInteractionMenu()
-				if cvAmmoHud:GetInt() >= 1 then
-					self:draw3D2DHUD()
-				end
+                if cvAmmoHud then
+                    if cvAmmoHud:GetInt() >= 1 then
+                        self:draw3D2DHUD()
+                    end
+                end
 				cam.IgnoreZ(false)
 			end
 
