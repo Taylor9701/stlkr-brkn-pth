@@ -56,7 +56,7 @@ function WeaponFired(entity, data)
 		local item
 		local ammo
 		
-		if wep.Damage != data.Damage then return end -- Ricochets have reduced damage, so we can filter them out this way
+		if wep.Damage != data.Damage then return end -- Ricochets have reduced damage, so we filter them out this way
 		
 		for k,v in pairs(entity:GetChar():GetInv():GetItems()) do
 			if v.isAmmo == true then
@@ -72,6 +72,12 @@ function WeaponFired(entity, data)
 				end
 			end
 		end
+
+        if item && ix.config.Get("durability") then
+            if item.modifier then
+                item:SetData("durability", (item:GetData("durability",10000) - item.modifier))
+            end
+        end
 		
 		local newAmmo
 		if ammo then

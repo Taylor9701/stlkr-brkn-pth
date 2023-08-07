@@ -9,6 +9,10 @@ ix.util.Include("sv_plugin.lua")
 ix.util.Include("sh_kkins2fix.lua")
 ix.util.Include("sv_ammo.lua")
 
+ix.config.Add("durability", true, "Whether or not durability loss occurs.", nil, {
+	category = "server"
+})
+
 --[[ Readme:
 
 Includes item bases for CW Weapons, Attachments, Ammo, and CW2.0 KK INS2 Grenades.
