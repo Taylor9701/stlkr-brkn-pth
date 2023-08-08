@@ -5,6 +5,16 @@ PLUGIN.repairFlag = "R"
 
 ix.flag.Add(PLUGIN.repairFlag, "Access to repair things.")
 
+ix.config.Add("Min Durability - Modify", 100, "Minimum durability req. for modding armor.", nil, {
+	data = {min = 0, max = 100, decimals = 2},
+    category = "TPlugins"
+})
+
+ix.config.Add("Min Durability - Sell", 100, "Minimum durability req. for selling armor.", nil, {
+	data = {min = 0, max = 100, decimals = 2},
+    category = "TPlugins"
+})
+
 if (CLIENT) then
 	local PANEL = {}
 	function PANEL:Init()

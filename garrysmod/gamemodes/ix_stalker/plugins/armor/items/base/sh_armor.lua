@@ -80,7 +80,7 @@ end,
 	OnRun = function(item, data)
 		local client = item.player
 		
-	    if item:GetData("durability", 100) < 100 then
+	    if item:GetData("durability", 10000) < (ix.config.Get("Min Durability - Modify") * 100) then
             client:NotifyLocalized("Must Repair Armor")
             return false
         end
@@ -154,7 +154,7 @@ if (CLIENT) then
 			surface.DrawOutlinedRect( 7, h - 15, 41, 9 )
 			if (item:GetData("durability") > 0) then
 				surface.SetDrawColor(110, 255, 110, 100)
-				surface.DrawRect(8, h - 14, (item:GetData("durability")/100) * 40, 8)
+				surface.DrawRect(8, h - 14, (item:GetData("durability")/10000) * 40, 8)
 			else
 				surface.SetDrawColor(255, 110, 110, 100)
 				surface.DrawRect(8, h - 14, 40, 8)
@@ -175,7 +175,7 @@ if (CLIENT) then
 			skintitle:SizeToContents()
 
 			local duratitle = tooltip:AddRowAfter("skintitle", "duratitle")
-			duratitle:SetText("Durability: " .. math.floor(self:GetData("durability", 100)) .. "%")
+			duratitle:SetText("Durability: " .. math.floor(self:GetData("durability", 10000)/100) .. "%")
 			duratitle:SizeToContents()
 		end
 	end
@@ -308,7 +308,7 @@ function ITEM:RemoveAttachment(id, client)
 end
 
 function ITEM:OnInstanced()
-	self:SetData("durability", 100)
+	self:SetData("durability", 10000)
 end
 
 local function skinset(item, data)
@@ -616,8 +616,8 @@ ITEM.functions.Sell = {
 	OnRun = function(item)
 		local client = item.player
 		local sellprice = item:GetData("RealPrice") or item.price
-		sellprice = math.Round((sellprice*(item:GetData("durability",0)/100))*0.75)
-		if item:GetData("durability",0) < 50 then
+		sellprice = math.Round((sellprice*(item:GetData("durability",0)/10000))*0.75)
+		if item:GetData("durability",0) < (ix.config.Get("Min Durability - Sell") * 100) then
 			client:Notify("Must be Repaired")
 			return false
 		end
@@ -636,8 +636,8 @@ ITEM.functions.Value = {
 	OnRun = function(item)
 		local client = item.player
 		local sellprice = item:GetData("RealPrice") or item.price
-		sellprice = math.Round((sellprice*(item:GetData("durability",0)/100))*0.75)
-		if item:GetData("durability",0) < 50 then
+		sellprice = math.Round((sellprice*(item:GetData("durability",0)/10000))*0.75)
+		if item:GetData("durability",0) < (ix.config.Get("Min Durability - Sell") * 100) then
 			client:Notify("Must be Repaired")
 			return false
 		end
@@ -798,7 +798,7 @@ function ITEM:GetDescription()
 	end
 
 	if (self.entity) then
-		return (self.description .. "\n\nDurability: " .. math.floor(self:GetData("durability", 100)) .. "%")
+		return (self.description .. "\n\nDurability: " .. math.floor(self:GetData("durability", 10000)/100) .. "%")
 	else
         return (str)
 	end

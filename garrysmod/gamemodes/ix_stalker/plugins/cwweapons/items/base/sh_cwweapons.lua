@@ -350,7 +350,7 @@ ITEM.functions.Sell = {
 		local client = item.player
 		local sellprice = item:GetData("RealPrice") or item.price
 		sellprice = math.Round((sellprice*(item:GetData("durability",0)/10000))*0.75)
-		if item:GetData("durability",0) < 4950 then
+		if item:GetData("durability",0) < (ix.config.Get("Min Durability - Sell") * 100) then
 			client:Notify("Must be Repaired")
 			return false
 		end
@@ -370,7 +370,7 @@ ITEM.functions.Value = {
 		local client = item.player
 		local sellprice = item:GetData("RealPrice") or item.price
 		sellprice = math.Round((sellprice*(item:GetData("durability",0)/10000))*0.75)
-		if item:GetData("durability",0) < 4950 then
+		if item:GetData("durability",0) < (ix.config.Get("Min Durability - Sell") * 100) then
 			client:Notify("Must be Repaired")
 			return false
 		end

@@ -3,6 +3,11 @@ PLUGIN.name = "Resistances"
 PLUGIN.author = "Chancer"
 PLUGIN.desc = "Handles damage resistances from items, among other things."
 
+ix.config.Add("Armor Durability Divisor", 10, "Damage is divided by this times 10 to determine durability damage.", nil, {
+    data = {min = 1, max = 100, decimals = 1},
+    category = "TPlugins"
+})
+
 local function bulBleed(client, res, dmg)
 	--no bleeding if they have enough resistance
 	if(!PLUGIN:calcBleed(client, res, dmg)) then return false end
@@ -144,11 +149,12 @@ function PLUGIN:EntityTakeDamage(target, dmginfo)
 				
 				--damages durability for all equipped res items
 				for k, v in pairs(resItems) do
-					local curDura = v:GetData("durability", 100)
-					local duraDamage = (dmg/10)
-					local duraDamage = 0 -- Teehee. 
-					local newDura = math.Round(math.Clamp(curDura - duraDamage, 0, 100))
-					v:SetData("durability", newDura)
+                    if ix.config.Get("Durability") then
+                        local curDura = v:GetData("durability", 10000)
+                        local duraDamage = (dmg/ix.config.Get("Armor Durability Divisor"))
+                        local newDura = math.Round(math.Clamp(curDura - duraDamage, 0, 10000))
+                        v:SetData("durability", newDura)
+                    end
 				end
 			end
 		end
@@ -164,10 +170,10 @@ function PLUGIN:calculateRes(client, dmgType)
 	for k, v in pairs (inventory:GetItems()) do
 		if(!v:GetData("equip", false)) then continue end --ignores unequipped items
 		
-		--local dura = v:GetData("durability", 10000)
-		--if(dura <= 0) then continue end --ignores items with 0 durability
+	    local dura = v:GetData("durability", 10000)
+		if(dura <= 0) then continue end --ignores items with 0 durability
 	
-		local res = v.res and v.res[dmgType.name] --grabs durability values from item
+		local res = v.res and v.res[dmgType.name] --grabs resistance values from item
 		if (res) then
 			table.insert(resItems, v)
 			total = total + res
