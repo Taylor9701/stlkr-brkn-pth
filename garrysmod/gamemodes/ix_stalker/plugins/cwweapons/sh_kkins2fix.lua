@@ -223,6 +223,18 @@ end
 for id,wepdata in pairs(weapons.GetList()) do 
 	if wepdata.Base == "cw_kk_ins2_base" then
 		SWEP = weapons.GetStored(wepdata.ClassName)
+        
+        function SWEP:TakePrimaryAmmo(num)  -- Override for Ammo hook, harmless if ammo not in use
+            if ( self:Clip1() <= 0 ) then
+                if ( self:Ammo1() <= 0 ) then return end
+                self:GetOwner():RemoveAmmo( num, self:GetPrimaryAmmoType())
+                return 
+            end
+
+            hook.Run("AmmoConsumption", self:GetOwner())
+            self:SetClip1( self:Clip1() - num )
+        end
+
 		function SWEP:Holster(wep)			-- Holstering Error Fix
 			if not IsValid(wep) and not IsValid(self.SwitchWep) then
 				self.SwitchWep = nil
